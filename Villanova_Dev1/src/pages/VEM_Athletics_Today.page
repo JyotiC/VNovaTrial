@@ -1,0 +1,76 @@
+<apex:page controller="VEM_EventController" tabStyle="VEM_Event__c" showHeader="false" sidebar="false" renderAs="pdf">
+    <html>
+
+        <head>
+            <style> 
+                body
+                {
+                    font-family:Arial;
+                    font-size:12pt;
+                }
+
+                .pageTitle
+                {
+                    font-weight:bold;
+                    font-size:30pt;
+                }  
+
+                .pageSubtitle
+                {
+                    font-weight:bold;
+                }  
+
+                .dataTable
+                {
+                    /* Display table header on each page */
+                    -fs-table-paginate:paginate;
+                }
+
+                .columnHeader
+                {
+                    font-weight:bold;
+                    border-bottom:1px solid #000000;
+                }
+
+                .rowLayout
+                {
+                    page-break-inside:avoid;
+                }
+
+                .columnLayout
+                {
+                    vertical-align:top;
+                }
+            </style>
+        </head>
+
+        <center>
+            <apex:panelGrid columns="1" width="100%">
+                <apex:outputText value="Today in Athletics" styleClass="pageTitle" />
+                <!--apex:outputText value="{0, Date, EEEE - MMMM d, yyyy}" styleClass="pageSubtitle">
+                    <apex:param value="{!today()}" />
+                </apex:outputText-->
+            <apex:outputText value="{!todayString}" styleClass="pageSubtitle" />
+            </apex:panelGrid>
+            <br/>
+        </center>
+
+        <apex:dataTable styleClass="dataTable" headerClass="columnHeader" rowClasses="rowLayout" columnClasses="columnLayout" width="100%" cellspacing="10px" value="{!eventsInAthleticsToday}" var="event" >
+            <apex:column headerValue="Time" width="200px">
+                <apex:outputText value="{!event.Start_Time__c}" />
+                -&nbsp;
+                <apex:outputText value="{!event.End_Time__c}" />
+            </apex:column>
+            <apex:column headerValue="Group" width="220px">
+                <apex:outputField value="{!event.Event_Sponsor__c}" />
+            </apex:column>
+            <apex:column headerValue="Event" width="220px">
+                <apex:outputText value="{!event.Name}" />
+            </apex:column>
+            <apex:column headerValue="Location" width="220px">
+                <apex:outputField value="{!event.Event_Location__r.Name}" />
+            </apex:column>
+        </apex:dataTable>
+
+    </html>
+</apex:page>

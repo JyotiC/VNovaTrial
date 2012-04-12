@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers
+END
+VEM_LocationValidation.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_LocationValidation.trigger-meta.xml
+END
+tgrCampaign.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/tgrCampaign.trigger-meta.xml
+END
+VEM_EventLocationApproverSync.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventLocationApproverSync.trigger-meta.xml
+END
+trgLead.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/trgLead.trigger
+END
+VEM_EventDateValidation.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventDateValidation.trigger-meta.xml
+END
+trgCampaignMember.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/trgCampaignMember.trigger
+END
+pdfSchedT.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/pdfSchedT.trigger-meta.xml
+END
+VEM_EventDefaultResources.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventDefaultResources.trigger
+END
+VEM_EventAutoSubmit.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventAutoSubmit.trigger-meta.xml
+END
+VEM_EventRecurrence.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventRecurrence.trigger-meta.xml
+END
+tgrOpportunity.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/tgrOpportunity.trigger
+END
+VEM_LocationValidation.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_LocationValidation.trigger
+END
+trgContact.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/trgContact.trigger-meta.xml
+END
+tgrCampaign.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/tgrCampaign.trigger
+END
+VEM_EventLocationApproverSync.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventLocationApproverSync.trigger
+END
+VEM_EventDateValidation.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventDateValidation.trigger
+END
+pdfSchedT.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/pdfSchedT.trigger
+END
+VEM_EventAutoSubmit.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventAutoSubmit.trigger
+END
+trgLead.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/trgLead.trigger-meta.xml
+END
+VEM_EventRecurrence.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventRecurrence.trigger
+END
+trgCampaignMember.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/trgCampaignMember.trigger-meta.xml
+END
+trgContact.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/trgContact.trigger
+END
+VEM_EventDefaultResources.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/VEM_EventDefaultResources.trigger-meta.xml
+END
+tgrOpportunity.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/triggers/tgrOpportunity.trigger-meta.xml
+END

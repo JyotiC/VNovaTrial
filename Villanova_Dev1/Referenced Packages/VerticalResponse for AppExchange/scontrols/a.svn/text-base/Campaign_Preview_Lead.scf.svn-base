@@ -1,0 +1,1 @@
+<iframe src="https://multiforce.verticalresponse.com/campaign/preview_campaign_by_hash.html?campaign={!VR_Email_History_Lead__c.Campaign_Hash__c}&company={!VR_Email_History_Lead__c.Company_Hash__c}" align="left" width="100%" height="100%"></iframe>

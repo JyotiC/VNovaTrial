@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>VerticalResponse email campaign statistics for salesforce.com Contacts</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Bounced__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Bounced indicates that the email sent to the recipient was undeliverable</description>
+        <externalId>false</externalId>
+        <label>Bounced</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Campaign_Hash__c</fullName>
+        <deprecated>false</deprecated>
+        <description>VerticalResponse campaign hash</description>
+        <externalId>false</externalId>
+        <label>Campaign Hash</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Clicked_Links__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The specific links that were clicked will be noted in this section</description>
+        <externalId>false</externalId>
+        <label>Clicked Links</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Clicked__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Clicked indicates that the recipient clicked on at least one link within the email</description>
+        <externalId>false</externalId>
+        <label>Clicked</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Company_Hash__c</fullName>
+        <deprecated>false</deprecated>
+        <description>VerticalResponse company hash</description>
+        <externalId>false</externalId>
+        <label>Company Hash</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Corresponds to the salesforce.com Contact who was sent a VerticalResponse email</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>VR Email History Contact</relationshipLabel>
+        <relationshipName>VR_Email_History_Contact</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Email_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>VerticalResponse email campaign ID</description>
+        <externalId>false</externalId>
+        <label>Email ID</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Type of email campaign sent using VerticalResponse</description>
+        <externalId>false</externalId>
+        <label>Email Type</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>List_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Corresponds to the type of mailing list used for the email campaign</description>
+        <externalId>false</externalId>
+        <label>List Type</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mail_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the date and time the email campaign was launched</description>
+        <externalId>false</externalId>
+        <label>Mail Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Opened__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Opened indicates that the recipient opened the HTML version of the email campaign</description>
+        <externalId>false</externalId>
+        <label>Opened</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Sent indicates the recipient was included on the mailing list at the time of launch</description>
+        <externalId>false</externalId>
+        <label>Sent</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Unsubscribed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Unsubscribed indicates the recipient opted-out of the email campaign</description>
+        <externalId>false</externalId>
+        <label>Unsubscribed</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>VR Email History Contact</label>
+    <nameField>
+        <label>Email Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>VR Email History Contact</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

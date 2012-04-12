@@ -1,0 +1,164 @@
+<apex:page standardController="Campaign" extensions="extAttendeeGroups" showHeader="true">
+    <apex:form id="frm">
+        <apex:pageBlock id="pb" title="Attendee Groups - {!camp.Name}">
+            <apex:pageBlockButtons location="top">
+                <apex:outputPanel rendered="{!Not(IsFullScreen)}">
+                &nbsp;&nbsp;<b><a href="/apex/AttendeeGroups?full=true&id={!camp.Id}" target="_top">Manage Groups</a></b>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!IsFullScreen}">
+                &nbsp;&nbsp;<b><a href="/{!camp.Id}" target="_top">Return to Event</a></b>
+                </apex:outputPanel>
+            </apex:pageBlockButtons>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!SaveGroup}" value="Save and Find Matches" rendered="{!isFullScreen}">
+                    <apex:actionSupport event="onclick" reRender="frm"/>
+                </apex:commandButton>
+            </apex:pageBlockButtons>
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockSection columns="1">
+                <apex:actionRegion >
+                <apex:outputPanel id="opGroups">
+                    <i>Click on a Group name to edit the criteria and view/add Contacts to the Event.</i>
+                    <apex:pageBlockTable value="{!lstGroups}" var="g" style="width:800px;">
+                        
+                        <apex:column headerValue="action">
+                            <apex:commandLink action="{!DelGroup}"><apex:param name="del_group" value="{!g.Id}"/><apex:actionSupport rerender="opAttGroup"/>del</apex:commandLink>
+                        </apex:column>
+                        <apex:column headerValue="Order">{!Text(g.Order__c)}</apex:column>
+                        <apex:column headerValue="Group">
+                            <apex:commandLink action="{!InitAttGroup}" immediate="true"><apex:param name="group" value="{!g.Id}"/><apex:actionSupport rerender="opAttGroup"/> {!g.Short_Name__c}</apex:commandLink>
+                        </apex:column>
+                        <apex:column headerValue="Registration Limit">{!Text(g.Registration_Limit__c)}</apex:column>
+                        <apex:column headerValue="Current Registration">{!Text(g.Current_Registration__c)}</apex:column>
+                        <apex:column headerValue="Wait List Limit">{!Text(g.Wait_List_Limit__c)}</apex:column>
+                        <apex:column headerValue="Current Wait List">{!Text(g.Current_Wait_List__c)}</apex:column>
+                        <apex:column >
+                            <apex:commandLink action="{!MoveUp}" value="up"  reRender="opGroups" rendered="{!(g.Order__c <> 1)}">
+                                <apex:actionSupport rerender="opGroups"/>
+                                <apex:param name="up_group" value="{!g.Id}" />
+                                
+                            </apex:commandLink>
+                        &nbsp;
+                            <apex:commandLink action="{!MoveDown}"  value="down" reRender="opGroups" rendered="{!(g.Order__c <> intMaxOrder)}">
+                                <apex:actionSupport rerender="opGroups"/>
+                                <apex:param name="down_group" value="{!g.Id}" />
+                                
+                            </apex:commandLink>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                   
+                    <apex:commandButton action="{!NewGroup}" value="New Group" rendered="{!isFullScreen}"/>
+                </apex:outputPanel>
+                </apex:actionRegion>
+            </apex:pageBlockSection>
+            <apex:outputPanel rendered="{!isFullScreen}" id="opAttGroup">
+                <br/>
+                <h1>New / Edit Attendee Group</h1>
+                <br/>
+                <apex:pageBlockSection >
+                    
+                    <apex:pageBlockSectionItem >
+                        Group Name
+                        <apex:inputField value="{!grp.Short_Name__c}" required="true"/>
+                    </apex:pageBlockSectionItem>
+                    &nbsp;
+                    <apex:pageBlockSectionItem >
+                        Registration Limit
+                        <apex:inputField value="{!grp.Registration_Limit__c}" required="true"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        Wait List Limit
+                        <apex:inputField value="{!grp.Wait_List_Limit__c}" required="true"/>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="1" id="pbsCriteria">
+                    Leave the fields and logic below blank to create a catch-all group for everyone.
+                    <div style="width:700px;">
+                    <table style="width:700px;"><tr>
+                        <th>Field</th>
+                        <th>Operator</th>
+                        <th>Value</th>
+                        <th>&nbsp;</th>
+                        </tr>
+                        <apex:repeat value="{!lstCrit}" var="crit">
+                            <tr>
+                            <td style="width:300px;">
+                                <apex:outputPanel >{!Text(crit.Order)}&nbsp;<apex:selectList value="{!crit.Field}" size="1" >
+                                    <apex:selectOptions value="{!Fields}"></apex:selectOptions>
+                                    
+                                </apex:selectList></apex:outputPanel>
+                            </td>
+                            <td style="width:200px;">
+                                <apex:selectList value="{!crit.Operator}" size="1">
+                                    <apex:selectOptions value="{!Operators}"></apex:selectOptions>
+                                </apex:selectList>
+                                
+                            </td>
+                            <td style="width:200px;">
+                                <apex:inputText value="{!crit.Value}"/>
+                            </td>
+                            <td>&nbsp;
+                            </td>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                    </div>
+                    <apex:pageBlockSectionItem >
+                        Logic
+                        <apex:inputField value="{!grp.Boolean__c}" style="width:500px;"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:selectRadio value="{!strAddOption}">
+                            <apex:selectOptions value="{!AddOptions}"></apex:selectOptions>
+                            <apex:actionSupport event="onchange" rerender="opContacts"/>
+                        </apex:selectRadio>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <i>Only Contacts that have not already members of the Event will be added / available to add.</i>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            </apex:pageBlock>
+            <apex:outputPanel id="opContacts" rendered="{!And(strAddOption = 'Some', isFullScreen)}">
+                <apex:pageBlock >
+                <apex:pagemessages ></apex:pagemessages>
+                <apex:pageBlockButtons location="top">
+                    Add Selected Contacts to Event with Status:
+                    <apex:selectList size="1" value="{!strStat}">
+                        <apex:selectOptions value="{!Statuses}"></apex:selectOptions>
+                    </apex:selectList>
+                    <apex:commandButton value="Add" action="{!AddToEvent}" reRender="opContacts"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection title="Matching Contacts">
+                    <apex:dataTable value="{!lstMatches}" var="m" width="600">
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:inputCheckbox value="{!SelectAll}">
+                                    <apex:actionSupport event="onclick" action="{!SelectAllMatches}" rerender="opContacts"/>
+                                </apex:inputCheckbox>
+                            </apex:facet>
+                            <apex:inputCheckbox value="{!m.isSelected}"/>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Last Name</apex:facet>
+                            <a href="/{!m.con.Id}">{!m.con.LastName}</a>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">First Name</apex:facet>
+                            {!m.con.FirstName}
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Phone</apex:facet>
+                            {!m.con.Phone}
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">Email</apex:facet>
+                            {!m.con.Email}
+                        </apex:column>
+                    </apex:dataTable>
+                </apex:pageBlockSection>
+                </apex:pageBlock>
+        </apex:outputPanel>
+        
+    </apex:form>
+</apex:page>

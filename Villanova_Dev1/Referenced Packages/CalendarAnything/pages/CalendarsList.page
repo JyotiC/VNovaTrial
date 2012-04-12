@@ -1,0 +1,59 @@
+<apex:page controller="SLCA2.CA_ListController" sidebar="false">
+
+<c:CalendarAnythingCreator AddButtonsClass="dlg_add_btn" 
+	EditButtonsClass="dlg-edit-btn"
+	deleteButtonsClass="delete-edit-btn" 
+	/>
+ 
+<apex:sectionHeader title="Calendars Control" subtitle="for {!$User.FirstName} {!$User.LastName}"/>
+<apex:form >
+<apex:pageBlock title="Calendar List ({!AlLCalendarsCount})" id="pbList">
+    <apex:facet name="header">
+        <div class="pbHeader">
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                <tr> 
+                    <td class="pbTitle" width="160px">
+                        <h2 class="mainTitle">Calendar List ({!AllCalendarsCount})</h2>
+                    </td>
+                    <td>
+                       <!--  <input type="button" id="dlg_add_btn" class="dlg_add_btn ui-button ui-state-default ui-corner-all" value="New"/>-->
+                       <input type="button" onclick="document.location.href='/apex/CalendarNewBtn'" class="ui-button ui-state-default ui-corner-all" value="New"/>
+                       &nbsp;&nbsp;&nbsp;
+                       <input type="button" onclick="window.location = '/apex/calendarAnything';" id="go_to_calendars_btn" name="go_to_calendars_btn" class="ui-button ui-state-default ui-corner-all text-size" value="Go to Calendars" />
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+    	</div> 
+    </apex:facet>
+    <apex:pageMessages />
+    <apex:pageBlockTable value="{!AllCalendars}" var="r" rendered="true" >
+      <apex:column >
+        <apex:facet name="header">
+            <apex:outputText >Action</apex:outputText> 
+        </apex:facet>
+        <apex:outputPanel id="thePanel" rendered="{!($User.Id == r.OwnerId) || isAdministrator}">
+		<a href="/apex/CalendarEditBtn?cid={!r.ID}" >Edit</a>  
+        &nbsp;|&nbsp;
+		<a href="/apex/CalendarNewBtn?cid={!r.ID}" >Clone</a>  
+        &nbsp;|&nbsp;
+        <a href="#" id="dlg_delete_btn_{!r.ID}" class="delete-edit-btn" cid="{!r.ID}" >Del</a>      
+         </apex:outputPanel>
+        </apex:column>       
+        <apex:column >
+            <apex:facet name="header">
+                <apex:outputText >Name</apex:outputText>
+            </apex:facet>
+			<a href="/apex/CalendarAnything?cid={!r.id}">{!r.Name}</a>
+        </apex:column>
+        <apex:column headerValue="Object" value="{!r.SLCA2__targetObjectName__c}" />
+        <apex:column headerValue="Ownership Filter" value="{!r.SLCA2__ownershipFilter__c}" />
+        <apex:column headerValue="Event Label Field" value="{!r.SLCA2__eventLabelFieldName__c}" />
+        <apex:column headerValue="Event Start Field" value="{!r.SLCA2__eventStartFieldName__c}" />
+        <apex:column headerValue="Event End Field" value="{!r.SLCA2__eventEndFieldName__c}" />
+      </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+
+</apex:page>

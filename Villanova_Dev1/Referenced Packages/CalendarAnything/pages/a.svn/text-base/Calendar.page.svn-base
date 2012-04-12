@@ -1,0 +1,100 @@
+<apex:page >
+
+<apex:stylesheet value="{!URLFOR($Resource.SLCA2__Calendar, 'fullcalendar/fullcalendar.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.SLCA2__Calendar, 'fullcalendar/dragdealer/dragdealer.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.SLCA2__Calendar, 'fullcalendar/dragdealer/dragdealer-main.css')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__Calendar, 'jquery/jquery-1.4.4.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__Calendar, 'jquery/jquery-ui-1.8.6.custom.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__Calendar, 'fullcalendar/fullcalendar.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__Calendar, 'fullcalendar/dragdealer/dragdealer.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__Calendar, 'fullcalendar/dragdealer/dragdealer-main.js')}"/>
+
+<script>
+
+	$(document).ready(function() {
+		
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			editable: true,
+			events: [
+				{
+					title: 'All Day Event',
+					start: new Date(y, m, 1)
+				},
+				{
+					title: 'Long Event',
+					start: new Date(y, m, d-5),
+					end: new Date(y, m, d-2)
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d-3, 16, 0),
+					allDay: false
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d+4, 16, 0),
+					allDay: false
+				},
+				{
+					title: 'Meeting',
+					start: new Date(y, m, d, 10, 30),
+					allDay: false
+				},
+				{
+					title: 'Lunch',
+					start: new Date(y, m, d, 12, 0),
+					end: new Date(y, m, d, 14, 0),
+					allDay: false
+				},
+				{
+					title: 'Birthday Party',
+					start: new Date(y, m, d+1, 19, 0),
+					end: new Date(y, m, d+1, 22, 30),
+					allDay: false
+				},
+				{
+					title: 'Click for Google',
+					start: new Date(y, m, 28),
+					end: new Date(y, m, 29),
+					url: 'http://google.com/'
+				}
+			]
+		});
+		
+		$('.fc-event a').each(function(index) {
+			//alert(index);
+			$(this).attr('id','a-d-'+index);
+			$(this).addClass('dragdealer');
+			new Dragdealer($(this).attr('id'),{vertical:true});
+			//alert($(this).attr('id'));
+		});
+		//$('.fc-event').css('border','3px solid red');
+		
+	});
+
+</script>
+
+<style type='text/css'>
+
+	#calendar {
+		width: 900px;
+		margin: 0 auto;
+		}
+
+</style>
+
+<div id='calendar'></div>
+
+</apex:page>

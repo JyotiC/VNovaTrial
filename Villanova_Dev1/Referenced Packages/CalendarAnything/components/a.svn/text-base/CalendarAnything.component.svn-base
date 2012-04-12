@@ -1,0 +1,152 @@
+<apex:component controller="SLCA2.CA_Controller">
+ 
+<apex:attribute name="CalendarsListContainerId"  
+        type="string" 
+        description="The id of container, created to hold list of all calendars"
+        required="true" /> 
+<apex:attribute name="GroupsListContainerId"                      
+        type="string" 
+        description="The id of container, created to hold list of groups"
+        /><!-- required="true"  waiting for a better times. Unused now-->
+        
+<apex:attribute name="FullCalendarContainerId"  
+        type="string" 
+        description="The id of container, created to hold full calendar"
+        required="true" />
+        
+<apex:attribute name="MessageBoxContainerId"  
+        type="string" 
+        description="The id of container, created to hold status bar. By default shows under calendars list"
+        required="false" />
+<apex:attribute name="ButtonEditCalendarsVisibilityId"   
+        type="string" 
+        description="The id of button created to open restrict visibility dialog"
+        default="" />
+        
+<apex:attribute name="CalendarsCookieName"  
+        type="string" 
+        description="The Name of cookie to hold information about checked calendars"
+        default="Calendar_Cookie_"/>
+<apex:attribute name="GroupsCookieName"  
+        type="string" 
+        description="The Name of cookie to hold information about checked groups"
+        default="Calendar_Group_Cookie_"/>
+        
+ <!--  <apex:attribute name="Data"  
+        type="string" 
+        description="The data to initiate widget(information about calendars)"
+        default=""/> -->
+<!-- 
+<apex:attribute name="LoadDataUrl"  
+        type="string" 
+        description="Url to load the data to initiate widget"
+        default=""/>
+<apex:attribute name="saveSelectedUrl"  
+        type="string" 
+        description="Url to save changing, provided by user"
+        required="true"/>
+        
+<apex:attribute name="jsonResponsesUrl"  
+        type="string" 
+        description="Url to load any data need to display on widget"
+        required="true"/>
+<apex:attribute name="TooltipPage"   
+        type="string" 
+        description="Url to load tooltips"
+        required="true"/>
+        
+<apex:attribute name="SaveColorAction"    
+        type="string" 
+        description="Colors save action name"
+        default=""/>
+<apex:attribute name="SaveCalendarsAction"   
+        type="string" 
+        description="Save visible calendars to server action name"
+        default=""/>
+<apex:attribute name="GetEventsAction"   
+        type="string" 
+        description="Get calendars action name"
+        default=""/>-->
+<apex:stylesheet value="{!URLFOR($Resource.SLCA2__CalendarAnything, '/themes/standard/css/theme.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'css/fullcalendar.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'colorPicker/colorPickerManagerStyles.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'css/calendarControllerStyles.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'css/uibox.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'popFrames/popFramesStyles.css')}"/>
+ 
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'js/jquery-1.5.2.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'js/jquery-ui-1.8.11.custom.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'js/jquery.ui.datepicker.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'js/ui.timepicker.js')}"/> 
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'js/panels-ui-1.0.js')}"/> 
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'colorPicker/colorPickerManager.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'popFrames/popFramesScript.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'js/date.format.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'fullcalendar.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.SLCA2__CalendarAnything, 'calendarController.js')}"/>
+<script type="text/javascript">
+                jQuery(document).ready(function() {
+                        var i = 0;
+                        jQuery("#{!FullCalendarContainerId}").calendarController({
+                                data : {!InitialData},
+                                 
+                                saveSelectedUrl : '{!EventHandlerPageName}',
+                                jsonResponsesUrl : '{!AjaxResponsePageName}', 
+                                TooltipPage : '{!EventDetailPageName}',
+                                
+                                calendarsListContainerId : '{!CalendarsListContainerId}', 
+                                messageContainerId : '{!MessageBoxContainerId}',
+                                /*calendarGroupsListContainerId : '{!GroupsListContainerId}',*/    //for a better times
+                                
+                                userId : '{!UserId}',
+                                userName : '{!UserName}',
+                                sessionToken : '{!SessionToken}',
+                                CalendarsCookieName : '{!CalendarsCookieName}',
+                                /*GroupsCookieName : '{!GroupsCookieName}',*/
+                                
+                                timeFormat : 'h(:mm)tt',
+                                
+                                more : 0,
+                                 
+                                EventNameSaveColor : '{!EventNameColorSave}',
+                                EventNameSaveVisibility : '{!EventNameVisibilitySave}',
+                                EventNameGetCalendarJson : '{!EventNameEventsGet}',
+                                EventNameMoveEvent : '{!EventNameMoveSet}',
+                                EventNameResizeEvent : '{!EventNameResizeSet}',
+                        		EventNameCreateAction : '{!EventNameCreateAction}',
+                                EventNameGetCalendarInfo : '{!EventNameGetCalendarInfo}',
+                                EventPicklistLoad : '{!EventNameFiltersLoad}',
+                
+                
+                                GetParamNameEvent : '{!GetParameterNameEvent}',
+                                GetParamNameCalID : '{!GetParameterNameCID}',
+                                GetParamNameToken : '{!GetParameterNameToken}',
+                                GetParamNameColor : '{!GetParameterNameColor}',
+                                GetParamNameObjType : '{!GetParameterNameObjName}',  
+                                GetParamNameObjName : '{!GetParameterNameObjName}',
+                                GetParamNameObjID : '{!GetParameterNameObjId}',
+                                GetParamNameVisible : '{!GetParameterNameSelectedIDs}',
+                                GetParamNameMDelta : '{!GetParameterNameMDelta}',
+                                GetParamNameDDelta : '{!GetParameterNameDDelta}',
+                                GetParamNameFields : '{!GetParameterNameNecessaryFields}',
+                                GetParamNamePicklist : '{!GetParameterNamePicklist}'
+                        });
+                        if("{!ButtonEditCalendarsVisibilityId}" != "")
+                        {
+                                jQuery("#{!ButtonEditCalendarsVisibilityId}").bind("click",function(){
+                                        jQuery("#{!FullCalendarContainerId}").calendarController("openCalendarsSelector");
+                                });
+                                jQuery("#dlg_visible_open_lnk").bind("click",function(){
+                                        jQuery("#{!FullCalendarContainerId}").calendarController("openCalendarsSelector");
+                                });
+                        }
+                        var view = '{!HTMLENCODE(view)}';
+                        if (view == 'w') {
+                        	jQuery("div.fc-button-agendaWeek").trigger("click");
+                        }
+                        if (view == 'd') {
+                        	jQuery("div.fc-button-agendaDay").trigger("click");
+                        }
+});
+</script>
+</apex:component>

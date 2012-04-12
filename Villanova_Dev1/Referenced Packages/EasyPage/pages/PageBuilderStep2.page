@@ -1,0 +1,90 @@
+<!-- 
+/*
+Copyright (c) 2009 Etherios LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, is not permitted.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, 
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+ -->
+<apex:page standardController="Document" extensions="EasyPage.PageBuilderCon" tabStyle="EasyPage__tab" sidebar="true" action="{!checkPage}">  
+    <apex:styleSheet value="{!URLFOR($Resource.EasyPage__yui,'skin.css')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.EasyPage__yui,'yahoo-dom-event.js')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.EasyPage__yui,'container-min.js')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.EasyPage__yui,'animation-min.js')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.EasyPage__yui,'dragdrop-min.js')}"/> 
+    <apex:includeScript value="{!$Resource.EasyPage__yui_etherios}"/> 
+    
+    <apex:sectionHeader title="Etherios EasyPage Wizard" subtitle="Step 2. Select Visualforce Page Type"/>
+    
+    <apex:form >   
+        <apex:pageBlock title="{!OBJECTNAME} Page" id="pb" mode="edit" helpTitle="EasyPage Help" helpURL="http://www.etherios.com/site_support_knowledgebase"> 
+            <apex:pageBlockButtons >
+            	<apex:commandButton value="Previous" action="{!step1}"/>
+            	<apex:commandButton value="Save" action="{!createPage}" style="margin-left: 2em;"/>              
+            </apex:pageBlockButtons>
+            <apex:pageMessages />
+            <apex:pageBlockSection collapsible="false" title="Step 2. Choose a Page Type" columns="2">
+            	<apex:pageBlockSectionItem helptext="Required; 40 character max">
+            		<apex:outputLabel value="Page Name"/>
+            		<apex:inputText value="{!pageName}" maxlength="40"/>
+            	</apex:pageBlockSectionItem>
+            	<apex:pageBlockSectionItem />
+            	<apex:pageBlockSectionItem >
+            		<apex:outputLabel value="Page Type" for="pageTypes"/>
+	            	<apex:selectRadio value="{!selectedPageType}" layout="pageDirection" id="pageTypes">
+	            		<apex:selectOptions value="{!pageTypes}"/>
+	            		<apex:actionSupport event="onchange" action="{!generate}" reRender="pb"
+	            				onsubmit="YAHOO.etherios.showLoader();"
+		                        oncomplete="YAHOO.etherios.hideLoader();"
+		                />
+	            	</apex:selectRadio>	
+            	</apex:pageBlockSectionItem>
+            	<apex:pageBlockSectionItem >
+            		<apex:outputLabel value="Markup Viewer" for="markupSettings"/>
+            		<apex:outputPanel id="markupSettings">            		
+		            	<apex:inputCheckBox id="showPage" value="{!showPage}">
+		            		<apex:actionSupport event="onchange" reRender="pagePanel,pb" 
+		            		onsubmit="YAHOO.etherios.showLoader();"
+	                        oncomplete="YAHOO.etherios.hideLoader();"
+	                        />
+		            	</apex:inputCheckBox>
+		            	<apex:outputLabel for="showPage" value="Show Page Markup" />
+		            	<br/>		            	
+		            	<apex:inputCheckBox id="editPage" value="{!editPage}" disabled="{!NOT(showPage)}">
+		            		<apex:actionSupport event="onchange" reRender="pagePanel" />
+		            	</apex:inputCheckBox>
+		            	<apex:outputLabel for="editPage" value="Edit Page Markup" />
+	            	</apex:outputPanel>		
+            	</apex:pageBlockSectionItem>
+            	<apex:pageBlockSectionItem /> 		
+            </apex:pageBlockSection>
+            <apex:outputPanel id="pagePanel"> 
+	            <apex:pageBlockSection collapsible="false" rendered="{!showPage}" title="Generated Visualforce Markup" id="pageSection" columns="1">     	            
+	            	<apex:inputTextArea value="{!thePage}" readonly="{!NOT(editPage)}" id="pageCode" rows="{!numLines}" style="width: 90%" />             			          		
+	            </apex:pageBlockSection>         
+	        </apex:outputPanel>
+        </apex:pageBlock> 
+    </apex:form>
+    <div id="loader" style="display: none">
+    	<div name="header" class="hd">
+    		Rendering...
+    	</div>
+    	<div name="body" class="bd">
+	        <apex:outputPanel id="loaderPanel">
+	            <apex:image value="{!$Resource.EasyPage__loader}" />
+	        </apex:outputPanel>
+        </div>
+    </div>
+</apex:page>

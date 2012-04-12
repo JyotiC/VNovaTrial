@@ -1,0 +1,73 @@
+<apex:component controller="ctrlDynamicField">
+
+	<apex:attribute name="fieldid" description="This is ID value of the Field to be used for component." assignTo="{!strField}" type="String" required="true"/>
+	<apex:attribute name="value" description="" type="String" required="true"></apex:attribute>
+	<apex:attribute name="boo" description="" type="Boolean" required="true"></apex:attribute>
+	<apex:attribute name="attach" description="" type="Blob" required="true"></apex:attribute>
+	<apex:attribute name="defaultvalue" description="This is value of the Field." type="String" assignTo="{!strDefaultValue}" default=""></apex:attribute>
+	<apex:attribute name="datatype" description="Value from DescribeFieldResult, with 'Schema.DisplayType.' removed." type="String" required="true"></apex:attribute>
+	<apex:attribute name="textval" description="" type="String" required="false"></apex:attribute>
+	<apex:attribute name="campaignid" description="" type="String" required="true" assignTo="{!strCamp}"></apex:attribute>
+	 
+	<!-- DATE -->
+	<apex:outputpanel rendered="{!Or(datatype='DATE',datatype='DATETIME')}">
+		<SCRIPT src="{!URLFOR($Resource.jQuery)}" type="text/javascript" />
+		<SCRIPT src="{!URLFOR($Resource.jQuery)}" type="text/javascript" />
+		<apex:stylesheet value="{!URLFOR($Resource.jQuery_UI_DatePicker,'/jquery.datepick.css')}" /> 
+		<SCRIPT src="{!URLFOR($Resource.jQuery_UI_DatePicker,'/jquery.datepick.js')}" type="text/javascript" />
+	
+		
+		<apex:inputText styleClass="{!fieldid}_dtClass" id="datePicker" value="{!value}" style="font-size:12px;width:80px;"></apex:inputText>
+	
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".{!fieldid}_dtClass").datepick({ 
+				    showOn: "both", 
+				    buttonImage: "{!URLFOR($Resource.jQuery_UI_DatePicker,'/calendar-blue.gif')}", 
+				    buttonImageOnly: true,
+				    buttonText: "calendar",
+				    dateFormat: 'mm/dd/yy'
+				});
+			});
+		</script>
+	</apex:outputpanel>
+	
+	<!-- PICKLIST-->
+	<apex:outputpanel rendered="{!Or(datatype='PICKLIST',datatype='MULTIPICKLIST')}">
+		<apex:selectList value="{!value}" multiselect="{!if(datatype='MULTIPICKLIST',true,false)}" size="{!if(datatype='MULTIPICKLIST',3,1)}">
+			<apex:selectOptions value="{!SelectOpts}"/>
+		</apex:selectList>
+	</apex:outputpanel>
+	
+	<!-- PICKLIST-->
+	<apex:outputpanel rendered="{!datatype='BOOLEAN'}">
+		<apex:inputCheckbox value="{!boo}"/>
+	</apex:outputpanel>
+	
+	<!-- ATTACHMENT -->
+	<apex:outputpanel rendered="{!datatype='Attachment'}">
+		<apex:inputFile value="{!attach}" filename="{!value}"></apex:inputFile>
+	</apex:outputpanel>
+	
+	<!-- HEADING -->
+	<apex:outputpanel rendered="{!datatype='Heading'}">
+	<p class="vu__Heading_3">{!textval}</p>
+	</apex:outputpanel>
+	
+	<!-- Line -->
+	<apex:outputpanel rendered="{!datatype='Line'}">
+		<hr color="#AFCE7B" width="100%" size="1"/>
+	</apex:outputpanel>
+	
+	<!-- TEXT -->
+	<apex:outputpanel rendered="{!datatype='Descrip'}">
+	<p>{!textval}</p>
+	</apex:outputpanel>
+	
+	<!-- TEXT FOR ALL ELSE-->
+	<apex:outputpanel rendered="{!Not(Or(datatype='Line',datatype='Descrip',datatype='Heading',datatype='BOOLEAN',datatype='Attachment',datatype='DATE',datatype='DATETIME',datatype='PICKLIST',datatype='MULTIPICKLIST'))}">
+		
+		<apex:inputText id="txtfield" value="{!value}" style="font-size:12px;width:{!if(datatype='TEXTAREA','400px;height:60px','200px')};"></apex:inputText>
+		
+	</apex:outputpanel>
+</apex:component>

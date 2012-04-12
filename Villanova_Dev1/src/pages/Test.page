@@ -1,0 +1,4 @@
+<apex:page id="page" standardController="Campaign" extensions="extRegistration" action="{!AllLeadFields}" showHeader="false" sidebar="false">
+    
+   <apex:iframe src="https://c.cs1.visual.force.com/apex/EventRegistration?event=6JuIEHYoeOpWNYezrrem0g_3D_3D"/>
+</apex:page>

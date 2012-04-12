@@ -1,0 +1,773 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes
+END
+JsonString.cls
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonString.cls
+END
+JsonObject.cls
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonObject.cls
+END
+CA_ParentController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_ParentController.cls
+END
+test_CA_ListController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_CA_ListController.cls-meta.xml
+END
+CA_AdditionalFieldFilters.cls
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_AdditionalFieldFilters.cls
+END
+Test_CA_Shares.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_Shares.cls-meta.xml
+END
+IJSonProperty.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/IJSonProperty.cls-meta.xml
+END
+JsonListAbstract.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonListAbstract.cls-meta.xml
+END
+test_FilterSoqlCompiler.cls
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_FilterSoqlCompiler.cls
+END
+IPropertyDescribe.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/IPropertyDescribe.cls-meta.xml
+END
+CA_Options.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Options.cls-meta.xml
+END
+FilterSet.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/FilterSet.cls-meta.xml
+END
+CA_EventHandlerController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_EventHandlerController.cls
+END
+CA_Test_DataLayer.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Test_DataLayer.cls-meta.xml
+END
+CA_Filters.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Filters.cls-meta.xml
+END
+Test_CA_CalendarToUserConnector.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_CalendarToUserConnector.cls-meta.xml
+END
+CA_JsonCompilerUtils.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_JsonCompilerUtils.cls-meta.xml
+END
+Test_CA_EventHoverController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_EventHoverController.cls-meta.xml
+END
+CA_Groups.cls
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Groups.cls
+END
+CA_EventWrapper.cls
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_EventWrapper.cls
+END
+StringUtils.cls
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/StringUtils.cls
+END
+CA_FieldWrapper.cls
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_FieldWrapper.cls
+END
+CA_Shares.cls
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Shares.cls
+END
+test_FilterSoqlCompiler.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_FilterSoqlCompiler.cls-meta.xml
+END
+test_CA_JsonCompiler.cls
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_CA_JsonCompiler.cls
+END
+CA_EventWrapper.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_EventWrapper.cls-meta.xml
+END
+JsonNameArray.cls
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonNameArray.cls
+END
+CA_EventHandlerController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_EventHandlerController.cls-meta.xml
+END
+CA_DataLayer.cls
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_DataLayer.cls
+END
+CA_Filters.cls
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Filters.cls
+END
+CA_CalendarToUserConnector.cls
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_CalendarToUserConnector.cls
+END
+Test_CA_EventHoverController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_EventHoverController.cls
+END
+test_CalendarAnything_pageController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_CalendarAnything_pageController.cls-meta.xml
+END
+Test_CA_Filters.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_Filters.cls-meta.xml
+END
+CA_UnitTests.cls
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_UnitTests.cls
+END
+Test_JsonNameValue.cls
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_JsonNameValue.cls
+END
+JsonNameValue.cls
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonNameValue.cls
+END
+CA_JsonCompiler.cls
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_JsonCompiler.cls
+END
+Test_CA_Fields.cls
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_Fields.cls
+END
+Test_CA_DataLayer.cls
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_DataLayer.cls
+END
+CA_CalendarWrapper.cls
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_CalendarWrapper.cls
+END
+IJsonList.cls
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/IJsonList.cls
+END
+DescribedCore_Test.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/DescribedCore_Test.cls-meta.xml
+END
+EnumObjectTypes.cls
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/EnumObjectTypes.cls
+END
+test_CA_ListController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_CA_ListController.cls
+END
+JsonString.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonString.cls-meta.xml
+END
+JsonObject.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonObject.cls-meta.xml
+END
+CA_ParentController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_ParentController.cls-meta.xml
+END
+JsonNameString.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonNameString.cls-meta.xml
+END
+JsonNameObject.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonNameObject.cls-meta.xml
+END
+CA_Trace.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Trace.cls-meta.xml
+END
+Test_StringUtils.cls
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_StringUtils.cls
+END
+CA_UnitTests.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_UnitTests.cls-meta.xml
+END
+test_CA_JsonCompiler.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_CA_JsonCompiler.cls-meta.xml
+END
+JsonListAbstract.cls
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonListAbstract.cls
+END
+CA_AdditionalFieldFilters.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_AdditionalFieldFilters.cls-meta.xml
+END
+test_CA_CalendarRemoveConnection.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_CA_CalendarRemoveConnection.cls-meta.xml
+END
+CA_Fields.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Fields.cls-meta.xml
+END
+DescribedCore_Test.cls
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/DescribedCore_Test.cls
+END
+CA_Security.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Security.cls-meta.xml
+END
+CA_JsonFormattingObject.cls
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_JsonFormattingObject.cls
+END
+test1.cls
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test1.cls
+END
+Test_CA_Trace.cls
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_Trace.cls
+END
+CA_CalendarWrapper.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_CalendarWrapper.cls-meta.xml
+END
+FilterSet.cls
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/FilterSet.cls
+END
+CA_ListController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_ListController.cls-meta.xml
+END
+FilterSoqlCompiler_NotVirtual.cls
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/FilterSoqlCompiler_NotVirtual.cls
+END
+CA_JSInitController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_JSInitController.cls
+END
+JsonArray.cls
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonArray.cls
+END
+StringUtils.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/StringUtils.cls-meta.xml
+END
+CA_FieldWrapper.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_FieldWrapper.cls-meta.xml
+END
+CA_AjaxResponceController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_AjaxResponceController.cls-meta.xml
+END
+FilterSoqlCompiler.cls
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/FilterSoqlCompiler.cls
+END
+CA_EventHoverController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_EventHoverController.cls-meta.xml
+END
+CA_Controller.cls
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Controller.cls
+END
+Test_JsonNameValue.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_JsonNameValue.cls-meta.xml
+END
+CA_EventHoverController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_EventHoverController.cls
+END
+DescribedCore.cls
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/DescribedCore.cls
+END
+CalendarAnything_pageController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CalendarAnything_pageController.cls-meta.xml
+END
+IJsonList.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/IJsonList.cls-meta.xml
+END
+JsonValue.cls
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonValue.cls
+END
+CA_Test_DataLayer.cls
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Test_DataLayer.cls
+END
+Test_StringUtils.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_StringUtils.cls-meta.xml
+END
+test_CalendarAnything_pageController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_CalendarAnything_pageController.cls
+END
+Test_CA_Filters.cls
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_Filters.cls
+END
+CA_Shares.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Shares.cls-meta.xml
+END
+DescribedCore.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/DescribedCore.cls-meta.xml
+END
+CA_JsonFormattingObject.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_JsonFormattingObject.cls-meta.xml
+END
+CA_ActionRouterController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_ActionRouterController.cls
+END
+Test_CA_Shares.cls
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_Shares.cls
+END
+IJSonProperty.cls
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/IJSonProperty.cls
+END
+Test_CA_CalendarToUserConnector.cls
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_CalendarToUserConnector.cls
+END
+CA_JsonCompilerUtils.cls
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_JsonCompilerUtils.cls
+END
+FilterSoqlCompiler_NotVirtual.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/FilterSoqlCompiler_NotVirtual.cls-meta.xml
+END
+JsonNameValue.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonNameValue.cls-meta.xml
+END
+CA_JsonCompiler.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_JsonCompiler.cls-meta.xml
+END
+DateUtils.cls
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/DateUtils.cls
+END
+CA_ActionRouterController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_ActionRouterController.cls-meta.xml
+END
+CA_Controller.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Controller.cls-meta.xml
+END
+CA_Security.cls
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Security.cls
+END
+CalendarAnything_pageController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CalendarAnything_pageController.cls
+END
+CA_ListController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_ListController.cls
+END
+JsonValue.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonValue.cls-meta.xml
+END
+CA_JSInitController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_JSInitController.cls-meta.xml
+END
+Test_CA_Fields.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_Fields.cls-meta.xml
+END
+Test_CA_DataLayer.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_DataLayer.cls-meta.xml
+END
+JsonNameArray.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonNameArray.cls-meta.xml
+END
+CA_DataLayer.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_DataLayer.cls-meta.xml
+END
+CA_DataUtils.cls
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_DataUtils.cls
+END
+IPropertyDescribe.cls
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/IPropertyDescribe.cls
+END
+CA_Options.cls
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Options.cls
+END
+JsonNameString.cls
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonNameString.cls
+END
+JsonNameObject.cls
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonNameObject.cls
+END
+CA_Trace.cls
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Trace.cls
+END
+FilterSoqlCompiler.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/FilterSoqlCompiler.cls-meta.xml
+END
+EnumObjectTypes.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/EnumObjectTypes.cls-meta.xml
+END
+CA_Groups.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Groups.cls-meta.xml
+END
+CA_Exceptions.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Exceptions.cls-meta.xml
+END
+test_CA_CalendarRemoveConnection.cls
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test_CA_CalendarRemoveConnection.cls
+END
+CA_Fields.cls
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Fields.cls
+END
+CA_CalendarToUserConnector.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_CalendarToUserConnector.cls-meta.xml
+END
+CA_DataUtils.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_DataUtils.cls-meta.xml
+END
+DateUtils.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/DateUtils.cls-meta.xml
+END
+test1.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/test1.cls-meta.xml
+END
+Test_CA_Trace.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/Test_CA_Trace.cls-meta.xml
+END
+CA_Exceptions.cls
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_Exceptions.cls
+END
+CA_AjaxResponceController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/CA_AjaxResponceController.cls
+END
+JsonArray.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/CalendarAnything/classes/JsonArray.cls-meta.xml
+END

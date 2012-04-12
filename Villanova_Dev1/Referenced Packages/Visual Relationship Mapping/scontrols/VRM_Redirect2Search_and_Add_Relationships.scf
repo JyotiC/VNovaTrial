@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+var contId ='{!Relationship__c.ContactId__c}';
+var accId = '{!Relationship__c.AccountId__c}';
+var leadId = '{!Relationship__c.LeadId__c}';
+var url = '';
+if(contId != null && contId != '')
+{
+url = '../apex/BES_VRM__Search_and_Add_Relationships?id=' + contId + '&type=Contact';
+}
+else if(accId != null && accId != '')
+{
+url = '../apex/BES_VRM__Search_and_Add_Relationships?id=' + accId + '&type=Account';
+}
+else if(leadId != null && leadId != '')
+{
+url = '../apex/BES_VRM__Search_and_Add_Relationships?id=' + leadId + '&type=Lead';
+}
+if(url != '')
+{
+window.parent.location.href = url;
+}
+</script>
+</head>
+</html>

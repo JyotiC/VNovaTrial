@@ -1,0 +1,42 @@
+<!-- 
+/*
+Copyright (c) 2009 Etherios LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, is not permitted.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, 
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+ -->
+<apex:page standardController="Document" extensions="EasyPage.PageBuilderCon" tabStyle="EasyPage__tab" sidebar="true">
+    <apex:sectionHeader title="Etherios EasyPage Wizard" subtitle="Step 1: Choose a Page Layout Meta File"/>
+    <apex:pageMessages />
+    <apex:form > 
+        <apex:pageBlock mode="edit" helpTitle="EasyPage Help" helpURL="http://www.etherios.com/site_support_knowledgebase">
+        	<apex:pageBlockButtons >
+        		<apex:commandButton id="btnLoad" action="{!LoadDocDeleteDoc}" value="Next" />
+        	</apex:pageBlockButtons>
+            <apex:pageBlockSection collapsible="false" title="Step 1. Choose a Page Layout" columns="1">          
+                <apex:pageBlockSectionItem helpText="If your layout is part of a managed package, enter the namespace value of your package here">
+	                	<apex:outputLabel value="Namespace Value (optional)" for="theNamespace" />
+	                	<apex:inputText value="{!theNamespace}" id="theNamespace"/>
+	            </apex:pageBlockSectionItem> 
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Layout File" for="upDoc"/>
+                    <apex:inputFile id="upDoc" value="{!doc.body}" filename="{!doc.name}" accept="text/xml" />
+                </apex:pageBlockSectionItem>      
+                <apex:pageBlockSectionItem />    
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

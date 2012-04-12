@@ -1,0 +1,70 @@
+<apex:page standardController="VEM_Event__c" recordSetVar="events">
+
+    <apex:sectionHeader title="{!$ObjectType.VEM_Event__c.labelPlural}" subtitle="Home" />
+
+    <apex:form >
+
+        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:outputLink value="{!URLFOR($Action.VEM_Event__c.New)}">New Event</apex:outputLink>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:outputLink value="/apex/VEM_Connelly_Today">Today in the Connelly Center</apex:outputLink>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:outputLink value="/apex/VEM_Athletics_Today">Today in Athletics</apex:outputLink>
+        <br /><br /-->
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:commandButton action="{!URLFOR($Action.VEM_Event__c.New)}" value="New {!$ObjectType.VEM_Event__c.label}" title="Creates a new {!$ObjectType.VEM_Event__c.label}" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:commandButton action="/apex/VEM_Connelly_Today" value="Today in the Connelly Center" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:commandButton action="/apex/VEM_Athletics_Today" value="Today in Athletics" />
+        <br /><br />
+
+        <apex:detail subject="{!VEM_Event__c.ownerId}" relatedList="false" title="false" />
+
+        <apex:pageBlock title="">
+            <apex:messages />
+            <apex:pageBlockButtons >
+                <!--apex:commandButton action="{!URLFOR($Action.VEM_Event__c.New)}" value="New {!$ObjectType.VEM_Event__c.label}" /-->
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockTable value="{!events}" var="event">
+                <apex:column headerValue="" width="10px">
+                    <apex:inputCheckbox />
+                </apex:column>
+                <apex:column headerValue="Action" width="60px">
+                    <apex:commandLink action="{!URLFOR($Action.VEM_Event__c.Edit, event.Id)}" style="color:blue" value="Edit" />
+                    |&nbsp;
+                    <apex:commandLink action="{!URLFOR($Action.VEM_Event__c.Delete, event.Id)}" style="color:blue" value="Del" />
+                </apex:column>
+                <apex:column headerValue="Event Name">
+                    <apex:commandLink action="{!URLFOR($Action.VEM_Event__c.View, event.Id)}" value="{!event.Name}" />
+                </apex:column>
+                <apex:column headerValue="Event Type">
+                    <apex:outputText value="{!event.Event_Type__c}" />
+                </apex:column>
+                <apex:column headerValue="Location">
+                    <apex:outputField value="{!event.Event_Location__c}" />
+                </apex:column>
+                <apex:column headerValue="Start Date/Time">
+                    <apex:outputText value="{0, date, M/d/yyyy h:mm a}">
+                        <apex:param value="{!event.Start_Date_Time__c}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="End Date/Time">
+                    <apex:outputText value="{0, date, M/d/yyyy h:mm a}">
+                        <apex:param value="{!event.End_Date_Time__c}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Sponser">
+                    <apex:outputField value="{!event.Event_Sponsor__c}" />
+                </apex:column>
+                <apex:column headerValue="Expected Volume">
+                    <apex:outputText value="{0, Number, ###,###,###}" >
+                        <apex:param value="{!event.Expected_Volume__c}" />
+                    </apex:outputText>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

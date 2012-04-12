@@ -1,0 +1,5 @@
+<apex:page controller="VEM_EventController" tabStyle="VEM_Event__c" showHeader="false" sidebar="false" renderAs="PDF">
+
+    <c:VEM_CcOpRptComponent />
+
+</apex:page>

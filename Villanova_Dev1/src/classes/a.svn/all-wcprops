@@ -1,0 +1,905 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes
+END
+VEMReportMailerTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMReportMailerTest.cls-meta.xml
+END
+SiteRegisterController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SiteRegisterController.cls-meta.xml
+END
+clsConstants.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsConstants.cls-meta.xml
+END
+VEM_MailerUtils.cls
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_MailerUtils.cls
+END
+VEMEmailControllerTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEmailControllerTest.cls
+END
+GoogleDataTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/GoogleDataTest.cls
+END
+VEMEmailController2.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEmailController2.cls-meta.xml
+END
+VEM_VolumeMonitorTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_VolumeMonitorTest.cls-meta.xml
+END
+ForgotPasswordController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ForgotPasswordController.cls-meta.xml
+END
+MassUpdater.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/MassUpdater.cls-meta.xml
+END
+SiteImageBrowser.cls
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SiteImageBrowser.cls
+END
+CalendarServiceTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/CalendarServiceTest.cls-meta.xml
+END
+VEM_LocationTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_LocationTest.cls
+END
+VEM_EventControllerTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_EventControllerTest.cls-meta.xml
+END
+XMLDomTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/XMLDomTest.cls-meta.xml
+END
+VEMEmailController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEmailController.cls-meta.xml
+END
+extAttendance.cls
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extAttendance.cls
+END
+CalendarService.cls
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/CalendarService.cls
+END
+VEM_ScheduleController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_ScheduleController.cls-meta.xml
+END
+AuthSubUtil.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/AuthSubUtil.cls-meta.xml
+END
+VEM_EventControllerTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_EventControllerTest.cls
+END
+DocumentServiceTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/DocumentServiceTest.cls
+END
+SiteLoginController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SiteLoginController.cls
+END
+BatchExecUpdateContactSummary.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/BatchExecUpdateContactSummary.cls-meta.xml
+END
+ContactSummary.cls
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ContactSummary.cls
+END
+SpreadsheetService.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SpreadsheetService.cls-meta.xml
+END
+ctrlTextField.cls
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ctrlTextField.cls
+END
+VEMReportMailer.cls
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMReportMailer.cls
+END
+BloggerService.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/BloggerService.cls-meta.xml
+END
+VEMEMSAPI.cls
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEMSAPI.cls
+END
+XmlEMSReaderTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/XmlEMSReaderTest.cls
+END
+VEM_EventTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_EventTest.cls
+END
+clsFields1.cls
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsFields1.cls
+END
+GoogleDataTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/GoogleDataTest.cls-meta.xml
+END
+clsAttendance.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsAttendance.cls-meta.xml
+END
+clsFunctions.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsFunctions.cls-meta.xml
+END
+ChangePasswordController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ChangePasswordController.cls-meta.xml
+END
+VEMReportMailer.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMReportMailer.cls-meta.xml
+END
+ctrlTextField.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ctrlTextField.cls-meta.xml
+END
+VEMEmailController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEmailController.cls
+END
+clsPageFunctions.cls
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsPageFunctions.cls
+END
+ChangePasswordController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5112/Villanova/Villanova_Dev1/src/classes/ChangePasswordController.cls
+END
+BatchUpdateContactSummary.cls
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/BatchUpdateContactSummary.cls
+END
+VEM_Location.cls
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_Location.cls
+END
+BatchExecUpdateContactSummary.cls
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/BatchExecUpdateContactSummary.cls
+END
+VEM_MailerUtilsTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_MailerUtilsTest.cls-meta.xml
+END
+PDFEmailController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/PDFEmailController.cls
+END
+VEM_TestHelper.cls
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_TestHelper.cls
+END
+DocumentBrowserController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/DocumentBrowserController.cls
+END
+CalendarServiceTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/CalendarServiceTest.cls
+END
+VEM_TestController1.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_TestController1.cls-meta.xml
+END
+DocumentService.cls
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/DocumentService.cls
+END
+Kevin.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/Kevin.cls-meta.xml
+END
+extSelectProcess.cls
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extSelectProcess.cls
+END
+XMLDom.cls
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/XMLDom.cls
+END
+ctrlDatePicker.cls
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ctrlDatePicker.cls
+END
+VEM_LocationTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_LocationTest.cls-meta.xml
+END
+extVREmail.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extVREmail.cls-meta.xml
+END
+VEMCallEMSWebServiceTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMCallEMSWebServiceTest.cls
+END
+clsFields.cls
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsFields.cls
+END
+PDFEmailController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/PDFEmailController.cls-meta.xml
+END
+SiteFileBrowser.cls
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SiteFileBrowser.cls
+END
+VEMEMSAPI.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEMSAPI.cls-meta.xml
+END
+extAttendance.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extAttendance.cls-meta.xml
+END
+SpreadsheetServiceTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SpreadsheetServiceTest.cls-meta.xml
+END
+VEM_Event.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_Event.cls-meta.xml
+END
+XmlEMSReader.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/XmlEMSReader.cls-meta.xml
+END
+Kevin.cls
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/Kevin.cls
+END
+DocumentServiceTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/DocumentServiceTest.cls-meta.xml
+END
+VEMEMSAPITest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEMSAPITest.cls
+END
+GoogleService.cls
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/GoogleService.cls
+END
+ContactService.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ContactService.cls-meta.xml
+END
+BatchUpdateContactSummary.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/BatchUpdateContactSummary.cls-meta.xml
+END
+BloggerService.cls
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/BloggerService.cls
+END
+ImageFile.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ImageFile.cls-meta.xml
+END
+MassUpdateSimpleController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/MassUpdateSimpleController.cls-meta.xml
+END
+VEM_ScheduleControllerTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_ScheduleControllerTest.cls
+END
+AuthSubUtil.cls
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/AuthSubUtil.cls
+END
+DocumentBrowserController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/DocumentBrowserController.cls-meta.xml
+END
+VEM_TestHelper.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_TestHelper.cls-meta.xml
+END
+clsFunctions.cls
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsFunctions.cls
+END
+VEM_TestController1.cls
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_TestController1.cls
+END
+ContactService.cls
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ContactService.cls
+END
+GoogleService.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/GoogleService.cls-meta.xml
+END
+MassUpdateSimpleController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/MassUpdateSimpleController.cls
+END
+VEM_MailerUtils.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_MailerUtils.cls-meta.xml
+END
+VEMCallEMSWS.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMCallEMSWS.cls-meta.xml
+END
+VEM_TestHelperTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_TestHelperTest.cls
+END
+VEM_VolumeMonitor.cls
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_VolumeMonitor.cls
+END
+MassUpdater.cls
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/MassUpdater.cls
+END
+clsPageFunctions.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsPageFunctions.cls-meta.xml
+END
+extAttendeeGroups.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extAttendeeGroups.cls-meta.xml
+END
+XMLDomTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/XMLDomTest.cls
+END
+VEM_Location.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_Location.cls-meta.xml
+END
+VEMCallEMSWebService.cls
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMCallEMSWebService.cls
+END
+VEMEMSAPITest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEMSAPITest.cls-meta.xml
+END
+VEM_EventTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_EventTest.cls-meta.xml
+END
+XmlEMSReaderTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/XmlEMSReaderTest.cls-meta.xml
+END
+extRegistration.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extRegistration.cls-meta.xml
+END
+extSelectProcess.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extSelectProcess.cls-meta.xml
+END
+DocumentService.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/DocumentService.cls-meta.xml
+END
+SiteLoginController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SiteLoginController.cls-meta.xml
+END
+extEvents.cls
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extEvents.cls
+END
+VEMEmailController2Test.cls
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEmailController2Test.cls
+END
+ForgotPasswordController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ForgotPasswordController.cls
+END
+SpreadsheetService.cls
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SpreadsheetService.cls
+END
+VEMCallEMSWebServiceTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMCallEMSWebServiceTest.cls-meta.xml
+END
+ContactSummary.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ContactSummary.cls-meta.xml
+END
+DocumentUtil.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/DocumentUtil.cls-meta.xml
+END
+VEM_MailerUtilsTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_MailerUtilsTest.cls
+END
+GoogleData.cls
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/GoogleData.cls
+END
+MassUpdateSimpleControllerTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/MassUpdateSimpleControllerTest.cls-meta.xml
+END
+FileUpload.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/FileUpload.cls-meta.xml
+END
+VEM_ScheduleController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_ScheduleController.cls
+END
+extEvents.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extEvents.cls-meta.xml
+END
+VEMEmailController2Test.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEmailController2Test.cls-meta.xml
+END
+clsAttendance.cls
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsAttendance.cls
+END
+VEM_TestHelperTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_TestHelperTest.cls-meta.xml
+END
+VEM_VolumeMonitor.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_VolumeMonitor.cls-meta.xml
+END
+clsFields1.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsFields1.cls-meta.xml
+END
+DocumentUtil.cls
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/DocumentUtil.cls
+END
+ctrlDynamicField.cls
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ctrlDynamicField.cls
+END
+CalendarService.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/CalendarService.cls-meta.xml
+END
+clsConstants.cls
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsConstants.cls
+END
+VEM_EventController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_EventController.cls-meta.xml
+END
+ImageFile.cls
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ImageFile.cls
+END
+XMLDom.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/XMLDom.cls-meta.xml
+END
+ctrlDatePicker.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ctrlDatePicker.cls-meta.xml
+END
+FileUpload.cls
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/FileUpload.cls
+END
+MassUpdateSimpleControllerTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/MassUpdateSimpleControllerTest.cls
+END
+VEM_VolumeMonitorTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_VolumeMonitorTest.cls
+END
+VEMEmailControllerTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEmailControllerTest.cls-meta.xml
+END
+VEM_ScheduleControllerTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_ScheduleControllerTest.cls-meta.xml
+END
+clsFields.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/clsFields.cls-meta.xml
+END
+SiteFileBrowser.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SiteFileBrowser.cls-meta.xml
+END
+extRegistration.cls
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extRegistration.cls
+END
+VEM_EventController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_EventController.cls
+END
+SiteImageBrowser.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SiteImageBrowser.cls-meta.xml
+END
+ctrlDynamicField.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/ctrlDynamicField.cls-meta.xml
+END
+VEMCallEMSWS.cls
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMCallEMSWS.cls
+END
+extAttendeeGroups.cls
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extAttendeeGroups.cls
+END
+VEMReportMailerTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMReportMailerTest.cls
+END
+SiteRegisterController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SiteRegisterController.cls
+END
+extVREmail.cls
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/extVREmail.cls
+END
+VEMEmailController2.cls
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMEmailController2.cls
+END
+XmlEMSReader.cls
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/XmlEMSReader.cls
+END
+VEM_Event.cls
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEM_Event.cls
+END
+SpreadsheetServiceTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/SpreadsheetServiceTest.cls
+END
+GoogleData.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/GoogleData.cls-meta.xml
+END
+VEMCallEMSWebService.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/src/classes/VEMCallEMSWebService.cls-meta.xml
+END

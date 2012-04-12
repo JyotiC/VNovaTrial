@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>22.0</apiVersion>
+    <description>Testing jQuery date picker control - Kevin</description>
+    <label>VEM_Test1</label>
+</ApexPage>

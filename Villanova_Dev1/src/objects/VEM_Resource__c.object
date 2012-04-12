@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>List of resources that can be reserved for an event at Villanova University</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Approver__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the person who will approve/reject reservations for this resource (leave blank for auto-approval)</inlineHelpText>
+        <label>Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Resource_Approver</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>External_Contact__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter name, address, phone, website, etc. for this resource</inlineHelpText>
+        <label>External Contact</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Inventory__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the available quantity for this resource</inlineHelpText>
+        <label>Inventory</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resource_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Resource Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Audio-Visual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Catering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Vendor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personnel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Support Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <label>Resource</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Resource_Type__c</columns>
+        <columns>Approver__c</columns>
+        <columns>External_Contact__c</columns>
+        <columns>Inventory__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Resource Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Resources</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Resource_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Approver__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>External_Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Inventory__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Resource_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>External_Contact__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Inventory_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>Inventory__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>Inventory__c</errorDisplayField>
+        <errorMessage>Value must be a positive number</errorMessage>
+    </validationRules>
+</CustomObject>

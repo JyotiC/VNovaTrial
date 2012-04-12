@@ -1,0 +1,67 @@
+<apex:component >
+</td><!-- standard.html -->
+                        </tr>
+                    </table>
+                    </td>
+                </tr>
+            </table>
+            </td>
+            </tr>
+        
+            <tr>
+                <td id="bottomShadow" colspan="3">
+                <table cellspacing="0">
+                    <tr class="printerFriendly">
+                        <td id="bottomShadowLeft"><img
+                            src="{!URLFOR($Resource.WebFiles, '/assets/images/shadow_bottom_left.jpg')}"
+                            width="11" height="9"/></td>
+                        <td id="bottomShadowRight"><img
+                            src="{!URLFOR($Resource.WebFiles, '/assets/images/shadow_bottom_right.jpg')}"
+                            width="11" height="9"/></td>
+                    </tr>
+                </table>
+                </td>
+        
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td id="footer" colspan="2">
+        
+        
+                <table cellspacing="0">
+                    <tr>
+                        <td height="25" class="footerText"><a
+                            href="http://www.villanova.edu/homepage/index_az/"
+                            class="whiteLinks">Site Index</a> | <a
+                            href="http://www.villanova.edu/homepage/contact/"
+                            class="whiteLinks">Contact VU</a> | <a
+                            href="mailto:webmaster-business@villanova.edu?subject=Feedback from Business School Event Registration"
+                            class="whiteLinks"> Send Feedback</a> | <a
+                            href="http://www.villanova.edu/unit/policies/privacy.htm"
+                            class="whiteLinks"> Privacy &amp; Security</a> | <a
+                            href="http://www.villanova.edu/homepage/photo_credits.htm"
+                            class="whiteLinks"> Photo Credits</a></td>
+                        <td width="225" rowspan="2" valign="middle">
+                        <div align="right"><a href="/"> <img
+                            src="{!URLFOR($Resource.WebFiles, '/assets/images/footer_logo.gif')}"
+                            alt="Villanova University" border="0" width="225" height="59"/></a></div>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td class="disclaimerText">© 1990-2009 Villanova University.
+                        All Rights Reserved.<br>
+                        <br>
+                        800 Lancaster Avenue · Villanova, PA 19085 · (610) 519-6000
+                        <div class=milonic><a href="http://www.milonic.com/">JavaScript
+                        Menu, DHTML Menu Powered By Milonic.</a></div>
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            </table>
+        
+            <p>&nbsp;</p>
+        </div>
+</apex:component>

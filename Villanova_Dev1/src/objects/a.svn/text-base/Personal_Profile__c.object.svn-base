@@ -1,0 +1,1632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object utilized for listing the various ways in which a Contact is related to to Villanova University and/or personal highlights that are important for profiling a person.  This object will has multiple record types and field dependencies to represent the different types of records.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Personal Profiles</relationshipLabel>
+        <relationshipName>Personal_Profiles</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Degree_Year__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the year of the Contact&apos;s Degree year.</inlineHelpText>
+        <label>Degree Year</label>
+        <picklist>
+            <controllingField>Profile_Type__c</controllingField>
+            <picklistValues>
+                <fullName>2012</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2011</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2010</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2009</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2008</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2007</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2006</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2005</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2004</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2003</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2002</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2001</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2000</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1999</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1998</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1997</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1996</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1995</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1994</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1993</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1992</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1991</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1990</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1989</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1988</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1987</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1986</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1985</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1984</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1983</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1982</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1981</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1980</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1979</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1978</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1977</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1976</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1975</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1974</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1973</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1972</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1971</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1970</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1969</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1968</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1967</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1966</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1965</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1964</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1963</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1962</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1961</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1960</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1959</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1958</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1957</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1956</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1955</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1954</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1953</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1952</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1951</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1950</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1949</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1948</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1947</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1946</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1945</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1944</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1943</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1942</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1941</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1940</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1939</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1938</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1937</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1936</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1935</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1934</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1933</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1932</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1931</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1930</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1929</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1928</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1927</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1926</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1925</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date Term Completes (or is expected to complete)</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Profile_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Profile Detail</label>
+        <picklist>
+            <controllingField>Profile_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Alumni - Board Member Interest</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alumni - Chapter Leader Interest</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alumni - Chapter Member</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alumni - Chapter President</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Award - School of Arts &amp; Sciences</fullName>
+                <controllingFieldValues>Award</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Award - School of Business</fullName>
+                <controllingFieldValues>Award</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Award - School of Engineering</fullName>
+                <controllingFieldValues>Award</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Award - St. Thomas of Villanova Alumni Medal</fullName>
+                <controllingFieldValues>Award</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Award - Villanova Alumni</fullName>
+                <controllingFieldValues>Award</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Center Donor</fullName>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Center for Global Leadership</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Center for Innovation, Creativity, and Entrepreneurship Center (ICE)</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Center for Marketing &amp; Public Policy Research</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Center for Real Estate (Daniel M. Dilella)</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Center for the Study of Church Management</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Center Member</fullName>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Currently Teaching</fullName>
+                <controllingFieldValues>Teaching</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Event Panelist</fullName>
+                <controllingFieldValues>Events</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Faculty - EMBA</fullName>
+                <controllingFieldValues>Teaching</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Friend of Villanova</fullName>
+                <controllingFieldValues>Speaking</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Guest Executive - EMBA</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Guest Speaker</fullName>
+                <controllingFieldValues>Speaking</controllingFieldValues>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Honor Society - Beta Alpha Psi (Business)</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Honor Society - Beta Gamma Sigma (VSB)</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Honor Society - Chi Alpha Epsilon (Multicultural)</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Honor Society - Omicron Delta Epsilon (Economics)</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Honor Society - Omicron Delta Kappa (Leadership)</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Honor Society - Pi Sigma Epsilon (Marketing)</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Honor Society - Upsilon Pi Epsilon (Computer Sciences)</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internship</fullName>
+                <controllingFieldValues>Employment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parent</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Program Sponsor</fullName>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Real Estate Mailing List</fullName>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recruiting Contact</fullName>
+                <controllingFieldValues>Employment</controllingFieldValues>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Business</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Business - EMBA</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Business - MBA</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Business - MTax</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Engineering</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Law</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Liberal Arts &amp; Sciences</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Nursing</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School Unknown</fullName>
+                <controllingFieldValues>VU Degree</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site Visit</fullName>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Speaking Opportunity</fullName>
+                <controllingFieldValues>Speaking</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Teaching Interest</fullName>
+                <controllingFieldValues>Teaching</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Top 50</fullName>
+                <controllingFieldValues>Employment</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tutor</fullName>
+                <controllingFieldValues>Teaching</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Volunteer Opportunity Interest</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Accounting Advisory Council</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Analytics Roundtable</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Center for Church Management</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Center for Global Leadership</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Center for Marketing and Public Policy Research</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Chief Information Officer</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Dean&apos;s Advisory Council</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Former</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - ICE Center</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Interested in Volunteering</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Real Estate</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Student Managed Fund</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB RE - Internship Sponsor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB RE - Mentor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB RE - Teaching Interest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Young Alumni Member</fullName>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Academic</fullName>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB DAC - Center for Business Analytics</fullName>
+                <controllingFieldValues>Volunteering</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Minor Alumni</fullName>
+                <controllingFieldValues>VSB Real Estate Center</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EMBA - Villanova University Association of Entrepreneurial Executives</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EMBA - Alumni Board Member</fullName>
+                <controllingFieldValues>Organization Membership</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EMBA - Fireside Chat Speaker</fullName>
+                <controllingFieldValues>Speaking</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Profile_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Profile Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Teaching</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Volunteering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Speaking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Award</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VSB Real Estate Center</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VU Degree</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organization Membership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date Term Initiates</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <label>Personal Profile</label>
+    <nameField>
+        <displayFormat>PP-{0000}</displayFormat>
+        <label>Personal Profile</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Personal Profiles</pluralLabel>
+    <recordTypes>
+        <fullName>Master</fullName>
+        <active>true</active>
+        <description>Profile representing Contact&apos;s Personal Profile.</description>
+        <label>Master</label>
+        <picklistValues>
+            <picklist>Degree_Year__c</picklist>
+            <values>
+                <fullName>1925</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1926</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1927</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1928</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1929</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1930</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1931</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1932</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1933</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1934</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1935</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1936</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1937</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1938</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1939</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1940</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1941</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1942</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1943</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1944</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1945</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1946</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1947</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1948</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1949</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1950</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1951</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1952</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1953</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1954</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1955</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1956</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1957</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1958</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1959</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1960</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1961</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1962</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1963</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1964</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1965</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1966</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1967</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1968</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1969</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1970</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1971</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1972</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1973</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1974</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1975</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1976</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1977</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1978</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1979</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1980</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1981</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1982</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1983</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1984</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1985</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1986</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1987</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1988</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1989</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1990</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1991</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1992</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1993</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1994</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1995</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1997</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1998</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2002</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2003</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2004</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2005</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2006</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2007</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2008</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2009</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Profile_Detail__c</picklist>
+            <values>
+                <fullName>Academic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni - Board Member Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni - Chapter Leader Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni - Chapter Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni - Chapter President</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Award - School of Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Award - School of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Award - School of Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Award - St%2E Thomas of Villanova Alumni Medal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Award - Villanova Alumni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center Donor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Global Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Innovation%2C Creativity%2C and Entrepreneurship Center %28ICE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Marketing %26 Public Policy Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for Real Estate %28Daniel M%2E Dilella%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Center for the Study of Church Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Currently Teaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMBA - Alumni Board Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMBA - Fireside Chat Speaker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMBA - Villanova University Association of Entrepreneurial Executives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Panelist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Faculty - EMBA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friend of Villanova</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guest Executive - EMBA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guest Speaker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Honor Society - Beta Alpha Psi %28Business%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Honor Society - Beta Gamma Sigma %28VSB%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Honor Society - Chi Alpha Epsilon %28Multicultural%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Honor Society - Omicron Delta Epsilon %28Economics%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Honor Society - Omicron Delta Kappa %28Leadership%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Honor Society - Pi Sigma Epsilon %28Marketing%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Honor Society - Upsilon Pi Epsilon %28Computer Sciences%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Minor Alumni</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Program Sponsor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate Mailing List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Business - EMBA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Business - MBA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Business - MTax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Liberal Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Nursing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaking Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teaching Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Top 50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tutor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Accounting Advisory Council</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Analytics Roundtable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Center for Business Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Center for Church Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Center for Global Leadership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Center for Marketing and Public Policy Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Chief Information Officer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Dean%27s Advisory Council</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Former</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - ICE Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Interested in Volunteering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB DAC - Student Managed Fund</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB RE - Internship Sponsor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB RE - Mentor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB RE - Teaching Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteer Opportunity Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Young Alumni Member</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Profile_Type__c</picklist>
+            <values>
+                <fullName>Award</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Organization Membership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teaching</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VSB Real Estate Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VU Degree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Volunteering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

@@ -1,0 +1,134 @@
+<apex:page standardController="VEM_Event__c" showHeader="true" sidebar="true">
+
+    <html>
+
+        <head>
+            <apex:stylesheet value="{!$Resource.VEM_jQueryDatePickerCSS}"/>
+
+            <style>
+                /* located in demo.css and creates a little calendar icon
+                 * instead of a text link for "Choose date"
+                 */
+                a.dp-choose-date {
+                    float: left;
+                    width: 16px;
+                    height: 16px;
+                    padding: 0;
+                    margin: 5px 3px 0;
+                    display: block;
+                    text-indent: -2000px;
+                    overflow: hidden;
+                    background: url({!$Resource.VEM_jQueryCalendarPNG}) no-repeat;
+                }
+                a.dp-choose-date.dp-disabled {
+                    background-position: 0 -20px;
+                    cursor: default;
+                }
+                /* makes the input field shorter once the date picker code
+                 * has run (to allow space for the calendar icon
+                 */
+                input.dp-applied {
+                    width: 140px;
+                    float: left;
+                }
+            </style>
+
+            <apex:includeScript value="{!$Resource.VEM_jQueryJS}" />
+            <apex:includeScript value="{!$Resource.VEM_jQueryDateJS}" />
+            <apex:includeScript value="{!$Resource.VEM_jQueryDatePickerJS}" />
+
+            <script>
+                Date.format = 'mm/dd/yyyy';
+
+                $(function()
+                {
+                    $('.date-pick')
+                        .datePicker(
+                            {
+                                createButton:true,
+                                displayClose:true,
+                                closeOnSelect:false,
+                                autoFocusNextInput:true,
+                                selectMultiple:true
+                            }
+                        )
+                        .bind(
+                            'click',
+                            function()
+                            {
+                                $(this).dpDisplay();
+                                this.blur();
+                                return false;
+                            }
+                        )
+                        .bind(
+                            'dateSelected',
+                            function(e, selectedDate, $td, state)
+                            {
+                                alert('You ' + (state ? '' : 'un') + 'selected ' + selectedDate);
+                            }
+                        )
+                        .bind(
+                            'dpClosed',
+                            function(e, selectedDates)
+                            {
+                                alert('You closed the date picker and the currently selected dates are: ' + selectedDates);
+                            }
+                        );
+                });
+            </script>
+
+        </head>
+
+        <body>
+
+            <apex:sectionHeader title="{!$ObjectType.VEM_Event__c.label} Edit" subtitle="{!VEM_Event__c.Name}" />
+
+            <apex:form >
+
+                <apex:pageBlock title="{!$ObjectType.VEM_Event__c.label} Booking" mode="edit">
+
+                    <apex:pageMessages />
+
+                    <apex:pageBlockButtons >
+                        <apex:commandButton action="{!save}" value="Save" />
+                        <apex:commandButton action="{!cancel}" value="Cancel" />
+                    </apex:pageBlockButtons>
+
+                    <apex:pageBlockSection showHeader="true" title="Information" columns="1">
+
+                        <table border="0">
+                            <tr><td><strong>jQuery Date Picker Test</strong></td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr>
+                                <td>Date 1:</td>
+                                <td><input name="date1" id="date1" class="date-pick" /></td>
+                            </tr>
+                            <tr>
+                                <td>Date 2:</td>
+                                <td><input name="date2" id="date2" class="date-pick" /></td>
+                            </tr>
+                            <tr>
+                                <td>Test select:</td>
+                                <td>
+                                    <select name="test-select" id="test-select" style="width:170px">
+                                        <option value="1">Test SELECT </option>
+                                        <option value="2">Doesn't shine through</option>
+                                        <option value="3">Even in IE</option>
+                                        <option value="4">Yay!</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </apex:pageBlockSection>
+
+                </apex:pageBlock>
+
+            </apex:form>
+
+        </body>
+
+    </html>
+
+</apex:page>

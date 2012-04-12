@@ -1,0 +1,120 @@
+<apex:page sidebar="false" controller="SLCA2.CalendarAnything_pageController" >
+<head>
+	<style>
+		.msg div {
+			padding: 4px;
+		}
+	</style>
+</head>
+<c:CalendarAnything CalendarsListContainerId="calendarsListHolder"
+	FullCalendarContainerId="calendarHolder" 
+	ButtonEditCalendarsVisibilityId="dlg_visible_open"
+	MessageBoxContainerId="statusBarHere"/>
+
+<table width="100%">
+  <tr>
+	<apex:form rendered="{!isSideBar}">
+		<td width="20%" valign="top">
+			<apex:pageBlock title="My&nbsp;Calendars" id="pbList" >
+			<apex:facet name="header">
+			    <div class="pbHeader">
+			        <table cellspacing="0" cellpadding="0" border="0">
+			            <tbody>
+			            <tr>
+			                <td class="pbTitle">
+			                    <h2 class="mainTitle">My&nbsp;Calendars</h2>
+			                </td>
+			                <td align="center">
+			                    &nbsp;&nbsp;<a id="dlg_visible_open" href="#">Edit</a>
+			                </td>
+			            </tr>
+			            </tbody>
+			        </table>
+			    </div> 
+			    </apex:facet>
+			    <div id="calendarsListHolder"></div>
+			</apex:pageBlock>
+			
+			<!-- <apex:pageBlock title="My&nbsp;Calendars&nbsp;Groups" id="groupsList">
+			    <apex:pageBlockTable value="{!AllGroups}" var="group" rendered="true" >
+			        <apex:column style="background-color: white;">
+			            <input type="checkbox" id="{!group.Id}" class="fcui-group-checkbox"/>
+			            <a href="#" class="fcui-group-link" >{!group.Name}</a>
+			        </apex:column>
+			    </apex:pageBlockTable>
+			</apex:pageBlock>-->
+			
+			<apex:pageBlock id="pbControl">
+			<apex:facet name="header">
+			    <div class="pbHeader" style="padding:10px;">
+			         <h2 class="mainTitle">Manage&nbsp;Calendars</h2>
+			    </div> 
+			    </apex:facet>
+				<a href="/apex/calendarsList">Add/Change Calendars</a>
+			</apex:pageBlock>
+			
+			<apex:pageBlock title="System" rendered="{!IF(isProfilerBar,'true','false')}">
+				<div id="start_loading_events" style="display:none;"></div>
+				<div id="end_loading_events" style="display:none;"></div>
+				<div id="last_loading_events" style="display:none;"></div>
+				<div style="border:1px solid #26c; border-radius:3px; padding:3px;">
+					<table style="width:100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+						<caption><i>Profiler</i></caption>
+						<tr>
+							<th style="border:1px solid black; text-align:center; padding:2px;">Action</th>
+							<th style="border:1px solid black; text-align:center; padding:2px;">Value</th>
+						</tr>
+						<tr>
+							<td>Events on the layout:</td>
+							<td><div id="eventsCount">0</div></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Loaded events:</td>
+							<td><div id="lastEventsCount">0</div></td>
+						</tr>
+						<tr>
+							<td>Loading time:</td>
+							<td><div id="loadTime">0</div></td>
+						</tr>
+					</table>
+				</div>
+				
+				<div style="border:1px solid #26c; border-radius:3px; padding:3px; margin-top:3px;">
+					<table style="width:100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
+						<caption><i>Details</i></caption>
+						<thead>
+							<tr>
+								<th style="border:1px solid black; text-align:center; padding:2px;">Object<br />name</th>
+								<th style="border:1px solid black; text-align:center; padding:2px;"># of<br />events</th>
+								<th style="border:1px solid black; text-align:center; padding:2px;">Events<br />loading time</th>
+							</tr>
+						</thead>
+						<tbody id="time-details-rows">
+						
+						</tbody>
+					</table>
+					
+				</div>
+				
+			</apex:pageBlock>
+			
+			<div id="testDiv"></div>
+		</td>
+	</apex:form>
+	<td width="{!IF(isSideBarStr == 'true','80%','100%')}">
+		<div id="calendarHolder" style="{!IF(isSideBarStr == 'true','margin-left:20px;','')}"></div>
+	</td>
+  </tr> 
+</table>
+		<div id="statusBarHere" class="msg" style="
+			z-index: 9999;
+			position: absolute;
+			left: 30%;
+			width: 55%;
+			top: 8px;
+		"></div>
+</apex:page>

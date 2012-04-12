@@ -1,0 +1,98 @@
+<apex:page controller="VEM_ScheduleController" tabStyle="VEM_Location__c" showHeader="true" sidebar="true">
+
+    <apex:sectionHeader title="Location" subtitle="Schedule" />
+
+    <apex:form >
+
+        <apex:pageBlock >
+
+            <apex:pageMessages />
+            <!--apex:pageBlockButtons /-->
+
+            <apex:outputPanel id="header">
+                <table border="0px">
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>Date</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>Locations</td>
+                    </tr>
+                    <tr>
+                        <td style="width:60px"></td>
+                        <td>
+                            <!--apex:outputLabel value="Date" for="datePicker" /-->
+                            <apex:inputField id="datePicker" label="" value="{!proxyObject.closeDate}">
+                                <apex:actionSupport event="onchange" action="{!handleDateChange}" rerender="header,schedule" />
+                            </apex:inputField>
+                        </td>
+                        <td style="width:40px"></td>
+                        <td>
+                            <apex:commandButton value="Previous Day" action="{!handlePreviousDay}" rerender="header,schedule" />
+                            <apex:commandButton value=" Next Day " action="{!handleNextDay}" rerender="header,schedule" />
+                        </td>
+                        <td style="width:160px"></td>
+                        <td>
+                            <apex:selectList label="Events" value="{!selectedProfileId}" size="1">
+                                <apex:selectOptions value="{!profileSelectionList}" />
+                                <apex:actionSupport event="onchange" rerender="schedule" />
+                            </apex:selectList>
+                        </td>
+                    </tr>
+                    <tr><td colspan="5" style="height:8px"></td></tr>
+                </table>
+            </apex:outputPanel>
+
+            <apex:pageBlockTable id="schedule" var="location" value="{!locationSchedule}">
+                <apex:column headerValue="Location">
+                    <apex:outputField label="Date" value="{!location.Name}" />
+                </apex:column>
+                <apex:column headerValue="Events">
+                    <apex:variable var="eventCount" value="{!0}" />
+                    <apex:repeat var="counter" value="{!location.Event_Location__r}">
+                        <apex:variable var="eventCount" value="{!eventCount+1}" />
+                    </apex:repeat>
+                    <apex:pageblocktable var="event" value="{!location.Event_Location__r}" rendered="{!eventCount > 0}">
+                        <apex:column headerValue="Time">
+                            <apex:variable var="isStartDate" value="{!event.Start_Date__c == scheduleStartDate}" />
+                            <apex:outputText value="{!event.Start_Time__c}" rendered="{!isStartDate}" />
+                            <apex:outputText value="12:00 AM" rendered="{!!isStartDate}" />
+                            -&nbsp;
+                            <apex:variable var="isEndDate" value="{!event.End_Date__c == scheduleEndDate}" />
+                            <apex:outputText value="{!event.End_Time__c}" rendered="{!isEndDate}" />
+                            <apex:outputText value="12:00 AM" rendered="{!!isEndDate}" />
+                        </apex:column>
+                        <apex:column headerValue="Event">
+                            <!--apex:outputfield value="{!event.Name}"/-->
+                            <apex:commandLink value="{!event.Name}" action="{!URLFOR($Action.VEM_Event__c.view,event.Id)}" />
+                        </apex:column>
+                        <apex:column headerValue="Type">
+                            <apex:outputfield value="{!event.Event_Type__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Sponsor">
+                            <apex:outputfield value="{!event.Event_Sponsor__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Attending">
+                            <apex:outputfield value="{!event.Expected_Volume__c}"/>
+                        </apex:column>
+                    </apex:pageblocktable>
+                </apex:column>
+            </apex:pageBlockTable>
+
+        </apex:pageBlock>
+
+    </apex:form>
+
+    <script type="text/javascript">
+        // Note: this is a total hack into Salesforce's "main.js" script for "setFocusOnLoad which is:    
+        //     function setFocusOnLoad()
+        //     {
+        //         beenFocused || setFocus();
+        //     }
+        // So, if we tell it that the focus has already been set, it does a shortcircuit evaluation and doesn't
+        // run the Salesforce code to set the focus itself.  e.g. the Date Pickers don't come up.
+        beenFocused = true;
+    </script>
+
+</apex:page>

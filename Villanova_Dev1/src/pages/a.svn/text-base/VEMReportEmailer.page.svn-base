@@ -1,0 +1,75 @@
+<apex:page controller="VEMEmailController2"> 
+
+  <apex:sectionHeader title="VEM Reports" subtitle="Home" description="" />
+
+  <apex:form >
+    <apex:pageMessages />
+    <apex:pageBlock id="main" mode="edit" >
+
+      <!-- Main Block section ----------------------------->
+      <apex:pageBlockSection showHeader="false" columns="1">
+        <apex:pageblockSectionItem >
+          <apex:outputLabel for="reports" value="Report" />      
+          <apex:selectList id="reports" value="{!sReports}" size="1" required="true">
+            <apex:selectOptions value="{!rName}" />
+                <apex:actionSupport event="onchange" reRender="dateSection" />
+          </apex:selectList>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
+
+      <!-- Dynamic section--------------> 
+      <apex:pageBlockSection id="dateSection" showHeader="false" columns="1" >
+
+        <!--apex:pageblockSectionItem rendered="{!sReports == 'VEM_Athletics_Week'}" >
+        </apex:pageblockSectionItem-->
+
+        <!--apex:pageblockSectionItem rendered="{!sReports == 'VEM_Connelly_Today'}">
+        </apex:pageblockSectionItem-->
+
+        <!--apex:pageblockSectionItem rendered="{!sReports == 'VEM_Athletics_Today'}">
+        </apex:pageblockSectionItem-->
+
+        <!--apex:outputPanel id="panel4" rendered="{!sReports == 'VEM_Connelly_Operations_Projection'}"-->
+        <apex:pageblockSectionItem rendered="{!sReports == 'VEM_Connelly_Operations_Projection'}" >
+          <apex:outputLabel value="Start Date" />
+          <apex:inputField value="{!proxyObject.Start_Date__c}" />
+          <!--<apex:inputText size="23" onfocus="showCalendarControl(this);" value="{!sDate}"/>-->  
+        </apex:pageblockSectionItem>
+
+        <apex:pageblockSectionItem rendered="{!sReports == 'VEM_Connelly_Operations_Projection'}" >
+          <apex:outputLabel value="End Date" />
+          <apex:inputField value="{!proxyObject.End_Date__c}" />
+          <!--<apex:inputText size="23" onfocus="showCalendarControl(this);" value="{!eDate}"/>-->  
+        </apex:pageblockSectionItem>
+
+        <!--apex:outputPanel id="panel5"  rendered="{!sReports == 'VEM_Connelly_Operations_Report'}" -->
+        <apex:pageblockSectionItem rendered="{!sReports == 'VEM_Connelly_Operations_Report'}" >
+          <apex:outputLabel value="Start Date" />
+          <!--<apex:inputText size="23"    onfocus="showCalendarControl(this);" id="sDate" value="{!sDate}" /> -->
+          <apex:inputField value="{!proxyObject.Start_Date__c}" />
+        </apex:pageblockSectionItem>
+        <!--/apex:outputPanel-->
+
+      </apex:pageBlockSection>  
+
+      <!---user email address section----------->
+      <apex:pageBlockSection showHeader="false" columns="1">
+        <apex:pageblockSectionItem >
+          <apex:outputLabel for="users" value="Recipient" />
+          <apex:selectList id="users" value="{!sUsers}" size="1" required="true" multiselect="false">
+            <apex:selectOptions value="{!uName}" />
+          </apex:selectList>
+        </apex:pageblockSectionItem>
+      </apex:pageBlockSection>
+
+      <!----------Command buttons section-------->
+      <apex:pageBlockButtons location="bottom" style="">
+        <apex:commandButton action="{!runReport}" value="Run Report" />
+        <apex:commandButton action="{!sendReport}" value="Email Report" />
+      </apex:pageBlockButtons>
+
+    </apex:pageBlock>
+
+  </apex:form>
+ 
+</apex:page>

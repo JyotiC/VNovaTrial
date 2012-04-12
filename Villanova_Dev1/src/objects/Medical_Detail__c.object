@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object contains information related to insurance, medical conditions, and emergency contact information.</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Allergies__c</fullName>
+        <description>Information related to allergies to: food, medicine, insect bites, etc.</description>
+        <externalId>false</externalId>
+        <label>Allergies</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Arrival_date_time_flight__c</fullName>
+        <externalId>false</externalId>
+        <label>Arrival date/time/flight #</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <description>City of emergency contact</description>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>Link between Contact record and Medical Detail record</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Medical Details</relationshipLabel>
+        <relationshipName>Medical_Details</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Departure_date_time_flight__c</fullName>
+        <externalId>false</externalId>
+        <label>Departure date/time/flight #</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emergency_Email__c</fullName>
+        <description>Emergency contact&apos;s email address</description>
+        <externalId>false</externalId>
+        <label>Emergency Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emergency_Home_Phone__c</fullName>
+        <description>Home phone of emergency contact</description>
+        <externalId>false</externalId>
+        <label>Emergency Home Phone</label>
+        <length>15</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emergency_Name__c</fullName>
+        <description>Name of Emergency contact</description>
+        <externalId>false</externalId>
+        <label>Emergency Name</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emergency_Relation__c</fullName>
+        <description>Relationship to emergency contact</description>
+        <externalId>false</externalId>
+        <label>Emergency Relation</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emergency_Work_Phone__c</fullName>
+        <description>Work phone number for emergency contact</description>
+        <externalId>false</externalId>
+        <label>Emergency Work Phone</label>
+        <length>15</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Flying_with_Group__c</fullName>
+        <description>Are they flying with the group?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Are you flying with the group?</inlineHelpText>
+        <label>Flying with Group</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Frequent_Flyer_1_Airline__c</fullName>
+        <externalId>false</externalId>
+        <label>Frequent Flyer #1 / Airline</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Frequent_Flyer_2_Airline__c</fullName>
+        <externalId>false</externalId>
+        <label>Frequent Flyer #2 / Airline</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Frequent_Flyer_3_Airline__c</fullName>
+        <externalId>false</externalId>
+        <label>Frequent Flyer #3 / Airline</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Insurance_Carrier__c</fullName>
+        <description>Name of the Insurance Company</description>
+        <externalId>false</externalId>
+        <label>Insurance Carrier</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Insurance_Group__c</fullName>
+        <description>Insurance Group Identifier</description>
+        <externalId>false</externalId>
+        <label>Insurance Group</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Insurance_ID__c</fullName>
+        <description>Plan ID number</description>
+        <externalId>false</externalId>
+        <label>Insurance ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Insurance_Other__c</fullName>
+        <description>Other insurance plan identification information</description>
+        <externalId>false</externalId>
+        <label>Insurance Other</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Medical_Conditions__c</fullName>
+        <description>General health/medical conditions that we should be aware of.</description>
+        <externalId>false</externalId>
+        <label>Medical Conditions</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Shuttle_from_VCC_to_Airport__c</fullName>
+        <externalId>false</externalId>
+        <label>Shuttle from VCC to Airport</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Shuttle_home_from_Airport_to_VCC__c</fullName>
+        <externalId>false</externalId>
+        <label>Shuttle home from Airport to VCC</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <description>State of emergency contact</description>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>15</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Address__c</fullName>
+        <description>Street address of emergency contact</description>
+        <externalId>false</externalId>
+        <label>Street Address</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Code__c</fullName>
+        <description>Zip code of emergency Contact</description>
+        <externalId>false</externalId>
+        <label>Zip Code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Medical Detail</label>
+    <nameField>
+        <displayFormat>MD-{0000}</displayFormat>
+        <label>Medical Detail Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Medical Details</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Emergency_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Emergency_Relation__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Emergency_Work_Phone__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Emergency_Home_Phone__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Emergency_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Emergency_Relation__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Emergency_Home_Phone__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Emergency_Work_Phone__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Emergency_Name__c</searchFilterFields>
+        <searchFilterFields>Emergency_Relation__c</searchFilterFields>
+        <searchFilterFields>Emergency_Home_Phone__c</searchFilterFields>
+        <searchFilterFields>Emergency_Work_Phone__c</searchFilterFields>
+        <searchFilterFields>Insurance_Carrier__c</searchFilterFields>
+        <searchFilterFields>Insurance_ID__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

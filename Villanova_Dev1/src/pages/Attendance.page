@@ -1,0 +1,225 @@
+<apex:page standardController="Campaign" extensions="extAttendance" title="Attendance" showHeader="true">
+    <script>
+        function runScript(e) {
+            
+            if (e.keyCode == 13) {
+                
+                btnGo.click();
+                return false;
+            }
+        }
+    </script>
+    <script type="text/javascript">
+      window.onkeypress = handleKeyPress;
+      function handleKeyPress(e){
+        var eventInstance = window.event ? event : e;
+        var keyCode = eventInstance.charCode ? eventInstance.charCode : eventInstance.keyCode;    
+        if (keyCode == 13){
+            actionSearchScript();
+            return false;
+        }
+      }
+    </script>
+
+    <apex:form id="frm">
+        
+        <apex:pageBlock title="Attendance for {!camp.Name}">
+        
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockButtons location="top">
+                <apex:actionRegion >
+                <apex:commandButton value="{!if(isAdd, 'Hide Add Attendee', 'Show Add Attendee')}" action="{!SetisAdd}" id="btnAdd" reRender="opAdd,btnAdd"/>
+                </apex:actionRegion>
+                <!--<apex:commandButton value="Full Screen" action="{!FullScreen}" rendered="{!Not(IsFullScreen)}" immediate="true"/>-->
+                <apex:outputPanel rendered="{!Not(IsFullScreen)}">
+                &nbsp;&nbsp;<b><a href="/apex/attendance?full=true&id={!camp.Id}" target="_top">Full Screen</a></b>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!IsFullScreen}">
+                &nbsp;&nbsp;<b><a href="/{!camp.Id}" target="_top">Return to Event</a></b>
+                </apex:outputPanel>
+            </apex:pageBlockButtons>
+            <apex:outputPanel id="opAdd" >
+                <apex:pageBlockSection id="pbsAdd" rendered="{!isAdd}">
+                    <apex:actionRegion >
+                    <apex:pageBlockSectionItem >
+                        Select Contact (leave blank for new)
+                        <apex:inputField value="{!cm.ContactId}" >
+                            <apex:actionSupport event="onblur" action="{!UpdateContact}" reRender="opAdd"/>
+                        </apex:inputField>
+                    </apex:pageBlockSectionItem>
+                    </apex:actionRegion>
+                    <apex:pageBlockSectionItem >
+                        &nbsp;
+                    </apex:pageBlockSectionItem>
+
+                    
+                    <apex:pageBlockSectionItem >
+                        First Name
+                        <apex:inputField value="{!con.FirstName}" required="true"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        Last Name
+                        <apex:inputField value="{!con.LastName}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        Phone
+                        <apex:inputField value="{!con.Phone}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        Email
+                        <apex:inputField value="{!con.Email}" required="true"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        Company 
+                        <apex:inputField value="{!con.AccountId}"/>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        Status
+                        <apex:inputField value="{!cm.Status}" required="true"/>
+                    </apex:pageBlockSectionItem>
+                    <!--
+                    <apex:pageBlockSectionItem >
+                        Registration Display
+                        <apex:inputField value="{!cm.Display_on_Registration_Page__c}" required="true"/>
+                    </apex:pageBlockSectionItem>
+                    -->
+                    <apex:pageBlockSectionItem >
+                        &nbsp;
+                        <apex:commandButton action="{!SaveNewAtt}" value="Save" reRender="frm"/>
+                    </apex:pageBlockSectionItem>
+                </apex:pageblockSection>
+            </apex:outputPanel>
+            <apex:pageBlockSection columns="1">
+                <apex:outputPanel id="opFilter">
+                <table width="650"><tr>
+                       <td align="left">
+                           <h2>Filter by &nbsp;</h2> Status&nbsp;
+                           <apex:selectList size="1" value="{!strStatFilter}">
+                               <apex:selectOptions value="{!Statuses}"></apex:selectOptions>
+                           </apex:selectList>
+                       </td>
+                       <td align="left">
+                           First&nbsp;
+                           <apex:inputText value="{!strFirstFilter}" style="width:80px;" onkeypress="return runScript(event)"/>  
+                           Last&nbsp;
+                           <apex:inputText value="{!strLastFilter}" style="width:80px;" onkeypress="return runScript(event)"/>
+                       </td>
+                       <td align="right">
+                           <apex:commandButton value="Go" action="{!Attendees}" rerender="opAttendees" id="btnGo">
+                               
+                           </apex:commandButton>
+                           <script> var btnGo = document.getElementById("{!$Component.btnGo}"); </script>
+                           &nbsp;<apex:commandLink value="clear" action="{!Clear}" reRender="opAttendees,opFilter"/>
+                       </td>
+                       
+                       </tr>
+                   </table>
+                   </apex:outputPanel>
+               </apex:pageBlockSection>
+               <apex:outputPanel id="opAttendees">
+                    <apex:toolbar style="background-color:#8d8d8d;background-image:none" width="800" >
+                       <apex:toolbarGroup location="left">
+                           Page {!intAttCurrPage} of {!intAttTotalPages}
+                           <apex:commandLink action="{!SetAttPage}" reRender="opAttendees" title="Previous" rendered="{!(intAttCurrPage - 1 > 0)}">
+                               <apex:param name="intAttPageChange" value="{!(intAttCurrPage - 1)}"/>
+                               Previous
+                           </apex:commandLink>
+                           <apex:commandLink action="{!SetAttPage}" reRender="opAttendees" title="Next" rendered="{!(intAttCurrPage + 1 <= intAttTotalPages)}">
+                               <apex:param name="intAttPageChange" value="{!(intAttCurrPage + 1)}"/>
+                               Next
+                           </apex:commandLink>
+                           
+                       </apex:toolbarGroup>
+                       <apex:toolbarGroup location="right">
+                           Attendees per Page
+                           <apex:selectList value="{!strAttPerPage}" size="1">
+                               <apex:selectOptions value="{!NumberPerPage}"/>
+                               <apex:actionSupport action="{!ChangeAttPage}" event="onchange" rerender="opAttendees"/>
+                           </apex:selectList>
+                       </apex:toolbarGroup>
+                       
+                   </apex:toolbar>
+               
+                   <table width="800"><tr>
+                       <td align="left" width="170">
+                           <i>Check Attendees and select<br/> a Status to mass update</i>
+                       </td>
+                       <td align="left" width="55">
+                           <apex:inputCheckbox value="{!SelectAll}">
+                                <apex:actionSupport event="onclick" action="{!SelectAllAttendees}" rerender="opAttendees"/>
+                            </apex:inputCheckbox>
+                       </td>
+                       <td align="left">
+                           <apex:selectList size="1" value="{!DummyMember.Status}">
+                               <apex:selectOptions value="{!Statuses}"></apex:selectOptions>
+                           </apex:selectList><apex:commandButton value="Update" action="{!MassStatus}" rerender="opAttendees"/> 
+                       </td>
+                       <td align="right">
+                       &nbsp;
+                       </td>
+                   </tr>
+                   <tr><td colspan="4">
+                       <font color="red"><apex:outputText escape="false" value="{!strSaveMsg}"></apex:outputText></font>
+                       </td></tr>
+                   <apex:outputPanel rendered="{!Not(IsNull(strSaveMsg))}">
+                       
+                   </apex:outputPanel>
+                   </table>
+               
+                <apex:pageBlockTable value="{!lstPageAttendees}" var="att" style="width:800px;" id="dtAtt">
+                   
+                    <apex:column width="80">
+                        <apex:facet name="header">Last Name</apex:facet>
+                        <apex:outputText rendered="{!att.Saved}"><span style="color:green;font-size:14px;">&#10003;</span></apex:outputText>
+                        <a href="/{!att.MemberId}" target="_top">{!att.LastName}</a>
+                    </apex:column>
+                    <apex:column width="80">
+                        <apex:facet name="header">First Name</apex:facet>
+                        {!att.FirstName}
+                    </apex:column>
+                    <apex:column width="25">
+                        <apex:inputCheckbox value="{!att.Checked}"/> 
+                        
+                    </apex:column>
+                    <apex:column headerValue="Status" width="150">
+                        <apex:selectList size="1" value="{!att.Member.Status}">
+                            <apex:actionSupport event="onchange" action="{!SaveAtt}" reRender="opAttendees"/>
+                           <apex:selectOptions value="{!Statuses}"></apex:selectOptions>
+                       </apex:selectList>
+                    </apex:column>
+                    <!--
+                    <apex:column width="60">
+                        <apex:facet name="header">Registration Display</apex:facet>
+                        <apex:commandLink value="{!IF(att.Member.Display_on_Registration_Page__c,'Shown','Hidden')}" action="{!RegPageDisplayMember}" rerender="frm">
+                            <apex:param name="member" value="{!att.Member.Id}"/>
+                        </apex:commandLink>
+
+                    </apex:column>  
+                    -->                  
+                    <apex:column >
+                        <apex:facet name="header">Group</apex:facet>
+                        <apex:selectList value="{!att.Member.Attendee_Group__c}" size="1">
+                            <apex:actionSupport event="onchange" action="{!SaveAtt}" reRender="opAttendees"/>
+                            <apex:selectOptions value="{!Groups}"></apex:selectOptions>
+                        </apex:selectList>
+                    </apex:column>
+    
+                    <apex:column width="120">
+                        <apex:facet name="header">Email</apex:facet>
+                        {!att.Email}
+                    </apex:column>
+                    <apex:column width="80">
+                        <apex:facet name="header">Phone</apex:facet>
+                        {!att.Phone}
+                    </apex:column>
+                    <apex:column headerValue="Action" width="40">
+                        <apex:commandLink value="del" action="{!DelMember}" rerender="frm">
+                            <apex:param name="member" value="{!att.Member.Id}"/>
+                        </apex:commandLink>
+                    </apex:column>
+                </apex:pageBlockTable>
+                </apex:outputPanel>
+           </apex:pageBlock>
+           
+    </apex:form>
+</apex:page>

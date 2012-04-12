@@ -1,0 +1,31 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="true" Controller="SLCA2.CA_JSInitController">
+<body>
+<script type="text/javascript" src="/static/101210/js/functions.js"></script> 
+<script  src="/jslibrary/1289346548000/main.js" type="text/javascript"></script>
+<script  src="/jslibrary/labels/1289346548000/en_US.js" type="text/javascript"></script>
+<link  href="/sCSS/20.0/sprites/1289346548000/Theme3/default/sf/elements.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link  href="/sCSS/20.0/sprites/1289346548000/Theme3/default/sf/common.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link  href="/sCSS/20.0/sprites/1289346557000/Theme3/sf/dStandard.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link  href="/sCSS/20.0/sprites/1289346557000/Theme3/00DT0000000HtMN/005A0000000gauz/sf/dCustom0.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link  href="/sCSS/20.0/sprites/1289346548000/Theme3/default/sf/extended.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="http://tapp0.salesforce.com/favicon.ico" /> 
+
+<div class="lookup">
+<div class="pbBody" style="padding:0px 0 10px 0"><h2>Select the Multi-picklist values to add below.</h2></div>
+<div class="topButton"><input value="Insert Selected"  class="btn" name="Done" onclick="FilterLookupPage.prototype.transfer(false);" title="Insert Selected" type="button" /></div>
+<div style="padding:0px 0 10px 0">
+	<a href="javascript:FilterLookupPage.prototype.checkAll%28false%29">Deselect all</a> 
+</div>
+<!-- WrappingClass --> 
+<div class="listRelatedObject lookupBlock"><div class="bPageBlock secondaryPalette"><div class="pbHeader"></div><div class="pbBody"><table class="list" border="0" cellspacing="0" cellpadding="0"><tr class="headerRow"><th class="actionColumn" scope="col">&nbsp;</th><th scope="col" class="">Value</th></tr>
+<apex:repeat value="{!lCPickListValue}" var="item"> 
+<tr class="dataRow odd"><td class="actionColumn"><input  id="chkbox{!item.ID}" name="chkbox{!item.ID}" onclick="FilterLookupPage.prototype.doCheckbox({!item.ID});" type="checkbox" value="{!IF(item.RecordTypeIdValue != '',item.RecordTypeIdValue,item.Value)}" /></td><td><label for="chkbox{!item.ID}">{!item.Value}</label></td></tr>
+</apex:repeat> 
+</table> 
+</div><div class="pbFooter secondaryPalette"><div class="bg"></div></div></div></div><div class="listElementBottomNav"></div> 
+<!-- End ListElement --> 
+<div class="bottomButton" style="padding: 0 0 10px 0"><input value="Insert Selected"  class="btn" name="Done" onclick="FilterLookupPage.prototype.transfer(false);" title="Insert Selected" type="button" /></div>
+<div class="footer" style="padding: 0 0 10px 0">Copyright &copy; 2000-2010 salesforce.com, inc. All rights reserved.</div>
+</div> 
+</body>
+</apex:page>

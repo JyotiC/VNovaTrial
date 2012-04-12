@@ -1,0 +1,67 @@
+<apex:page tabStyle="Account" controller="FNA_MapCon"showHeader="true" sidebar="false">
+    <style> body {background: #F3F3EC;}
+    		.accountBlock, .bPageBlock {border-left: thin solid #236FBD ; }
+    </style>
+
+<apex:SectionHeader title="Plan your Trip Near" subtitle="{!mainAccount.name}"> 
+<apex:form >    
+<table align="center" cellspacing="15">
+<tr>
+    <td colspan="2" align="center"><apex:commandButton action="{!goBack}" value="Back to {!mainAccount.name} record"/></td>
+    <td colspan="2" align="center"><apex:commandButton action="{!goBackMap}" value="Back to Nearby Accounts"/></td>
+</tr>
+</table>
+
+ <table width="50%" align="center">
+ 	<tr><td>
+	<apex:pageBlock id="dasBlock" Title="Get your Directions in Order">  
+          <apex:pageblockSection title="Itinerary" columns="1"  collapsible="false" id="Dirchoice" >
+                 <apex:pageBlockSectionItem id="cdir">  
+                	<apex:outputLabel value="From: " for="Cfrom"/>
+                    <apex:inputText value="{!fromAdd}" size="24" id="cFrom"/> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="To:" for="Tfrom"/>
+                        <apex:selectList value="{!ToAdd}" multiselect="false" id="Tfrom" size="1"  >
+                            <apex:selectOptions value="{!places}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+   				<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Then To:" for="Tthree"/>
+                        <apex:selectList value="{!ToThird}" multiselect="false" id="Tthree" size="1">
+                            <apex:selectOptions value="{!placesD}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+   				<apex:pageBlockSectionItem > 
+                    <apex:outputLabel value="Then To:" for="Tfour"/>
+                        <apex:selectList value="{!ToFourth}" multiselect="false" id="Tfour" size="1" >
+                            <apex:selectOptions value="{!placesD}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+   				<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Then To:" for="Tfive"/>
+                        <apex:selectList value="{!ToFifth}" multiselect="false" id="Tfive" size="1" >
+                            <apex:selectOptions value="{!placesD}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>                   
+   				<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Then To:" for="Tsix"/>
+                        <apex:selectList value="{!Tosixth}" multiselect="false" id="Tsix" size="1" >
+                            <apex:selectOptions value="{!placesD}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>                   
+   			           
+           		<apex:pageBlockSectionItem dataStyle="text-Align: center; align: center;">
+                    <apex:commandLink style="text-decoration: none;" target="_blank" action="{!makeIten}">
+						<apex:commandButton value="Make Itinerary"/>
+					</apex:commandLink>
+                </apex:pageBlockSectionItem>
+           </apex:pageblockSection>
+    </apex:pageBlock>
+    </td>
+    </tr>
+    </table>
+</apex:form>
+</apex:SectionHeader>
+
+</apex:page>

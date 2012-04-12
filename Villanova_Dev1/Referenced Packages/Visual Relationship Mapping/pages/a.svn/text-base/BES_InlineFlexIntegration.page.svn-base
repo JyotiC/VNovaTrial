@@ -1,0 +1,7 @@
+<apex:page sidebar="false" controller="BES_VRM.ParseVisualParemeter">
+    
+
+<body scroll="yes" >
+    <apex:flash src="{!$Resource.BES_VRM__FlexSWFFileName}" height="600" width="100%" flashVars="session_id={!session_id}&server_url={!server_url}&cid={!contId}&aid={!accountId}&lid={!leadId}&uid={!userId}"/>
+</body>
+</apex:page>

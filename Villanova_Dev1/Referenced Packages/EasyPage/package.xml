@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EasyPage</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <description>Etherios - EasyPage</description>
+    <namespacePrefix>EasyPage</namespacePrefix>
+    <types>
+        <members>EXMLStreamWriter</members>
+        <members>PageBuilderCon</members>
+        <members>PageBuilderConTestData</members>
+        <members>RelatedListMapper</members>
+        <members>XMLDom</members>
+        <members>XMLDomTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>PageBuilderStep1</members>
+        <members>PageBuilderStep2</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>EasyPage</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>EasyPage</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>EtheriosEasyPage</members>
+        <members>EtheriosEasyPage/flames_blueBkground_32x34_jpg.png</members>
+        <members>EtheriosEasyPage/logo_250x50_appBkground_jpg.png</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>loader</members>
+        <members>yui</members>
+        <members>yui_etherios</members>
+        <name>StaticResource</name>
+    </types>
+    <version>20.0</version>
+</Package>

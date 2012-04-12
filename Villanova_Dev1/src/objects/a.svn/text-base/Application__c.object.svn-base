@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>student Application to the University</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Bio__c</fullName>
+        <description>Brief Biographical information</description>
+        <externalId>false</externalId>
+        <label>Bio</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Child_1_Age__c</fullName>
+        <description>Age of 1st child</description>
+        <externalId>false</externalId>
+        <label>Child 1 Age</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_1_Gender__c</fullName>
+        <description>Gender of 1st child</description>
+        <externalId>false</externalId>
+        <label>Child 1 Gender</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_1_Name__c</fullName>
+        <description>Name of 1st child</description>
+        <externalId>false</externalId>
+        <label>Child 1 Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_2_Age__c</fullName>
+        <description>Age of 2nd child</description>
+        <externalId>false</externalId>
+        <label>Child 2 Age</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_2_Gender__c</fullName>
+        <description>Gender of 2nd child</description>
+        <externalId>false</externalId>
+        <label>Child 2 Gender</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_2_Name__c</fullName>
+        <description>Name of 2nd child</description>
+        <externalId>false</externalId>
+        <label>Child 2 Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_3_Age__c</fullName>
+        <description>Age of 3rd child</description>
+        <externalId>false</externalId>
+        <label>Child 3 Age</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_3_Gender__c</fullName>
+        <description>Gender or 3rd child</description>
+        <externalId>false</externalId>
+        <label>Child 3 Gender</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_3_Name__c</fullName>
+        <description>Name of 3rd child</description>
+        <externalId>false</externalId>
+        <label>Child 3 Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_4_Age__c</fullName>
+        <description>Age of 4th child</description>
+        <externalId>false</externalId>
+        <label>Child 4 Age</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_4_Gender__c</fullName>
+        <description>Gender of 4th child</description>
+        <externalId>false</externalId>
+        <label>Child 4 Gender</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Child_4_Name__c</fullName>
+        <description>Name of 4th child</description>
+        <externalId>false</externalId>
+        <label>Child 4 Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Applications</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Country_of_Citizenship__c</fullName>
+        <description>Country of Citizenship</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country of Citizenship</inlineHelpText>
+        <label>Country of Citizenship</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Submitted__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Submitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Entry_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Entry Term</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2009 - Spring</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2009 - Fall</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2010 - Spring</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2010 - Fall</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2011 - Spring</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2011 - Fall</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2012 - Spring</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2012 - Fall</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Foreign_Citizen__c</fullName>
+        <description>Is applicant a foreign citizen</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is applicant a foreign citizen</inlineHelpText>
+        <label>Foreign Citizen</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>International_Travel__c</fullName>
+        <description>Has applicant traveled internationally in the last 5 years.</description>
+        <externalId>false</externalId>
+        <label>International Travel</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Internship_Interest__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Internship Interest?</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Module_III_C_Pay__c</fullName>
+        <description>Amount company is paying for Module III</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount company is paying for Module III</inlineHelpText>
+        <label>Module III C-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Module_III_P_Pay__c</fullName>
+        <description>Amount the person is paying for Module III</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount the person is paying for Module III</inlineHelpText>
+        <label>Module III P-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Module_II_C_Pay__c</fullName>
+        <description>Amount company is paying for Module II</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount company is paying for Module II</inlineHelpText>
+        <label>Module II C-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Module_II_P_Pay__c</fullName>
+        <description>Amount person is paying for Module II</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount person is paying for Module II</inlineHelpText>
+        <label>Module II P-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Module_IV_C_Pay__c</fullName>
+        <description>Amount the company is paying for Module IV</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount the company is paying for Module IV</inlineHelpText>
+        <label>Module IV C-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Module_IV_P_Pay__c</fullName>
+        <description>Amount the person pays for Module IV</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount the person pays for Module IV</inlineHelpText>
+        <label>Module IV P-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Module_I_C_Pay__c</fullName>
+        <description>Amount company is paying for Module 1</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount company is paying for Module 1</inlineHelpText>
+        <label>Module I C-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Module_I_P_Pay__c</fullName>
+        <description>Amount person is paying for Module I</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount person is paying for Module I</inlineHelpText>
+        <label>Module I P-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Module_V_C_Pay__c</fullName>
+        <description>Amount the company pays for Module V</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount the company pays for Module V</inlineHelpText>
+        <label>Module V C-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Module_V_P_Pay__c</fullName>
+        <description>Amount the person pays for Module V</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount the person pays for Module V</inlineHelpText>
+        <label>Module V P-Pay</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Name_Plate__c</fullName>
+        <description>Name format to be printed on name plate</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name format to be printed on name plate</inlineHelpText>
+        <label>Name Plate</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phonetic_Name__c</fullName>
+        <description>Phonetic pronunciation of persons name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Phonetic pronunciation of persons name</inlineHelpText>
+        <label>Phonetic Name</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Program Interest</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Graduate - MBA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate - EMBA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate - JD/MBA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate - Masters Accounting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate - Masters Taxation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Undergraduate - Accountancy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Undergraduate - Economics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Undergraduate - Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Undergraduate - Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Undergraduate - MIS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Undergraduate - Marketing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Undergraduate - International Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RSVP_BBQ_Name__c</fullName>
+        <description>Name of guest attending BBQ</description>
+        <externalId>false</externalId>
+        <label>RSVP BBQ Name</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RSVP_BBQ__c</fullName>
+        <description>Attending the Barbecue</description>
+        <externalId>false</externalId>
+        <label>RSVP BBQ</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RSVP_Family_Night_Adults__c</fullName>
+        <description>Number of adults attending family night</description>
+        <externalId>false</externalId>
+        <label>RSVP Family Night Adults</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RSVP_Family_Night_Children__c</fullName>
+        <description>Number of children attending family night</description>
+        <externalId>false</externalId>
+        <label>RSVP Family Night Children</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RSVP_Family_Night_Names__c</fullName>
+        <description>Names of people attending</description>
+        <externalId>false</externalId>
+        <label>RSVP Family Night Names</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RSVP_Partner_Name__c</fullName>
+        <description>Name of guest attending</description>
+        <externalId>false</externalId>
+        <label>RSVP Partner Name</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RSVP_Partner__c</fullName>
+        <description>Attending the Partners Program</description>
+        <externalId>false</externalId>
+        <label>RSVP Partner</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RSVP_Value__c</fullName>
+        <description>Used to collect RSVP responses to various activities</description>
+        <externalId>false</externalId>
+        <label>RSVP Value</label>
+        <picklist>
+            <picklistValues>
+                <fullName>able to attend</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>unable to attend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Shirt_Size__c</fullName>
+        <description>Shirt Size</description>
+        <externalId>false</externalId>
+        <label>Shirt Size</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Small</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Large</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extra Large</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Significant_Other__c</fullName>
+        <description>Name of Significant other</description>
+        <externalId>false</externalId>
+        <label>Significant Other</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Travel_Locations__c</fullName>
+        <description>Locations of international travel</description>
+        <externalId>false</externalId>
+        <label>Travel Locations</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>WSJ_Delivery_Address__c</fullName>
+        <description>Where to deliver the Wall Street Journal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Where to deliver the Wall Street Journal</inlineHelpText>
+        <label>WSJ Delivery Address</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Work Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Online</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <label>Matriculation</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Shirt_size</fullName>
+        <columns>NAME</columns>
+        <columns>Shirt_Size__c</columns>
+        <columns>Contact__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Shirt_Size__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Shirt size</label>
+    </listViews>
+    <nameField>
+        <displayFormat>AP-{0000000}</displayFormat>
+        <label>Application ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Matriculation</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Foreign_Citizen</fullName>
+        <active>true</active>
+        <description>Insure we collect the name of the country for foreign students</description>
+        <errorConditionFormula>AND(
+          ISBLANK( Country_of_Citizenship__c ),
+          ISPICKVAL( Foreign_Citizen__c , &quot;Yes&quot;)
+         )</errorConditionFormula>
+        <errorDisplayField>Foreign_Citizen__c</errorDisplayField>
+        <errorMessage>You must specify your country of citizenship.</errorMessage>
+    </validationRules>
+</CustomObject>

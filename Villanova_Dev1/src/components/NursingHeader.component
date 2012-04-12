@@ -1,0 +1,377 @@
+<apex:component >
+
+    <!-- START SITE HEAD -->
+    
+    
+    <!-- BEGIN JavaScript code for image swaps and restores. Also preloads rollover states into cache memory. Do not modify. -->
+    <script language="JavaScript" type="text/JavaScript">
+    
+        function MM_preloadImages() { //v3.0
+          var d=document; 
+          if(d.images){ 
+            if(!d.MM_p) {d.MM_p=new Array();}
+            var i,j=d.MM_p.length,a=MM_preloadImages.arguments; 
+            for(i=0; i<a.length; i++){
+                if (a[i].indexOf("#")!=0){ 
+                    d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];
+                }
+            }
+          }
+        }
+        function MM_swapImgRestore() { //v3.0
+          var i,x,a=document.MM_sr; 
+          for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++){
+            x.src=x.oSrc;
+          }
+        }
+        
+        function MM_findObj(n, d) { //v4.01
+          var p,i,x;  
+          if(!d){ d=document; }
+          if((p=n.indexOf("?"))>0&&parent.frames.length) {
+            d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);
+          }
+          if(!(x=d[n])&&d.all) {x=d.all[n]; }
+          for (i=0;!x&&i<d.forms.length;i++){
+           x=d.forms[i][n];
+          }
+          for(i=0;!x&&d.layers&&i<d.layers.length;i++){
+            x=MM_findObj(n,d.layers[i].document);
+          }
+          if(!x && d.getElementById){ x=d.getElementById(n);}
+          return x;
+        }
+        
+        function MM_swapImage() { //v3.0
+          var i,j=0,x,a=MM_swapImage.arguments; 
+          document.MM_sr=new Array; 
+          for(i=0;i<(a.length-2);i+=3){
+           if ((x=MM_findObj(a[i]))!=null){
+             document.MM_sr[j++]=x; if(!x.oSrc){ 
+                x.oSrc=x.src; x.src=a[i+2];
+             }
+           }
+          }
+        }
+    </script>
+    <!-- END Swap Image Code -->
+    
+        <!-- BEGIN attaching dropdown menu files. Change the path to these files if they are moved on the server. Do not modify the order in which they are loaded. -->
+        
+        <script type="text/javascript" src="{!URLFOR($Resource.WebFiles, '/assets/dropdown/rotate.js')}"></script>
+        <script type="text/javascript" src="{!URLFOR($Resource.WebFiles, '/assets/dropdown/milonic_src.js')}"></script>
+        <script type="text/javascript" src="{!URLFOR($Resource.WebFiles, '/assets/dropdown/insert_active_flash.js')}"></script>
+        
+        <script type="text/javascript" src="{!URLFOR($Resource.WebFiles, '/assets/dropdown/mmenudom.js')}"></script>
+        <script type="text/javascript">
+        if(ns4)_d.write("<scr"+"ipt type=text/javascript src={!URLFOR($Resource.WebFiles, '/assets/dropdown/mmenuns4.js')}><\/scr"+"ipt>");      
+          else _d.write("<scr"+"ipt type=text/javascript src={!URLFOR($Resource.WebFiles, '/assets/dropdown/mmenudom.js')}><\/scr"+"ipt>"); 
+        </script>
+    
+    
+    
+    
+      <script type="text/javascript" src="{!URLFOR($Resource.WebFiles, '/assets/dropdown/menu_data.js')}"></script>
+    
+    
+    <!-- END attaching dropdown menu files. -->
+    <script Language="JavaScript">                                                  
+          function popUpWindow(url, windowName, width, height) { 
+            var newWindow = window.open(url+"?template=no", windowName, "dependent=no,toolbar=no,width="+width+",innerWidth="+width+",height="+height+",innerHeight="+height+",scrollbars=yes,menubar=yes,status=yes,resizable=yes");
+            newWindow.focus();                                                          
+            return false;                                                               
+          }           
+    
+        //   Detect Browser Objects
+        //
+        //   document.images The surfer is using NS 3+, IE 4+
+        //   !document.images The surfer is using NS 2, IE 3
+        //   document.layers The surfer is using NS 4
+        //   document.all The surfer is using IE 4+
+        //   document.getElementById The surfer is using IE5+ OR NS6+
+        //   document.getElementById && !document.all The surfer is using NS6+
+        
+         if (document.layers) {
+           document.location="http://www.villanova.edu/homepage/redirect.htm?template=no";
+         }
+    
+        // delay the About menu for half a second
+          function delayAboutMenu() {
+            MM_swapImage('About_VU','','{!URLFOR($Resource.WebFiles, '/assets/images/About_VU_over.gif')}',1);
+            setTimeout('popup("menuAbout_VU","About_VU")',500);
+          }
+    </script>
+    <script>
+    var bHover = '';
+        function setNavMenuActive(menuName, imageName) 
+        {
+            if (bHover==imageName)
+            {
+                popup(menuName, imageName);
+            }
+        }
+        function delayPopUpMenu(menuName, imageName)
+        {
+            setTimeout('setNavMenuActive(\''+menuName+'\', \''+imageName+'\')',325);
+        }
+    </script>
+    <!-- END SITE HEAD -->
+    <div align="center">
+   
+           <table cellspacing="0" id="mainTable">
+           
+               <tr class="printerFriendly">
+                   <td rowspan="2" id="leftShadow"><apex:image value="{!URLFOR($Resource.WebFiles, '/assets/images/shadow_left_top.gif')}"
+                       width="5" height="8" /></td>
+                   <td id="headerBackground">
+                   <table id="headerBackgroundTable" cellspacing="0">
+                       <tr>
+                           <td id="siteLogo"><a href="/business/"><apex:image value="{!URLFOR($Resource.WebFiles, '/business/assets/images/business_logo.gif')}"
+                               alt="Villanova University" style="border:none;" /> </a></td>
+                           <td id="pipeline" align="right">
+                           
+                           <table>
+                               <tr>
+                                   <td id="pipelineTop">
+                                       &nbsp;
+                                       <a href="https://vusecure.villanova.edu/vusecurity/authentication">Log on</a>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td id="pipelineBottom"><a
+                                       href="http://www.villanova.edu/apply/"
+                                       title="Admission Application">Apply</a> | <a
+                                       href="http://www.villanova.edu/business/contact/"
+                                       title="Villanova School of Business Contact Us">Contact Us</a>
+                                   | <a href="http://www.villanova.edu/business/giveagift/"
+                                       title="Give a Gift - Villanova School of Business">Give a
+                                   Gift</a> | <a href="http://www.villanova.edu/homepage/"
+                                       title="VU Home">VU Home</a> | <a
+                                       href="http://www.villanova.edu/homepage/index_az/">Site
+                                   Index</a> | <a href="http://assistive.usablenet.com/tt/referrer"
+                                       title="text-only page produced automatically by LIFT Text Transcoder">Text
+                                   only</a></td>
+       
+                               </tr>
+                               <tr>
+                                   <td>
+                                    <!-- START SITE SEARCH -->
+                                    <div align="right" id="searchBox">
+                                    <script type="text/javascript">
+                                        function gosearch()
+                                        {
+                                           var v = document.searchform.elements["sitesearch"].value;
+                                           if (v == "VU People") {
+                                               var query = URLencode(document.searchform.elements["q"].value);
+                                               document.searchform.method = "post";
+                                               document.searchform.action = "http://www.villanova.edu/directoryservices/search?lastName="+query;
+                                              document.searchform.submit();
+                                           } else {
+                                             var submitStr = "";
+                                             for (var j=0; j<document.searchform.elements.length; j++) {
+                                               if ( j == 0) {
+                                                 submitStr = document.searchform.elements[j].name+"="+document.searchform.elements[j].value; 
+                                        
+                                               } else {
+                                                 submitStr = submitStr+"&"+document.searchform.elements[j].name+"="+document.searchform.elements[j].value; 
+                                        
+                                               }
+                                             }
+                                             document.searchform.method = "get";
+                                             document.searchform.action = "http://www.google.com/u/villanova?"+submitStr;
+                                             document.searchform.submit();
+                                           }
+                                        }
+                                        
+                                         function URLencode(sStr) {
+                                            return escape(sStr).replace(/\+/g,'%2C').replace(/\"/g,'%22').replace(/\'/g, '%27');
+                                          }
+                                        </script>
+                                            <FORM ACTION="" NAME="searchform"  onSubmit="return gosearch()">
+                                           <input type="hidden" name="domains" value="villanova.edu"/>
+                                            Search&nbsp;<img src="{!URLFOR($Resource.WebFiles, '/assets/images/google_icon.gif')}" alt="Google Search" align="absmiddle" width="16" height="16"/>&nbsp;<input name="q" type="text" class="inputBox" value="Enter Keywords" onFocus="javascript:this.value='';" size="14" maxlength="255"/>&nbsp;<select name="sitesearch" class="inputBox" onchange="MM_jumpMenu('parent',this,0)">
+                                              <option value="villanova.edu/business">VU Web</option>
+                                        
+                                              <option value="VU People">VU People</option>
+                                              <option value="library.villanova.edu">VU Library</option>
+                                              <option value=".villanova.edu">The Internet</option>
+                                          </select>&nbsp;<input type="image" border="0" alt="GO!" name="sa" src="{!URLFOR($Resource.WebFiles, '/assets/images/GO_button.gif')}" align="absmiddle" width="39" height="15"/>
+                                        </FORM>
+                                                                                
+                                    </div>
+                                    <!-- END SITE SEARCH -->
+                                   </td>
+                               </tr>
+       
+       
+                           </table>
+                           </td>
+                       </tr>
+                   </table>
+                   </td>
+                   <td rowspan="2" id="rightShadow"><apex:image value="{!URLFOR($Resource.WebFiles, '/assets/images/shadow_right_top.gif')}" width="5" height="8" /></td>
+               </tr>
+       
+               <tr>
+                   <td class="contentArea">
+                    <!-- START SITE TOP MENU -->
+               <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td colspan="2" class="menuTopLine"><table width="100%"  border="0" cellpadding="0" cellspacing="0" class="menuTopBottomLine">
+                    <tr>
+                      <td><a href="#" onMouseOver="MM_swapImage('About_VU','','{!URLFOR($Resource.WebFiles, '/assets/images/About_VU_over.gif')}',1);delayPopUpMenu('menuAbout_VU','About_VU');bHover='About_VU'" onMouseOut="MM_swapImgRestore();popdown();bHover=''">
+                      <img src="{!URLFOR($Resource.WebFiles, '/assets/images/About_VU.gif')}" name="About_VU" alt="About VU" border="0" id="About_VU" width="96" height="20"/></a></td>
+                      <td><a href="#" onMouseOver="MM_swapImage('Admissions','','{!URLFOR($Resource.WebFiles, '/assets/images/Admissions_over.gif')}',1);delayPopUpMenu('menuAdmissions','Admissions');bHover='Admissions'" onMouseOut="MM_swapImgRestore();popdown();bHover=''">
+                      <img src="{!URLFOR($Resource.WebFiles, '/assets/images/Admissions.gif')}" name="Admissions" alt="Admission" border="0" id="Admissions" width="96" height="20"/></a></td>
+                      <td><a href="#" onMouseOver="MM_swapImage('Academics','','{!URLFOR($Resource.WebFiles, '/assets/images/Academics_over.gif')}',1);delayPopUpMenu('menuAcademics','Academics');bHover='Academics'" onMouseOut="MM_swapImgRestore();popdown();bHover=''">
+                      <img src="{!URLFOR($Resource.WebFiles, '/assets/images/Academics.gif')}" name="Academics" alt="Academics" border="0" id="Academics" width="87" height="20"/></a></td>
+    
+                      <td><a href="#" onMouseOver="MM_swapImage('Campus_Life','','{!URLFOR($Resource.WebFiles, '/assets/images/Campus_Life_over.gif')}',1);delayPopUpMenu('menuCampus_Life','Campus_Life');bHover='Campus_Life'" onMouseOut="MM_swapImgRestore();popdown();bHover=''">
+                      <img src="{!URLFOR($Resource.WebFiles, '/assets/images/Campus_Life.gif')}" name="Campus_Life" alt="Campus Life" border="0" id="Campus_Life" width="96" height="20"/></a></td>
+                      <td><a href="#" onMouseOver="MM_swapImage('Athletics','','{!URLFOR($Resource.WebFiles, '/assets/images/Athletics_over.gif')}',1);delayPopUpMenu('menuAthletics','Athletics');bHover='Athletics'" onMouseOut="MM_swapImgRestore();popdown();bHover=''">
+                      <img src="{!URLFOR($Resource.WebFiles, '/assets/images/Athletics.gif')}" name="Athletics" alt="Athletics and Recreation" border="0" id="Athletics" width="141" height="20"/></a></td>
+                      <td><a href="#" onMouseOver="MM_swapImage('Libraries','','{!URLFOR($Resource.WebFiles, '/assets/images/Libraries_over.gif')}',1);delayPopUpMenu('menuLibraries','Libraries');bHover='Libraries'" onMouseOut="MM_swapImgRestore();popdown();bHover=''">
+                      <img src="{!URLFOR($Resource.WebFiles, '/assets/images/Libraries.gif')}" name="Libraries" alt="Libraries" border="0" id="Libraries" width="81" height="20"/></a></td>
+                      <td><a href="#" onMouseOver="MM_swapImage('Alumni_Friends','','{!URLFOR($Resource.WebFiles, '/assets/images/Alumni_Friends_over.gif')}',1);delayPopUpMenu('menuAlumni_Friends','Alumni_Friends');bHover='Alumni_Friends'" onMouseOut="MM_swapImgRestore();popdown();bHover=''">
+                      <img src="{!URLFOR($Resource.WebFiles, '/assets/images/Alumni_Friends.gif')}" name="Alumni_Friends" alt="Alumni and Friends of VU" border="0" id="Alumni_Friends" width="158" height="20"/></a></td>
+                    </tr>
+    
+              </table>
+                    <!-- END SITE TOP MENU -->
+                   </td>
+               </tr>
+               <tr>
+       
+       
+       
+                   <td id="siteNavBackground">
+                    <!-- START SITE LEFT MENU -->
+                    <table cellspacing="0" class="siteNav">
+                        <tr>
+                            <td id="siteNavTitle"><a
+                                href="http://www.villanova.edu/business/
+                                            ">Villanova
+                            School of Business</a></td>
+                
+                        </tr>
+                        <tr>
+                            <td><img src="{!URLFOR($Resource.WebFiles, '/assets/images/spacer.gif')}"width="145" height="7" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <table class="siteNavOne" cellspacing="0">
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/about/"
+                                        title="About the Villanova School of Business">About the School</a></td>
+                
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/undergrad/"
+                                        title="Undergraduate Programs">Undergraduate Programs</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/graduate/"
+                                        title="Graduate Business Programs">Graduate Business Programs</a></td>
+                                </tr>
+                                <tr>
+                
+                                    <td><a href="http://www.villanova.edu/business/execmba/"
+                                        title="Executive MBA">Executive MBA</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/sbi/"
+                                        title="Summer Business Institute">Summer Business Institute</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/facultyareas/"
+                                        title="VSB Academic Areas Areas">Academic Areas</a></td>
+                
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/excellence/"
+                                        title="Centers of Excellence">Centers of Excellence</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/facstaff/"
+                                        title="Villanova School of Business Administration">Faculty
+                                    and Staff</a></td>
+                                </tr>
+                                <tr>
+                
+                                    <td id="on"><a
+                                        href="http://www.villanova.edu/business/newsevents/"
+                                        title="Events and Speakers">Events and Speakers</a></td>
+                                </tr>
+                                <tr>
+                                    <td id="padding">
+                                        <table class="siteNavLast" cellspacing="0">
+                                            <tr>
+                                                <td><a href="/business/newsevents/upcoming.htm"
+                                                    title="Upcoming Events">Upcoming Events</a></td>
+                                            </tr>
+                                            <tr>
+                    
+                                                <td id="selected">Event Registration Form</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/resources/"
+                                        title="VSB Community Resources">VSB Community Resources</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a
+                                        href="http://www.villanova.edu/business/corprecruiters.htm"
+                                        title="Corporate Recruiter Resources">Corporate Recruiter
+                                    Resources</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/newsmedia/"
+                                        title="Newsroom">Newsroom</a></td>
+                
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.villanova.edu/business/faqs.htm"
+                                        title="Frequently Asked Questions">FAQs</a></td>
+                                </tr>
+                            </table>
+                            </td>
+                        </tr>
+                
+                    </table>
+                    <!-- END SITE LEFT MENU -->
+                   </td>
+       
+       
+                   <td width="612" class="bodyPaddingOutline">
+                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+       
+                       <!-- end NoLeftNav -->
+       
+                       <tr>
+                           <td class="breadcrumb">
+                           <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                               <tr>
+                                   <td class="breadcrumb">&nbsp;</td>
+       
+                                   <td valign="top" align="right" class="printerFriendly"><!-- <SCRIPT type="text/javascript"  LANGUAGE="JavaScript">
+                                         document.write("    <FORM NAME=\"PrinterFriendly\" TARGET=\"-614715483\" METHOD=\"POST\" ACTION=\""+document.URL+"\">\n");
+                                         document.write("      <INPUT TYPE=\"HIDDEN\" NAME=\"template\" VALUE=\"no\"/>\n");
+                                         document.write("      <INPUT TYPE=\"HIDDEN\" NAME=\"print\" VALUE=\"true\"/>\n");
+                                         document.write("      &nbsp;<INPUT TYPE=\"IMAGE\" IMG SRC=\"{!URLFOR($Resource.WebFiles, '/assets/images/print_icon.gif')}" BORDER=\"0\" width=\"90\" height=\"14\" alt=\"Printer Friendly Version\"/>\n");
+                                         document.write("    </FORM>");
+                                       </SCRIPT> --> <a href="javascript:window.print()"> 
+                                       <IMG SRC="{!URLFOR($Resource.WebFiles, '/assets/images/print_icon.gif')}" BORDER="0" width="90"height="14" alt="Print This Page"/></a>
+                                   </td>
+                               </tr>
+                           </table>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td id="content" class="bodyContentPadding">
+   
+       
+       
+</apex:component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Monitor post-launch statistics for VerticalResponse campaigns</description>
+    <frameHeight>1000</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <label>VR Statistics</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom7: Square</motif>
+    <url>https://multiforce.verticalresponse.com/multiforce/entry.html?dest=stats.html&amp;sfdc_api_session_id={!API.Session_ID}&amp;sfdc_user_id={!User.Id}&amp;sfdc_soap_endpoint={!API.Partner_Server_URL_80}</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

@@ -1,0 +1,25 @@
+<apex:component controller="ctrlDatePicker">
+	<apex:attribute name="pickDateLabel" description="This is the value for the label to display before pickdate component." type="String" required="true"/>
+	<apex:attribute name="pickDateField" description="This is ID value of the Field to be used for component." type="String" required="true"/>
+	<apex:attribute name="value" description="" type="String" required="true"></apex:attribute>
+	<apex:attribute name="defaultValue" description="This is value of the Field." type="String" assignTo="{!dateDefaultValue}" default=""></apex:attribute>
+	
+	<SCRIPT src="{!URLFOR($Resource.JQueryZip,'/jquery-1.3.2.min.js')}" type="text/javascript" /><!-- '/ui.datepicker/jquery-1.2.6.min.js')}" type="text/javascript" /> -->
+	<apex:stylesheet value="{!URLFOR($Resource.jQuery_UI_DatePicker,'/jquery.datepick.css')}" /> <!-- '/ui.datepicker/smoothness/ui.datepicker.css')}" /> -->
+	<SCRIPT src="{!URLFOR($Resource.jQuery_UI_DatePicker,'/jquery.datepick.js')}" type="text/javascript" /><!-- '/ui.datepicker/ui.datepicker.js')}" type="text/javascript" /> -->
+
+	<span style="font-weight:bold;text-align:right;">&nbsp;&nbsp;{!pickDateLabel}&nbsp;</span>
+	<apex:inputText styleClass="{!pickDateField}_dtClass" id="datePicker" value="{!value}" style="font-size:12px;width:80px;"></apex:inputText>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".{!pickDateField}_dtClass").datepick({ 
+			    showOn: "both", 
+			    buttonImage: "{!URLFOR($Resource.jQuery_UI_DatePicker,'/calendar-blue.gif')}", 
+			    buttonImageOnly: true,
+			    buttonText: "calendar",
+			    dateFormat: 'mm/dd/yy'
+			});
+		});
+	</script>
+</apex:component>

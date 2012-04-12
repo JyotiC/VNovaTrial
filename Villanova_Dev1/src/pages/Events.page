@@ -1,0 +1,25 @@
+<apex:page standardController="Campaign" extensions="extEvents" recordSetVar="{!lstEvents}" tabStyle="Campaign">
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageBlockButtons >
+                View: 
+                <apex:selectList value="{!strView}" size="1">
+                    <apex:selectOptions value="{!Views}"></apex:selectOptions>
+                    <apex:actionSupport event="onchange" action="{!ChangeView}"/>
+                </apex:selectList>
+                <apex:commandButton value="New" action="{!NewEvent}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!lstEvents}" var="e">
+                <apex:column headerValue="Event">
+                    <a href="/{!e.Id}">{!e.Name}</a>
+                </apex:column>
+                <apex:column headerValue="Date" value="{!e.Date__c}" />
+                <!-- 
+                <apex:column headerValue="Venue">
+                    <a href="/{!e.Event_Venue__c}">{!e.Event_Venue__r.Name}</a>
+                </apex:column> -->
+                <apex:column headerValue="Type" value="{!e.Type}" />
+            </apex:pageBlockTable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

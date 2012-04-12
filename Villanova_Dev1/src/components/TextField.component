@@ -1,0 +1,8 @@
+<apex:component controller="ctrlTextField">
+	
+	<apex:attribute name="TextFieldId" description="This is ID value of the Field to be used for component." type="String" required="true"/>
+	<apex:attribute name="txtvalue" description="" type="String" required="true"></apex:attribute>
+	<apex:attribute name="defaultValue" description="This is value of the Field." type="String" assignTo="{!txtDefaultValue}" default=""></apex:attribute>
+
+	<apex:inputText id="txtfield" value="{!txtvalue}" style="font-size:12px;width:80px;"></apex:inputText>
+</apex:component>

@@ -1,0 +1,49 @@
+<apex:page controller="VEM_EventController" tabStyle="VEM_Event__c" showHeader="false" sidebar="false" renderAs="pdf">
+
+    <apex:stylesheet value="{!$Resource.VEM_ccOperationReportsCSS}"/>
+
+    <apex:panelGrid columns="1" width="100%" style="text-align:center;">
+        <apex:outputText value="Connelly Center - Villanova University" styleClass="pageTitle" />
+        <br />
+        <apex:outputText value="Operations Projection for {!projectionDateRangeString}" styleClass="pageTitle" />
+    </apex:panelGrid>
+
+    <apex:dataTable styleClass="dataTable" headerClass="columnHeader" rowClasses="rowLayout" columnClasses="columnLayout" width="100%" cellspacing="10px" value="{!connellyOperationsProjectionEvents}" var="event">
+        <apex:column headerValue="Date" width="56px">
+            <apex:outputField value="{!event.Start_Date__c}" />
+        </apex:column>
+        <apex:column headerValue="Ready By" width="56px" style="text-align:right">
+            <apex:outputField value="{!event.Ready_By_Time__c}" />
+        </apex:column>
+        <apex:column headerValue="Location" width="100px">
+            <apex:outputField value="{!event.Event_Location__r.Name}" />
+        </apex:column>
+        <apex:column headerValue="Start Time" width="56px" style="text-align:right">
+            <apex:outputField value="{!event.Start_Time__c}" />
+        </apex:column>
+        <apex:column headerValue="End Time" width="56px" style="text-align:right">
+            <apex:outputField value="{!event.End_Time__c}" />
+        </apex:column>
+        <apex:column headerValue="Event" width="120px">
+            <apex:outputField value="{!event.Event_Type__c}"/>
+        </apex:column>
+        <apex:column headerValue="Sponsor">
+            <apex:outputField value="{!event.Event_Sponsor__c}" />
+        </apex:column>
+        <apex:column headerValue="Title" width="120px">
+            <apex:outputField value="{!event.Name}" />
+        </apex:column>
+        <apex:column headerValue="Phone">
+            <apex:outputField value="{!event.Sponsor_Phone__c}" />
+        </apex:column>
+        <apex:column headerValue="Attendance" style="text-align:right">
+            <apex:outputText value="{0, number, #,###}">
+                <apex:param value="{!event.Expected_Volume__c}" />
+            </apex:outputText>
+        </apex:column>
+        <apex:column headerValue="Setup" width="300px">
+            <apex:outputField value="{!event.Event_Notes__c}" />
+        </apex:column>
+    </apex:dataTable>
+
+</apex:page>

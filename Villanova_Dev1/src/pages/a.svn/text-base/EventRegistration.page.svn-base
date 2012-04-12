@@ -1,0 +1,354 @@
+<apex:page id="page" cache="false" standardController="Campaign" extensions="extRegistration" action="{!AllLeadConFields}" showHeader="false" sidebar="false">
+    <apex:stylesheet value="{!URLFOR($Resource.WebFiles, '/homepage/assets/styles/VSB_content.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.WebFiles, '/assets/styles/homepage.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.WebFiles, '/assets/styles/VSB_content.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.WebFiles, '/assets/styles/layout.css')}"/>
+    
+    
+
+        <apex:includeScript value="{!URLFOR($Resource.jQuery)}"/> 
+        <apex:includeScript value="{!URLFOR($Resource.fckEditor,'/fckeditor/fckeditor.js')}"/>
+        
+        <script type="text/javascript">
+            
+            window.onload = function() {
+                if ({!isEdit}){
+                    var editor1 = new FCKeditor($(".editor1").attr("id"));
+                    editor1.BasePath = "{!URLFOR($Resource.fckEditor, '/fckeditor/')}";
+                    editor1.Config['CustomConfigurationsPath'] = editor1.BasePath + 'richtext.config.js';
+                    editor1.ToolbarSet = 'SalesforceBasic';
+                    editor1.Config['ImageBrowserURL'] = '{!$Page.SiteImageBrowser}';
+                    editor1.Config['LinkBrowserURL'] = '{!$Page.SiteFileBrowser}';
+                    editor1.Config['SkinPath'] = editor1.BasePath + 'editor/skins/sfdc/';
+                    editor1.Width = '100%'; 
+                    editor1.Height = '300';
+                    editor1.ReplaceTextarea();
+                    
+                    var editor2 = new FCKeditor($(".editor2").attr("id"));
+                    editor2.BasePath = "{!URLFOR($Resource.fckEditor, '/fckeditor/')}";
+                    editor2.Config['CustomConfigurationsPath'] = editor2.BasePath + 'richtext.config.js';
+                    editor2.ToolbarSet = 'SalesforceBasic';
+                    editor2.Config['ImageBrowserURL'] = '{!$Page.SiteImageBrowser}';
+                    editor2.Config['LinkBrowserURL'] = '{!$Page.SiteFileBrowser}';
+                    editor2.Config['SkinPath'] = editor1.BasePath + 'editor/skins/sfdc/';
+                    editor2.Width = '100%'; 
+                    editor2.Height = '300';
+                    editor2.ReplaceTextarea();
+                }
+            }
+        </script>
+
+
+        
+<html style="height: 100%;">
+<body style="{!if(c.Do_Not_Use_VU_Web_Wrapper__c,'background-color:white;height:100%','height:100%')}">
+<c:VSBHeader rendered="{!Not(c.Do_Not_Use_VU_Web_Wrapper__c)}"/>
+<div style="height:100%;background-color:white">
+<apex:form id="frm" >
+        
+        <table id="support" cellpadding="0" cellspacing="0" style="{!if(c.Do_Not_Use_VU_Web_Wrapper__c,'width:100%;background-color:white;height:100%','width:600px')}">
+            <apex:outputPanel rendered="{!Or(strUserType <> 'Guest',c.Web_Page_Public__c)}">
+                <tr>
+                    <td><h1>{!c.Name}</h1></td>
+                </tr>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!And(strUserType = 'Guest',Not(c.Web_Page_Public__c))}">
+                <tr>
+                    <td align="left" colspan="2"><h1>Page not available</h1></td>
+                </tr>
+                <tr>
+                    <td align="left" colspan="2">The page you have reached is not currently available.</td>
+                </tr>
+            </apex:outputPanel>
+        
+            <tr>
+                <td id="content1" align="left">
+                    <apex:outputPanel rendered="{!Not(Confirm)}">
+                        <apex:outputPanel rendered="{!(strUserType <> 'Guest')}">
+                            <table style="width:580px">
+                                <tr>
+                                    <td align="right" colspan="2">
+                                        <apex:commandLink action="{!EditToggle}" value="Edit" rendered="{!Not(IsEdit)}">
+                                           <apex:actionSupport reRender="frm"/>
+                                       </apex:commandLink>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                    <td align="left" colspan="2">
+                                        <span class="vu___stylize_3">Public URL (currently {!if(c.Web_Page_Public__c,'public','not public')}):</span><br/>http://villanova.<apex:outputText rendered="{!Not(IsProd)}">dev1.cs7.</apex:outputText>force.com/Events/EventRegistration?event={!strKey}
+                                    </td>
+                                    
+                                     
+                                </tr>
+                            </table>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!IsEdit}">
+                            <p><span class="vu__Heading_3">Event Details &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>Display?</b><apex:inputField value="{!c.Display_Event_Details_Header__c}" rendered="{!isEdit}"/></p>
+                            <table style="width:600px">
+                               <tr>
+                                    <td style="width:120px" valign="top" align="left">
+                                        <span class="vu___stylize_3">Web Page Public:</span>
+                                     </td>
+                                     <td style="width:480px" valign="top" align="left">
+                                            <apex:inputField value="{!c.Web_Page_Public__c}"/>
+                                     
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                    <td style="width:120px" valign="top" align="left">
+                                        <span class="vu___stylize_3">Do Not Use VU Web Wrapper:</span>
+                                     </td>
+                                     <td style="width:480px" valign="top" align="left">
+                                            <apex:inputField value="{!c.Do_Not_Use_VU_Web_Wrapper__c}"/>
+                                     
+                                     </td>
+                                 </tr>
+                                <tr>
+                                    <td style="width:120px" valign="top" align="left">
+                                        <span class="vu___stylize_3">Date:</span>
+                                     </td>
+                                     <td style="width:480px" valign="top" align="left">
+                                        <apex:inputField value="{!c.Date__c}" style="width:100px"/>
+                                         <b>Display?</b><apex:inputField value="{!c.Display_Date__c}" rendered="{!isEdit}"/>
+                                     </td>
+                                 </tr>
+                                 
+                                 <tr>
+                                    <td valign="top" align="left">
+                                        <span class="vu___stylize_3">Speaker:</span>
+                                     </td>
+                                     <td valign="top" align="left">
+                                         <apex:inputField value="{!c.Speaker__c}" style="width:300px" rendered="{!isEdit}"/> 
+                                         <b>Display?</b><apex:inputField value="{!c.Display_Speaker__c}" rendered="{!isEdit}"/>
+                                     </td>
+                                 </tr>
+                                 
+                                 <tr>
+                                    <td valign="top" align="left">
+                                        <span class="vu___stylize_3">Location:</span>
+                                     </td>
+                                     <td valign="top" align="left">
+                                         <apex:inputField value="{!c.Location__c}" style="width:300px"/> <b>Display?</b><apex:inputField value="{!c.Display_Location__c}"/>
+                                     </td>
+                                 </tr>
+                             
+                                 <tr>
+                                    <td valign="top" align="left">
+                                        <span class="vu___stylize_3">Time:</span>
+                                     </td>
+                                     <td valign="top" align="left">
+                                         <apex:inputTextarea value="{!c.Time__c}" style="width:300px"/> <b>Display?</b><apex:inputField value="{!c.Display_Time__c}"/>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                    <td valign="top" align="left">
+                                        <span class="vu___stylize_3">Description:</span>
+                                     </td>
+                                     <td valign="top" align="left">
+                                         &nbsp;
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                    <td valign="top" align="left" colspan="2">
+                                         <i>Images and links to files stored in Documents can be included but must be set as an Externally Available Image.</i><br/>
+                                         <apex:inputTextarea id="txtDescrip" value="{!c.Web_Description__c}" rendered="{!isEdit}" styleClass="editor1"/>
+                                     </td>
+                                 </tr>
+                                <tr>
+                                    <td valign="top" align="left" colspan="2">
+                                        <span class="vu___stylize_3">Confirmation Text:</span>
+                                     
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                    <td valign="top" align="left" colspan="2">
+                                         <apex:inputTextarea id="txtConfirm" value="{!c.Confirmation_Text__c}" rendered="{!isEdit}" styleClass="editor2"/>
+                                         
+                                     </td>
+                                 </tr>
+                             </table>
+                         
+                         </apex:outputPanel>
+                         
+                         
+                         <apex:outputPanel rendered="{!And(Not(IsEdit),c.Display_Event_Details_Header__c,Not(IsNull(strKey)),Or(strUserType <> 'Guest',c.Web_Page_Public__c))}">
+                             <p class="vu__Heading_3">Event Details</p>
+                         </apex:outputPanel>
+                         <apex:outputPanel rendered="{!And(Not(IsEdit),c.Display_Date__c,Not(IsNull(strKey)),Or(strUserType <> 'Guest',c.Web_Page_Public__c))}">
+                             <table style="width:580px">
+                                
+                                <tr>
+                                    <td style="width:80px" valign="top" align="left">
+                                        <span class="vu___stylize_3">Date:</span>
+                                     </td>
+                                     <td style="width:500px" valign="top" align="left">
+                                      <apex:outputText escape="false" rendered="{!Not(isEdit)}" value="{!strDate}"></apex:outputText>
+                                     
+                                  </td>
+                                </tr>
+                                
+                             </table>
+                         </apex:outputPanel>
+                         <apex:outputPanel rendered="{!And(Not(IsEdit),c.Display_Speaker__c,Not(IsNull(strKey)),Or(strUserType <> 'Guest',c.Web_Page_Public__c))}">
+                             <table style="width:580px">
+                             
+                                 <tr>
+                                    <td style="width:80px" valign="top" align="left">
+                                        <span class="vu___stylize_3">Speaker:</span>
+                                     </td>
+                                     <td style="width:500px" valign="top" align="left">
+                                         <apex:outputText escape="false" rendered="{!And(Not(isEdit),c.Display_Speaker__c)}" value="{!c.Speaker__c}"></apex:outputText>
+                                     </td>   
+                                 </tr>
+      
+                             </table>
+                         </apex:outputPanel>
+                         <apex:outputPanel rendered="{!And(Not(IsEdit),c.Display_Location__c,Not(IsNull(strKey)),Or(strUserType <> 'Guest',c.Web_Page_Public__c))}">
+                             <table style="width:580px">
+                             
+                                 <tr>
+                                    <td style="width:80px" valign="top" align="left">
+                                        <span class="vu___stylize_3">Location:</span>
+                                     </td>
+                                     <td style="width:500px" valign="top" align="left">
+                                         <apex:outputText escape="false" rendered="{!And(Not(isEdit),c.Display_Location__c)}" value="{!c.Location__c}"></apex:outputText>
+                                         
+                                     </td>
+                                 </tr>
+                             </table>
+                         </apex:outputPanel>
+                         <apex:outputPanel rendered="{!And(Not(IsEdit),c.Display_Time__c,Not(IsNull(strKey)),Or(strUserType <> 'Guest',c.Web_Page_Public__c))}">
+                             <table style="width:580px">
+                         
+                                 <tr>
+                                    <td style="width:80px" valign="top" align="left">
+                                        <span class="vu___stylize_3">Time:</span>
+                                     </td>
+                                     <td style="width:500px" valign="top" align="left">
+                                         <apex:outputText escape="false" rendered="{!And(Not(isEdit),c.Display_Time__c)}" value="{!c.Time__c}"></apex:outputText>
+                                         
+                                     </td>
+                                 </tr>
+                             </table>
+                         </apex:outputPanel>
+                         <apex:outputPanel rendered="{!And(Not(IsEdit),Not(IsNull(strKey)),Len(c.Web_Description__c)>0,Or(strUserType <> 'Guest',c.Web_Page_Public__c))}">
+                             <table style="width:580px">
+                         
+                                 <tr>
+                                    <td style="width:580px" colspan="2" valign="top" align="left">
+                                         
+                                         <apex:outputText escape="false" rendered="{!Not(isEdit)}" value="{!c.Web_Description__c}"></apex:outputText>
+                                         
+                                     </td>
+                                 </tr>
+                             </table>
+                         </apex:outputPanel>
+                     </apex:outputPanel>
+                      
+                    <apex:outputPanel id="opFields" rendered="{!isEdit}">
+                         <p class="vu__Heading_3">Registration<apex:outputText rendered="{!isEdit}"> Form Fields</apex:outputText> </p>
+                        
+                        <!--SELECT FIELDS FOR FORM-->
+                        <apex:dataTable value="{!lstDisplayFields}" var="df" columnsWidth="60,120,80,100,20,20">
+                            <apex:column headerValue="Action">
+                                <apex:commandLink action="{!RemoveField}" value="remove" rendered="{!AND(df.field <> 'firstname',df.field <> 'lastname')}">
+                                    <apex:param name="rem_field" value="{!df.field}" />
+                                    <apex:actionSupport rerender="opFields"/>
+                                </apex:commandLink>
+                            </apex:column>
+                            
+                            <apex:column headerValue="Field" value="{!df.label}"/>
+                            <apex:column headerValue="Type" value="{!df.datatype}"/>
+                            <apex:column headerValue="Label">
+                                <apex:inputText value="{!df.label}" style="width:200px" rendered="{!And(df.datatype <> 'ATTACHMENT', df.datatype <> 'Heading',df.datatype <> 'Descrip')}" disabled="{!And(df.datatype <> 'ATTACHMENT', df.datatype <> 'Heading', df.datatype <> 'Descrip')}" />
+                                <apex:inputText value="{!df.textval}" style="width:200px" rendered="{!Or(df.datatype = 'ATTACHMENT', df.datatype = 'Heading')}" />
+                                <apex:inputTextarea style="width:200px;height:120px" value="{!df.textval}" rendered="{!df.datatype = 'Descrip'}"/>
+                            </apex:column>
+                            <apex:column headerValue="Required?">
+                                <apex:inputCheckbox value="{!df.required}" disabled="{!Or(df.field='firstname',df.field='lastname',df.datatype='Boolean',df.datatype='Heading',df.datatype='Descrip')}"/>
+                            </apex:column>
+                            <apex:column >
+                                <apex:commandLink action="{!MoveUp}" value="up" rendered="{!(df.order <> 1)}">
+                                    <apex:param name="field" value="{!df.field}" />
+                                    <apex:actionSupport rerender="opFields"/>
+                                </apex:commandLink>
+                            </apex:column>
+                            <apex:column >
+                                <apex:commandLink action="{!MoveDown}" value="down" rendered="{!(df.order <> intMaxOrder)}">
+                                    <apex:param name="field" value="{!df.field}" />
+                                    <apex:actionSupport rerender="opFields"/>
+                                </apex:commandLink>
+                            </apex:column>
+                            
+                        </apex:dataTable>
+                        <apex:selectList value="{!strAddField}" size="1">
+                           <apex:selectOptions value="{!AvailFields}"></apex:selectOptions>
+                        </apex:selectList>
+                        <apex:commandButton action="{!AddField}" value="Add" rerender="opFields"/>
+                        <br/>
+                            <apex:outputPanel rendered="{!Not(IsNull(strError))}"><font color="red"><apex:outputText value="{!strError}" escape="false"/></font></apex:outputPanel>
+                        <br/>
+                        <apex:commandButton action="{!SaveC}" value="Save">
+                            <apex:actionSupport rerender="opFields"/>
+                        </apex:commandButton>
+                    </apex:outputPanel>
+                        
+                    
+
+                    <!--REGISTRATION FORM-->
+                    <apex:outputPanel id="opRegForm" rendered="{!And(Not(isEdit),Not(Confirm),Not(IsNull(strKey)),Or(strUserType <> 'Guest',c.Web_Page_Public__c))}">
+                     <p class="vu__Heading_3">Registration </p>
+                        <apex:outputPanel rendered="{!Not(IsNull(strError))}"><font color="red"><apex:outputText value="{!strError}" escape="false"/></font></apex:outputPanel>
+                        <table width="100%">
+                        <apex:repeat value="{!lstDisplayFields}" var="f">
+                            <tr>
+                                <apex:outputPanel rendered="{!And(f.datatype <> 'Line', f.datatype <> 'Heading', f.datatype <> 'Descrip')}">
+                                    <td valign="top" align="left" width="160px">
+                                        {!f.label}<apex:outputPanel rendered="{!f.required}">*</apex:outputPanel>
+                                    </td>
+                                    <td valign="top" align="left">
+                                        
+                                         <c:DynamicField fieldid="{!f.field}" value="{!f.value}" datatype="{!f.datatype}" attach="{!f.attach}" boo="{!f.bool}" campaignid="{!c.Id}"/> 
+                                         
+                                    </td>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!Or(f.datatype = 'Line', f.datatype = 'Heading', f.datatype = 'Descrip')}">
+                                    
+                                    <td valign="top" align="left" colspan="2">
+                                        
+                                         <c:DynamicField fieldid="{!f.field}" value="{!f.value}" datatype="{!f.datatype}" attach="{!f.attach}" boo="{!f.bool}" textval="{!f.textval}" campaignid="{!c.Id}"/> 
+                                         
+                                    </td>
+                                </apex:outputPanel>
+                            </tr>
+                        </apex:repeat>
+                        </table>
+                        <apex:commandButton action="{!Register}" value="{!IF(ISNull(c.Submit_Button_Label__c),"Register",c.Submit_Button_Label__c)}">
+                            
+                        </apex:commandButton>
+                        
+                    </apex:outputPanel>
+                    
+                    
+                    <apex:outputPanel id="opConfirm" rendered="{!And(Not(isEdit),Confirm)}">
+                        <p class="vu__Heading_3">Registration Confirmed</p>
+                        <apex:outputText escape="false" value="{!c.Confirmation_Text__c}"></apex:outputText>
+                    </apex:outputPanel>
+                
+                </td>
+            </tr>
+
+        </table> 
+        
+</apex:form>
+
+</div>
+<c:VSBFooter rendered="{!Not(c.Do_Not_Use_VU_Web_Wrapper__c)}"/> 
+</body>
+</html>
+<meta name="author" content="Platy IT"/>
+       
+
+         
+    
+</apex:page>

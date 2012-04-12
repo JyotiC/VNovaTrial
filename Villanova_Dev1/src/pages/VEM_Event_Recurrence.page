@@ -1,0 +1,361 @@
+<apex:page standardController="VEM_Event__c" showHeader="true" sidebar="true">
+
+    <script language="javascript">
+
+        function initializeDaily(dailyTypeId, dailyTypeRadioName, daysId)
+        {
+            // Reset unselected option(s)
+            var dailyType = document.getElementById(dailyTypeId);
+            if (dailyType)
+            {
+                // Reset number of days
+                if (dailyType.value != 'Every X day(s)')
+                {
+                    document.getElementById(daysId).value = '1';
+                }
+            }
+
+            // Set the previously selected option
+            setSelectedOption(dailyTypeId, dailyTypeRadioName);
+        }
+
+        function initializeWeekly(weeksId)
+        {
+            // Reset number of weeks
+            weeks = document.getElementById(weeksId);
+            if (weeks && (weeks == null || weeks.value == ''))
+            {
+                weeks.value = '1';
+            }
+        }
+
+        function initializeMonthly(monthlyTypeId, monthlyTypeRadioName,
+                                   dayOfMonthId, months1Id,
+                                   dayList1Id, dayList2Id, months2Id)
+        {
+            // Reset unselected option(s)
+            var monthlyType = document.getElementById(monthlyTypeId);
+            if (monthlyType)
+            {
+                if (monthlyType.value != 'Day X of every Y month(s)')
+                {
+                    document.getElementById(dayOfMonthId).value = '1';
+                    document.getElementById(months1Id).value = '1';
+                }
+                if (monthlyType.value != 'The X Y of every Z month(s)')
+                {
+                    document.getElementById(dayList1Id).selectedIndex = -1;
+                    document.getElementById(dayList2Id).selectedIndex = -1;
+                    document.getElementById(months2Id).value = '1';
+                }
+            }
+
+            // Set the previously selected option
+            setSelectedOption(monthlyTypeId, monthlyTypeRadioName);
+        }
+
+        function initializeYearly(yearlyTypeId, yearlyTypeRadioName,
+                                  yearlyMonthList1Id, yearlyDayId,
+                                  yearlyDayList1Id, yearlyDayList2Id, yearlyMonthList2Id)
+        {
+            // Reset unselected option(s)
+            var yearlyType = document.getElementById(yearlyTypeId);
+            if (yearlyType)
+            {
+                if (yearlyType.value != 'Every X Y')
+                {
+                    document.getElementById(yearlyMonthList1Id).value = '1';
+                    document.getElementById(yearlyDayId).value = '1';
+                }
+                if (yearlyType.value != 'The X Y of Z')
+                {
+                    document.getElementById(yearlyDayList1Id).selectedIndex = -1;
+                    document.getElementById(yearlyDayList2Id).selectedIndex = -1;
+                    document.getElementById(yearlyMonthList2Id).selectedIndex = -1;
+                }
+            }
+
+            // Set the previously selected option
+            setSelectedOption(yearlyTypeId, yearlyTypeRadioName);
+        }
+    
+     function initializeRecurrenceDates(recurrenceStartDateId, eventStartDateId)
+        {
+            var recurrenceStartDate = document.getElementById(recurrenceStartDateId);
+            if (recurrenceStartDate && (recurrenceStartDate.value == null || recurrenceStartDate.value == ''))
+            {
+                var eventStartDate = document.getElementById(eventStartDateId);
+                if (eventStartDate && eventStartDate.value != null && eventStartDate.value != '')
+                {
+                    //Format: 'ddd mmm d h:M:s o yyyy'
+                    var dateField = eventStartDate.value.split(' ');
+                    var tempDate = new Date(dateField[1] + ' ' + dateField[2] + ', ' + dateField[5]);
+                    recurrenceStartDate.value = tempDate.getMonth()+1 + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
+                }
+            }
+        }
+        
+    
+       
+    
+        function setSelectedOption(ctrlHidddenId, ctrlRadioName)
+        {
+            var ctrlHiddden = document.getElementById(ctrlHidddenId);
+            var ctrlRadio = document.getElementsByName(ctrlRadioName);
+            if (ctrlHiddden && ctrlRadio)
+            {
+                var isChecked = false;
+                for (i = 0; i < ctrlRadio.length; i++)
+                {
+                    if (ctrlRadio[i].value == ctrlHiddden.value)
+                    {
+                        ctrlRadio[i].checked = true;
+                        isChecked = true;
+                    }
+                }
+                
+                if (!isChecked)
+                {
+                    ctrlRadio[0].checked = true;
+                    ctrlHiddden.value = ctrlRadio[0].value;
+                }
+            }
+        }
+
+        function changeSelectedOption(ctrlRadio, ctrlHidddenId)
+        {
+            var ctrlHiddden = document.getElementById(ctrlHidddenId);
+            if (ctrlRadio && ctrlHiddden)
+            {
+                ctrlHiddden.value = ctrlRadio.value;
+            }
+        }
+  
+      function removeNoneFromPicklistIfNotSelected(dropDownId)
+        {
+            var dropDown = document.getElementById(dropDownId);
+            if (dropDown && dropDown.selectedIndex != 0)
+            {
+                removeNoneFromPicklist(dropDownId);
+                //dropDown.focus();
+            }
+        }
+
+        function removeNoneFromPicklist(dropDownId)
+        {
+            var dropDown = document.getElementById(dropDownId);
+            if (dropDown)
+            {
+                var optionList = dropDown.options;
+                if (optionList && optionList.length > 0 && optionList[0].value == '')
+                {
+                    optionList.remove(0);
+                }
+            }
+        }
+
+    </script>
+
+    <apex:sectionHeader title="{!$ObjectType.VEM_Event__c.label} Edit" subtitle="{!VEM_Event__c.Name}" />
+
+    <apex:form >
+
+        <apex:pageBlock title="{!$ObjectType.VEM_Event__c.label} Recurrence" mode="edit">
+
+            <apex:pageMessages />
+
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save" />
+                <apex:commandButton action="{!cancel}" value="Cancel" />
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection showHeader="true" title="Information" columns="1"/>
+
+            <apex:pageBlockSection id="staticSection" showHeader="false" title="" columns="1">
+                <apex:pageBlockSection id="timeSection" showHeader="false" title="" columns="1">
+                    <apex:outputLabel value="Time:" />
+                    <apex:outputField value="{!VEM_Event__c.Start_Time__c}" />
+                    <apex:outputField value="{!VEM_Event__c.End_Time__c}" />
+                </apex:pageBlockSection>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="dynamicSection" showHeader="false" title="" columns="1">
+
+                <apex:outputPanel id="frequencyPanel">
+                    <apex:actionRegion >
+                        <apex:outputLabel value="Frequency:" />
+                        <table border="0">
+                          <tr>
+                            <td style="width:80px">&nbsp;</td>
+                            <td style="width:1000px">
+                              <apex:inputField id="recurrenceType" value="{!VEM_Event__c.Recurrence_Type__c}" required="false">
+                                  <apex:actionSupport event="onchange" reRender="dynamicSection" />
+                              </apex:inputField>
+                            </td>
+                          </tr>
+                        </table>
+                        <script language="javascript">
+                            //Keep --None-- so recurrences can be removed
+                            //removeNoneFromPicklistIfNotSelected('{!$Component.recurrenceType}');
+                        </script>
+                    </apex:actionRegion>
+                </apex:outputPanel>
+
+                <apex:pageBlockSection id="frequencyDetailSection" showHeader="false" title="" columns="1">
+
+                    <!----------->
+                    <!-- Daily -->
+                    <!----------->
+
+                    <apex:outputPanel id="dailyPanel" rendered="{!VEM_Event__c.Recurrence_Type__c == 'Daily'}">
+                        <apex:inputHidden id="recurrenceDailyType" value="{!VEM_Event__c.Recurrence_Daily_Type__c}" />
+                        <table border="0">
+                          <tr>
+                            <td style="width:50px">&nbsp;</td>
+                            <td style="width:1000px">
+                              <input type="radio" name="dailyTypeRadio" value="Every X day(s)" onclick="changeSelectedOption(this,'{!$Component.recurrenceDailyType}');">Every &nbsp;<apex:inputField id="recurrenceDays" value="{!VEM_Event__c.Recurrence_Days__c}" style="width:25px" /> day(s)</input>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td><input type="radio" name="dailyTypeRadio" value="Every weekday" onclick="changeSelectedOption(this,'{!$Component.recurrenceDailyType}');">Every weekday (Monday - Friday)</input></td>
+                          </tr>
+                        </table>
+                        <script language="javascript">
+                            initializeDaily('{!$Component.recurrenceDailyType}', 'dailyTypeRadio', '{!$Component.recurrenceDays}');
+                        </script>
+                    </apex:outputPanel>
+                    <!--apex:selectRadio layout="pageDirection" rendered="{!VEM_Event__c.Recurrence_Type__c == 'Daily'}">
+                        <apex:selectOption itemLabel="Every Day" itemValue="Every Day" />
+                        <apex:selectOption itemLabel="Every Weekday" itemValue="Every Weekday" />
+                    </apex:selectRadio-->
+
+                    <!------------>
+                    <!-- Weekly -->
+                    <!------------>
+
+                    <apex:outputPanel id="weeklyPanel" rendered="{!VEM_Event__c.Recurrence_Type__c == 'Weekly'}">
+                        <table border="0">
+                          <tr>
+                            <td style="width:50px">&nbsp;</td>
+                            <td style="width:1000px">
+                              Recurs every &nbsp;<apex:inputField id="recurrenceWeeks" value="{!VEM_Event__c.Recurrence_Weeks__c}" style="width:25px" /> week(s) on
+                            </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td>
+                              <apex:inputCheckbox id="weeklySunday" value="{!VEM_Event__c.Recurrence_Sunday__c}" />Sunday
+                              <apex:inputCheckbox id="weeklyMonday" value="{!VEM_Event__c.Recurrence_Monday__c}" />Monday
+                              <apex:inputCheckbox id="weeklyTuesday" value="{!VEM_Event__c.Recurrence_Tuesday__c}" />Tuesday
+                              <apex:inputCheckbox id="weeklyWednesday" value="{!VEM_Event__c.Recurrence_Wednesday__c}" />Wednesday
+                              <apex:inputCheckbox id="weeklyThursday" value="{!VEM_Event__c.Recurrence_Thursday__c}" />Thursday
+                              <apex:inputCheckbox id="weeklyFriday" value="{!VEM_Event__c.Recurrence_Friday__c}" />Friday
+                              <apex:inputCheckbox id="weeklySaturday" value="{!VEM_Event__c.Recurrence_Saturday__c}" />Saturday
+                            </td>
+                          </tr>
+                        </table>
+                        <script language="javascript">
+                            initializeWeekly('{!$Component.recurrenceWeeks}');
+                        </script>
+                    </apex:outputPanel>
+
+                    <!------------->
+                    <!-- Monthly -->
+                    <!------------->
+
+                    <apex:outputPanel id="monthlyPanel" rendered="{!VEM_Event__c.Recurrence_Type__c == 'Monthly'}">
+                        <apex:inputHidden id="recurrenceMonthlyType" value="{!VEM_Event__c.Recurrence_Monthly_Type__c}" />
+                        <table border="0">
+                          <tr>
+                            <td style="width:50px">&nbsp;</td>
+                            <td style="width:1000px">
+                              <input type="radio" name="monthlyTypeRadio" value="Day X of every Y month(s)" onclick="changeSelectedOption(this,'{!$Component.recurrenceMonthlyType}');">Day &nbsp;<apex:inputField id="recurrenceDayOfMonth" value="{!VEM_Event__c.Recurrence_Day_Of_Month__c}" style="width:25px" /> of every &nbsp;<apex:inputField id="recurrenceMonths1" value="{!VEM_Event__c.Recurrence_Months1__c}" style="width:25px" /> month(s)</input>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td>
+                              <input type="radio" name="monthlyTypeRadio" value="The X Y of every Z month(s)" onclick="changeSelectedOption(this,'{!$Component.recurrenceMonthlyType}');">The &nbsp;
+                                <apex:inputField id="monthlyDayList1" value="{!VEM_Event__c.Recurrence_Monthly_Day_List1__c}" />&nbsp;
+                                <apex:inputField id="monthlyDayList2" value="{!VEM_Event__c.Recurrence_Monthly_Day_List2__c}" />
+                                of every &nbsp;<apex:inputField id="recurrenceMonths2" value="{!VEM_Event__c.Recurrence_Months2__c}" style="width:25px" /> month(s)
+                              </input>
+                            </td>
+                          </tr>
+                        </table>
+                        <script language="javascript">
+                            initializeMonthly('{!$Component.recurrenceMonthlyType}', 'monthlyTypeRadio',
+                                              '{!$Component.recurrenceDayOfMonth}', '{!$Component.recurrenceMonths1}',
+                                              '{!$Component.monthlyDayList1}', '{!$Component.monthlyDayList2}', '{!$Component.recurrenceMonths2}');
+                            removeNoneFromPicklist('{!$Component.monthlyDayList1}');
+                            removeNoneFromPicklist('{!$Component.monthlyDayList2}');
+                        </script>
+                    </apex:outputPanel>
+
+                    <!------------>
+                    <!-- Yearly -->
+                    <!------------>
+
+                    <apex:outputPanel id="yearlyPanel" rendered="{!VEM_Event__c.Recurrence_Type__c == 'Yearly'}">
+                        <apex:inputHidden id="recurrenceYearlyType" value="{!VEM_Event__c.Recurrence_Yearly_Type__c}" />
+                        <table border="0">
+                          <tr>
+                            <td style="width:50px">&nbsp;</td>
+                            <td style="width:1000px">
+                              <input type="radio" name="yearlyTypeRadio" value="Every X Y" onclick="changeSelectedOption(this,'{!$Component.recurrenceYearlyType}');">
+                                  Every &nbsp;<apex:inputField id="yearlyMonthList1" value="{!VEM_Event__c.Recurrence_Yearly_Month_List1__c}" />
+                                  <apex:inputField id="yearlyDay" value="{!VEM_Event__c.Recurrence_Yearly_Day__c}" style="width:25px" />
+                              </input>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td>
+                              <input type="radio" name="yearlyTypeRadio" value="The X Y of Z" onclick="changeSelectedOption(this,'{!$Component.recurrenceYearlyType}');">
+                                  The &nbsp;
+                                  <apex:inputField id="yearlyDayList1" value="{!VEM_Event__c.Recurrence_Yearly_Day_List1__c}" />&nbsp;
+                                  <apex:inputField id="yearlyDayList2" value="{!VEM_Event__c.Recurrence_Yearly_Day_List2__c}" />
+                                  of &nbsp;<apex:inputField id="yearlyMonthList2" value="{!VEM_Event__c.Recurrence_Yearly_Month_List2__c}" />
+                              </input>
+                            </td>
+                          </tr>
+                        </table>
+                        <script language="javascript">
+                            initializeYearly('{!$Component.recurrenceYearlyType}', 'yearlyTypeRadio',
+                                              '{!$Component.yearlyMonthList1}', '{!$Component.yearlyDay}',
+                                              '{!$Component.yearlyDayList1}', '{!$Component.yearlyDayList2}', '{!$Component.yearlyMonthList2}');
+                            removeNoneFromPicklist('{!$Component.yearlyMonthList1}');
+                            removeNoneFromPicklist('{!$Component.yearlyDayList1}');
+                            removeNoneFromPicklist('{!$Component.yearlyDayList2}');
+                            removeNoneFromPicklist('{!$Component.yearlyMonthList2}');
+                        </script>
+                    </apex:outputPanel>
+
+                </apex:pageBlockSection>
+
+                <!----------->
+                <!-- Dates -->
+                <!----------->
+
+                <apex:pageBlockSection id="dateSection" showHeader="false" title="" columns="1" rendered="{!VEM_Event__c.Recurrence_Type__c != ''}">
+                    <apex:outputLabel value="Dates:" />
+                    <!--apex:inputHidden id="eventStartDate" value="{!VEM_Event__c.Start_Date__c}" rendered="false" /-->
+                    <input type="hidden" id="eventStartDate" value="{!VEM_Event__c.Start_Date__c}" />
+                    <apex:inputField id="recurrenceStartDate" required="true" value="{!VEM_Event__c.Recurrence_Start_Date__c}" rendered="true" />
+                    <apex:inputField id="recurrenceEndDate" required="true" value="{!VEM_Event__c.Recurrence_End_Date__c}" />
+                    
+                    <script language="javascript">
+                        //initializeRecurrenceDates('{!$Component.recurrenceStartDate}', '{!$Component.eventStartDate}');
+                        initializeRecurrenceDates('{!$Component.recurrenceStartDate}', 'eventStartDate');
+                    </script>
+
+                </apex:pageBlockSection>
+
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+
+    </apex:form>
+
+</apex:page>

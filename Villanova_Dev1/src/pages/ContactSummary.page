@@ -1,0 +1,40 @@
+<apex:page standardController="Contact" extensions="ContactSummary">
+    <apex:form >
+    <apex:pageBlock mode="VIEW">
+        <apex:pageBlockSection columns="2">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >Largest Gift:</apex:outputLabel>
+                <apex:outputText value="{!LargestGift}">
+                </apex:outputText>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >SYBUNT:</apex:outputLabel>
+
+                <apex:outputField value="{!Contact.SYBUNT__c}" />
+            </apex:pageBlockSectionItem>
+            
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >Last Gift:</apex:outputLabel>
+                <apex:outputText value="{!LastGift}">
+                </apex:outputText>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >LYBUNT:</apex:outputLabel>
+
+                <apex:outputField value="{!Contact.LYBUNT__c}" />
+            </apex:pageBlockSectionItem>
+            
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >LifeTime Gift:</apex:outputLabel>
+                <apex:outputText value="{!LifeTimeGift}">
+                </apex:outputText>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

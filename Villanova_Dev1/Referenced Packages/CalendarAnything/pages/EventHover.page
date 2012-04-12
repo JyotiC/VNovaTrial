@@ -1,0 +1,22 @@
+<apex:page controller="SLCA2.CA_EventHoverController"sidebar="false" showheader="false" >
+<!--  <p>trace: {!trace} </p>  -->
+<div class="bPageBlock secondaryPalette">
+	<div class="pbHeader"> 
+		<table  border="0" cellpadding="0" cellspacing="0">  
+		<tr>
+		    <td class="pbTitle" colspan="2"><h2 class="mainTitle">{!goalObjectLabel}</h2></td>
+		</tr>
+		</table>
+	</div>  
+	<div class="pbBody">  
+	    <table  class="detailList" border="0" cellpadding="0" cellspacing="0">
+ <apex:repeat value="{!Fields}" var="field">
+	    <tr>
+	        <td class="labelCol">{!field.Label}</td>
+	        <td class="dataCol"><apex:outputText value="{!field.Value}" escape="false" /></td>
+	    </tr>
+</apex:repeat>	   
+	    </table>
+	</div>
+</div> 
+</apex:page>

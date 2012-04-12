@@ -1,0 +1,20 @@
+<apex:page standardController="Campaign" extensions="extSelectProcess">
+    <apex:form >
+        <apex:pageBlock id="pbProc" title="Implement a Process for {!camp.Name}">
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Implement Process" disabled="{!strProc = null}" action="{!Implement}" reRender="pbProc"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    Select a Process
+                    <apex:selectList value="{!strProc}" size="1">
+                        <apex:selectOptions value="{!Processes}"></apex:selectOptions>
+                        <apex:actionSupport event="onchange" action="{!SelectProc}" rerender="pbProc"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                {!strDescrip}
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

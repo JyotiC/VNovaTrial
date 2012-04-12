@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Tracks team members from a specific vendor and/or partner.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Team_Member__c</fullName>
+        <externalId>false</externalId>
+        <label>Team Member</label>
+        <referenceTo>SFDC_Team_Member__c</referenceTo>
+        <relationshipName>R00N60000001HpzlEAC</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Vendor_Partner__c</fullName>
+        <externalId>false</externalId>
+        <label>Vendor/Partner</label>
+        <referenceTo>SFDC_Vendor_Partner__c</referenceTo>
+        <relationshipName>R00N60000001HpzjEAC</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Vendor Team Member</label>
+    <nameField>
+        <displayFormat>{0000}</displayFormat>
+        <label>Vendor Team Member Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Vendor Team Members</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

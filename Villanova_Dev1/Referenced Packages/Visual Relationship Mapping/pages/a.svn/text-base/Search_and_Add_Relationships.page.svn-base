@@ -1,0 +1,523 @@
+<apex:page controller="BES_VRM.ClsSearchandAddRelationships" tabStyle="BES_VRM__Relationship__c" sidebar="false">
+    <apex:sectionHeader title="Search and Add Relationships for '{!sourceName}'">
+    </apex:sectionHeader>
+     
+    <apex:form >
+                  
+        <apex:inputHidden id="hidProdIds" value="{!hidProdIds}"/>
+        <apex:inputHidden id="hidSelectedIds" value="{!hidSelectedIds}"/>
+        <script>
+            var objHidProdId = document.getElementById('{!$Component.hidProdids}');
+            var objHidSelectedIds = document.getElementById('{!$Component.hidSelectedids}');
+            
+        </script>
+        <table height="20%" valign="middle">
+            <tr>
+                <td  height="100%" valign="middle">
+                    <apex:outputLabel value="Search within "/>
+                </td>
+                <td  height="100%" valign="middle">
+                    <apex:selectList size="1" id="selSearch" value="{!selSearchObj}">
+                      <apex:selectOptions value="{!SearchObjectNames}" />
+                    </apex:selectList>
+                 </td>
+                 <td  height="100%" valign="middle">
+                    <apex:outputLabel value=" for"/>
+                 </td>
+                 <td  height="100%" valign="middle">
+                     <apex:inputText value="{!searchText}" onkeypress="javascript: return isEnterKey(event)" />
+                     <apex:inputText style="display:none" />
+                 </td>
+                 <td  height="100%" valign="middle">
+                    <apex:commandButton id="btnSearch" value="Search" action="{!getSearchResults}" rerender="pbAddRelationship"/> 
+                </td>
+                <apex:actionFunction id="af" name="myAction" action="{!getSearchResults}" rerender="pbAddRelationship"></apex:actionFunction>
+            </tr>
+            <tr></tr>
+        </table>
+        <script>            
+            var sbutton = document.getElementById('{!$Component.btnSearch}'); 
+        </script>
+        <script>
+            var objChkboxArr = new Array();
+            var objtxtPrimaryParentArr = new Array();
+            var objddlStrengthParentArr = new Array();
+            var objtxtReciprocalParentArr = new Array();
+            //var objddlInterestArr = new Array();
+            var objtxtStartDateArr = new Array();
+            var objtxtEndDateArr = new Array();
+            var intGlobalProductPageCounter = 0;
+            var objPbookIds = '';  
+			
+			var NotesParentArr = new Array();
+
+        </script>
+        <apex:pageBlock title="Add Relationships" mode="Edit" id="pbAddRelationship">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Insert Selected" action="{!showPBInsertSelected}" rerender="pbInsertSelected, pbAddRelationship"/>
+                <apex:commandButton value="Done" onclick="javascript:callAddRelationships()" rerender="pbAddRelationship" rendered="{!renderDone}"/>
+                <apex:actionFunction name="insertRelationships" action="{!addRelationships}" rerender="pbAddRelationship"/>
+                <apex:commandButton value="Cancel" action="{!goBack}"/>  
+            </apex:pageBlockButtons>
+            <apex:outputPanel >
+                <apex:pageBlockTable value="{!searchResult}" var="records" >  
+                    <apex:column headerValue="" id="chkAll" rendered="true" > 
+                        <apex:facet name="header">
+                            <apex:inputCheckbox id="chkgridSelect" onclick="javascript:checkAll(this, objChkboxArr)"/>
+                        </apex:facet>
+                        <apex:inputCheckbox id="chkRecord" value="{!records.selected}" rendered="{!records.isNotExist}" onclick="javascript: enableTextBoxes(this.id);"/>
+                        <script>
+                            objChkboxArr.push('{!$Component.chkRecord}');
+                            
+                            objPbookIds += '{!SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(records.recId,'&','&amp;'),'\'','&rsquo;'),'"','&quot;'),'<','&lt;'),'>','&gt;')}' + ",";
+                        </script>
+                    </apex:column>
+                    <apex:column headerValue="Name" value="{!records.recName}"/>
+                    <apex:column headerValue="Primary Relation Type">
+                        <!-- <apex:inputText value="{!records.recPrimaryRelationType}" id="txtPrimaryParent"  />-->
+                        <apex:selectList size="1" id="txtPrimaryParent" value="{!records.recPrimaryRelationType}" >
+                            <apex:selectOptions value="{!PrimaryRelationshipTypes}" />
+                        </apex:selectList>                         
+                         <script>
+                            objtxtPrimaryParentArr.push('{!$Component.txtPrimaryParent}');
+                            var chkRecordNotExist = '{!records.isNotExist}';                            
+                            if(chkRecordNotExist == 'false')
+                            {
+                                document.getElementById('{!$Component.txtPrimaryParent}').disabled = true; 
+                            }
+                            if(document.getElementById('{!$Component.chkRecord}').checked == false ) 
+                            {
+                                document.getElementById('{!$Component.txtPrimaryParent}').disabled = true;                       
+                            }
+                        </script>   
+                    </apex:column>
+                    <apex:column headerValue="Reciprocal Relation Type" >
+                        <!-- <apex:inputText value="{!records.recReciprocalRelationType}" id="txtReciprocalParent"   rendered="{!records.showReciprocaType}" />-->
+                        <apex:selectList size="1" value="{!records.recReciprocalRelationType}" id="txtReciprocalParent"   rendered="{!records.showReciprocaType}">
+                            <apex:selectOptions value="{!ReciprocalRelationshipTypes}" />
+                        </apex:selectList>
+                        <script>
+                            objtxtReciprocalParentArr.push('{!$Component.txtReciprocalParent}'); 
+                            var chkRecordNotExist = '{!records.isNotExist}';                            
+                            if(chkRecordNotExist == 'false')
+                            {
+                                document.getElementById('{!$Component.txtReciprocalParent}').disabled = true; 
+                            }
+                            if(!document.getElementById('{!$Component.chkRecord}').checked) 
+                                document.getElementById('{!$Component.txtReciprocalParent}').disabled = true;                       
+                        </script>  
+                    </apex:column>
+                     <apex:column headerValue="Strength">
+                        <apex:selectList size="1" id="ddlStrength" value="{!records.recStrength}" >
+                            <apex:selectOptions value="{!Strength}" />
+                        </apex:selectList>                         
+                         <script>
+                          
+                            objddlStrengthParentArr.push('{!$Component.ddlStrength}');
+                            var chkRecordNotExist = '{!records.isNotExist}';                            
+                            if(chkRecordNotExist == 'false')
+                            {
+                                document.getElementById('{!$Component.ddlStrength}').disabled = true; 
+                            }
+                            if(document.getElementById('{!$Component.chkRecord}').checked == false ) 
+                            {
+                                document.getElementById('{!$Component.ddlStrength}').disabled = true;                       
+                            }
+                        </script>   
+                    </apex:column>
+
+					<apex:column headerValue="Notes" rendered="true"> 
+                        <apex:inputTextarea id="txtNotes" value="{!records.strNotes}" />
+                        <script>
+                            NotesParentArr.push('{!$Component.txtNotes}'); 
+                            var chkRecordNotExist = '{!records.isNotExist}';                            
+                            if(chkRecordNotExist == 'false')
+                            {
+                                document.getElementById('{!$Component.txtNotes}').disabled = true; 
+                            }
+                            if(!document.getElementById('{!$Component.chkRecord}').checked) 
+                                document.getElementById('{!$Component.txtNotes}').disabled = true;                       
+                        </script>
+                    </apex:column>
+
+                    <!-- <apex:column headerValue="Interest">
+                        <apex:inputText id="txtInterest" value="{!records.recInterest}"  size="5" onkeypress="return onlyNumbers(event);" maxlength="4"/>                        
+                         <script>
+                          
+                            objddlInterestArr.push('{!$Component.txtInterest}');
+                            var chkRecordNotExist = '{!records.isNotExist}';    
+                            if(chkRecordNotExist == 'false')
+                            {
+                                document.getElementById('{!$Component.txtInterest}').disabled = true; 
+                            }
+                            if(document.getElementById('{!$Component.chkRecord}').checked == false ) 
+                            {
+                                document.getElementById('{!$Component.txtInterest}').disabled = true;                       
+                            }                        
+                            
+                        </script>   
+                    </apex:column> -->
+                    <apex:column headerValue="Type" value="{!records.recType}"/>
+                   <!-- 
+                   <apex:column headerValue="Start Date">
+                    <apex:inputText id="txtStartDate"  value="{!records.strStartDate}" />
+                        <script>
+                          
+                            objtxtStartDateArr.push('{!$Component.txtStartDate}');
+                            var chkRecordNotExist = '{!records.isNotExist}';                            
+                            if(chkRecordNotExist == 'false')
+                            {
+                                document.getElementById('{!$Component.txtStartDate}').disabled = true; 
+                            }
+                            if(document.getElementById('{!$Component.txtStartDate}').checked == false ) 
+                            {
+                                document.getElementById('{!$Component.txtStartDate}').disabled = true;                       
+                            }
+                        </script>
+                    </apex:column>
+                    <apex:column headerValue="End Date">
+                     <apex:inputText id="txtEndDate"  value="{!records.strEndDate}" />
+                      <script>
+                         
+                            objtxtEndDateArr.push('{!$Component.txtEndDate}');
+                            var chkRecordNotExist = '{!records.isNotExist}';                            
+                            if(chkRecordNotExist == 'false')
+                            {
+                                document.getElementById('{!$Component.txtEndDate}').disabled = true; 
+                            }
+                            if(document.getElementById('{!$Component.chkRecord}').checked == false ) 
+                            {
+                                document.getElementById('{!$Component.txtEndDate}').disabled = true;                       
+                            }
+                        </script>
+                    </apex:column>   --> 
+                </apex:pageBlockTable>  
+                <font size="1pt">Page #:&nbsp;<apex:outputLabel value="{!PageNumber}"/>&nbsp;out of&nbsp;<apex:outputLabel value="{!TotalPageNumber}"/>&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                        <apex:commandButton value="Previous" action="{!PreviousBtnClick}" disabled="{!PreviousButtonEnabled}" reRender="pbAddRelationship" onclick="javascript:fillPrevCheckedArray('prev');" oncomplete="javascript:setCheckedBoxes()"></apex:commandButton>
+                        <apex:commandButton value="Next" action="{!NextBtnClick}" reRender="pbAddRelationship" disabled="{!NextButtonDisabled}" onclick="javascript:fillPrevCheckedArray('next');" oncomplete="javascript:setCheckedBoxes()" ></apex:commandButton>
+            </apex:outputPanel>  
+        </apex:pageBlock>
+        
+        <apex:outputPanel id="pbInsertSelected"> 
+        <script>
+            var objChkboxISArr = new Array();
+            var objhidISRecIdArr = new Array();
+            var hidSelectedIds = '';
+        </script>
+        <apex:pageBlock title="Selected List" mode="Edit" rendered="{!renderInsertSelected}">
+            <apex:outputPanel > 
+                 <apex:pageBlockTable value="{!insertSelected}" var="ISrecords" > 
+                 <apex:inputHidden id="hidISRecId"/>
+                    <apex:column headerValue="" id="chkISAll" rendered="true" > 
+                        <apex:facet name="header">
+                            <apex:inputCheckbox id="chkgISridSelect" onclick="javascript:checkAll(this, objChkboxISArr)"/>
+                        </apex:facet>
+                        <apex:inputCheckbox id="chkISRecord" value="{!ISrecords.selected}"/>
+                        <script>
+                            objChkboxISArr.push('{!$Component.chkISRecord}');
+                            
+                            objhidISRecIdArr.push('{!SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(ISrecords.recId,'&','&amp;'),'\'','&rsquo;'),'"','&quot;'),'<','&lt;'),'>','&gt;')}');
+                        </script>
+                    </apex:column> 
+                    <apex:column headerValue="Name" value="{!ISrecords.recName}"/>
+                    <apex:column headerValue="Primary Relation Type" >
+                        <!--<apex:inputText value="{!ISrecords.recPrimaryRelationType}"/>-->
+                        <apex:selectList size="1"  value="{!ISrecords.recPrimaryRelationType}"  >
+                            <apex:selectOptions value="{!PrimaryRelationshipTypes}" />
+                        </apex:selectList>
+                    </apex:column>
+                    <apex:column headerValue="Reciprocal Relation Type" >
+                       <!--<apex:inputText value="{!ISrecords.recReciprocalRelationType}" rendered="{!ISrecords.showReciprocaType}"/>-->
+                         <apex:selectList size="1" value="{!ISrecords.recReciprocalRelationType}" rendered="{!ISrecords.showReciprocaType}"   >
+                            <apex:selectOptions value="{!ReciprocalRelationshipTypes}" />
+                        </apex:selectList> 
+                    </apex:column>
+                    <apex:column headerValue="Strength" >
+                    <apex:selectList size="1" id="ddlStrength" value="{!ISrecords.recStrength}" >
+                            <apex:selectOptions value="{!Strength}" />
+                        </apex:selectList>
+                    </apex:column>
+
+					 <apex:column headerValue="Notes" rendered="true"> 
+                        <apex:inputTextarea id="txtNotesLower" value="{!ISrecords.strNotes}" />
+                    </apex:column>
+
+                    <!--  <apex:column headerValue="Interest" >
+                        <apex:inputText value="{!ISrecords.recInterest}" size="5" onkeypress="return onlyNumbers(event);" maxlength="4"/>
+                    </apex:column>-->
+                    <apex:column headerValue="Type" value="{!ISrecords.recType}" /> 
+                    <!--<apex:column headerValue="Start Date" value="{!ISrecords.strStartDate}" /> 
+                    <apex:column headerValue="End Date" value="{!ISrecords.strEndDate}" />-->                   
+                </apex:pageBlockTable>                  
+            </apex:outputPanel>  
+        </apex:pageBlock>
+        </apex:outputPanel>  
+        <script>
+            function checkAll(inputField, objArr)             
+            {
+                var ArrSize = objArr.length;
+                if (ArrSize > 0)
+                {
+                    for(var j = 0; j < ArrSize; j++)
+                    {
+                        if(document.getElementById(objArr[j]) != null)
+                        {
+                            if(inputField.checked)
+                            {
+                                document.getElementById(objArr[j]).checked = true;
+                                enableTextBoxes(objArr[j]);
+                            }
+                            else
+                            {
+                                document.getElementById(objArr[j]).checked = false;
+                                enableTextBoxes(objArr[j]);
+                            }
+                        }
+                    }
+                }
+            }
+            function enableTextBoxes(objChkBox)
+            {               
+                if(document.getElementById(objChkBox).checked)
+                {
+                    //alert("In here selected --------" + objChkBox);
+                    var chkId = objChkBox.split(":");
+                    //alert(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtPrimaryParent');
+                    document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtPrimaryParent').disabled = false;
+                    document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':ddlStrength').disabled = false;
+                    //document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtStartDate').disabled = false;
+                    //document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtEndDate').disabled = false;
+                    //document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtInterest').disabled = false;
+                    if(document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtReciprocalParent') != null)
+                    {
+                        document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtReciprocalParent').disabled = false;                
+                        document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':ddlStrength').disabled = false;
+                        //document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtInterest').disabled = false;
+                    }
+					 document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtNotes').disabled = false;
+                }
+                else
+                {
+                    //alert("In here not selected");                
+                    var chkId = objChkBox.split(":");
+                    document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtPrimaryParent').disabled = true;
+                    document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':ddlStrength').disabled = true;
+                    //document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtStartDate').disabled = true;
+                    //document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtEndDate').disabled = true;
+                    //document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtInterest').disabled = true;
+                    if(document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtReciprocalParent') != null)
+                    {
+                        document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtReciprocalParent').disabled = true;                             
+                        document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':ddlStrength').disabled = true;
+                        //document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtInterest').disabled = true;
+                    }
+					document.getElementById(chkId[0]+ ':' + chkId[1]+ ':' + chkId[2]+ ':' + chkId[3]+ ':' + chkId[4] + ':txtNotes').disabled = true;
+                }
+            }
+        </script>
+        <script>
+            
+            var mainPrevCheckedArray = new Array();
+            var mainPrimaryTextArray = new Array();
+            var mainStrengthArray = new Array();
+            //var mainInterestArray = new Array();
+            var mainReciprocalTextArray = new Array();
+            //var maintxtStartDateArray = new Array();
+           //   var maintxtEndDateArray = new Array();
+            var globalpBookIdsforProduct = '';
+
+			var mainNotesTextArray = new Array();
+           
+            
+            
+            function fillPrevCheckedArray(btnClicked)
+            {                           
+                
+                var prevCheckedArray = new Array();
+                var prevPrimaryTextArray = new Array();                 
+                var prevReciprocalTextArray = new Array();              
+                var pbookIdarr = objPbookIds.split(",");
+                var prevddlStrengthArray = new Array();
+                var prevtxtStartDateArray = new Array();
+                var prevtxtEndDateArray = new Array();
+                //var prevtxtInterestArray = new Array();
+
+				var prevNotesTextArray = new Array();
+                
+                if(objChkboxArr.length > 0)
+                {
+                    for(var j = 0; j < objChkboxArr.length; j++)
+                    {
+                         var isExist = false;
+                         if(document.getElementById(objChkboxArr[j]) != null && document.getElementById(objChkboxArr[j]).checked == true)
+                         {                        
+                            for(var k = 0; k < prevCheckedArray.length; k++)
+                            {
+                                if(objChkboxArr[j] == prevCheckedArray[k])
+                                {
+                                    isExist = true;
+                                }                            
+                            }
+                            if(!isExist)
+                            {
+                             
+                                prevCheckedArray.push(objChkboxArr[j]);
+                                prevPrimaryTextArray.push(objtxtPrimaryParentArr[j] + '~' + document.getElementById(objtxtPrimaryParentArr[j]).value);
+                                prevddlStrengthArray.push(objddlStrengthParentArr[j] + '~' + document.getElementById(objddlStrengthParentArr[j]).value);
+                                //prevtxtInterestArray.push(objddlInterestArr[j] + '~' + document.getElementById(objddlInterestArr[j]).value);
+                                //prevtxtStartDateArray.push(objtxtStartDateArr[j] + '~' + document.getElementById(objtxtStartDateArr[j]).value)
+                                //alert(prevtxtStartDateArray);
+                               // prevtxtEndDateArray.push(objtxtEndDateArr[j] + '~' + document.getElementById(objtxtEndDateArr[j]).value)
+                                if(document.getElementById(objtxtReciprocalParentArr[j]) != null)
+                                {
+                                    prevReciprocalTextArray.push(objtxtReciprocalParentArr[j] + '~' + document.getElementById(objtxtReciprocalParentArr[j]).value);
+                                }
+								if(document.getElementById(NotesParentArr[j]) != null)
+                                {
+                                    prevNotesTextArray.push(NotesParentArr[j] + '~' + document.getElementById(NotesParentArr[j]).value);
+                                }
+                                globalpBookIdsforProduct += pbookIdarr[j] + ",";
+                            }
+                         }
+                    }
+                }           
+                mainPrevCheckedArray[intGlobalProductPageCounter]= new Array();
+                mainPrevCheckedArray[intGlobalProductPageCounter]= prevCheckedArray ;
+                mainPrimaryTextArray[intGlobalProductPageCounter] = new Array();
+                mainPrimaryTextArray[intGlobalProductPageCounter]= prevPrimaryTextArray ;
+                mainStrengthArray[intGlobalProductPageCounter]  =  prevddlStrengthArray;
+                //mainInterestArray[intGlobalProductPageCounter]  =  prevtxtInterestArray;
+               // maintxtStartDateArray[intGlobalProductPageCounter] = new Array();
+                //maintxtStartDateArray[intGlobalProductPageCounter] = prevtxtStartDateArray;
+                //maintxtEndDateArray[intGlobalProductPageCounter] = new Array();
+                //maintxtEndDateArray[intGlobalProductPageCounter] = prevtxtEndDateArray;        
+                mainReciprocalTextArray[intGlobalProductPageCounter] = new Array();
+                if(prevReciprocalTextArray != null && prevReciprocalTextArray.length > 0)
+                {
+                    mainReciprocalTextArray[intGlobalProductPageCounter]= prevReciprocalTextArray ;
+                }
+
+				if(prevNotesTextArray != null && prevNotesTextArray.length > 0)
+                {
+                    mainNotesTextArray[intGlobalProductPageCounter]= prevNotesTextArray  ;                    
+                }
+                //alert(mainPrevCheckedArray[intGlobalProductPageCounter].length);
+                objChkboxArr = new Array();
+                objtxtPrimaryParentArr = new Array();
+                objtxtReciprocalParentArr = new Array(); 
+                objddlStrengthParentArr = new Array();
+                //objddlInterestArr = new Array();
+               // objtxtStartDateArr = new Array();
+                //objtxtEndDateArr = new Array();
+                objHidProdId.value = globalpBookIdsforProduct;
+                //alert('objHidProdId**************' + objHidProdId.value);
+                objPbookIds = '';
+
+				NotesParentArr = new Array();
+                
+                if(btnClicked == 'prev')
+                {
+                    intGlobalProductPageCounter--;
+                }
+                else
+                {
+                    intGlobalProductPageCounter++;
+                }               
+            }
+        
+            function setCheckedBoxes()
+            {                        
+                var count=0;
+                
+                while(mainPrevCheckedArray.length > 0 && count <= mainPrevCheckedArray.length && count != intGlobalProductPageCounter)
+                {
+                    for(var k = 0; k < mainPrevCheckedArray[count].length; k++)
+                    {
+                        document.getElementById(mainPrevCheckedArray[count][k]).checked = false;                                                
+                    }                
+                    count++;
+                }
+                
+                if(mainPrevCheckedArray.length > 0 &&  mainPrevCheckedArray[intGlobalProductPageCounter] != null && mainPrevCheckedArray[intGlobalProductPageCounter].length > 0)
+                {
+                    //alert(mainPrevCheckedArray[intGlobalProductPageCounter].length);
+                    for(var k = 0; k < mainPrevCheckedArray[intGlobalProductPageCounter].length; k++)
+                    {
+                        //alert(mainPrevCheckedArray[intGlobalProductPageCounter][k]);
+                        document.getElementById(mainPrevCheckedArray[intGlobalProductPageCounter][k]).checked = true;
+                        enableTextBoxes(mainPrevCheckedArray[intGlobalProductPageCounter][k]);
+                        var txtPrimary = mainPrimaryTextArray[intGlobalProductPageCounter][k].split("~");
+                        var ddlStrengthItem = mainStrengthArray[intGlobalProductPageCounter][k].split("~");
+                        //var ddlInterestItem = mainInterestArray[intGlobalProductPageCounter][k].split("~");
+                        //var txtStartDateItem = maintxtStartDateArray[intGlobalProductPageCounter][k].split("~");
+                        //var txtEndDateItem = maintxtEndDateArray[intGlobalProductPageCounter][k].split("~");
+                        //document.getElementById(txtStartDateItem[0]).value = txtStartDateItem[1];
+                       // document.getElementById(txtEndDateItem[0]).value = txtEndDateItem[1];
+                        document.getElementById(txtPrimary[0]).value = txtPrimary[1];
+                        //alert(ddlStrengthItem[1]);
+                        document.getElementById(ddlStrengthItem[0]).value = ddlStrengthItem[1];
+                        //document.getElementById(ddlInterestItem[0]).value = ddlInterestItem[1];
+                        if(mainReciprocalTextArray[intGlobalProductPageCounter].length > 0)
+                        {
+                            var txtReciprocal = mainReciprocalTextArray[intGlobalProductPageCounter][k].split("~");
+                            document.getElementById(txtReciprocal[0]).value = txtReciprocal[1];
+                        }
+						if(mainNotesTextArray[intGlobalProductPageCounter].length > 0)
+                        {                         	                        	
+                            var txtNotes = mainNotesTextArray[intGlobalProductPageCounter][k].split("~");
+                            document.getElementById(txtNotes[0]).value = txtNotes[1];
+                        }
+                    }
+                }            
+            }
+        
+            function callAddRelationships()
+            {
+                for(var i = 0; i < objChkboxISArr.length; i++)
+                {
+                    if(document.getElementById(objChkboxISArr[i]).checked)
+                    {
+                        hidSelectedIds += objhidISRecIdArr[i] + '~';
+                        
+                    }
+                }
+                objHidSelectedIds.value = hidSelectedIds;
+                
+                insertRelationships();
+            }        
+
+            function isEnterKey(evt)
+            {
+                var charCode = (evt.which) ? evt.which : evt.keyCode
+                if (charCode == 13)
+                {                               
+                    getSearchResultsfn();               
+                    return false;
+                }
+    
+            }
+    
+            function getSearchResultsfn()
+            {           
+                myAction(); 
+            }  
+            
+            /* ************* Allow only numbers ****************** */
+            
+            function onlyNumbers(evt)
+            {
+                var e = evt; // for trans-browser compatibility
+                var charCode = e.which || e.keyCode;
+            
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                    return false;
+            
+                return true;
+            
+            }
+            
+            /* ********************************************* */
+                 
+    </script>
+   </apex:form> 
+</apex:page>

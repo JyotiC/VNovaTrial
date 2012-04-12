@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers
+END
+BES_LeadConvertToContact.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/BES_LeadConvertToContact.trigger
+END
+VRM_deleteRelationshipsFromContacts.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/VRM_deleteRelationshipsFromContacts.trigger
+END
+AddFeed.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/AddFeed.trigger-meta.xml
+END
+VRM_deleteRelationshipsFromAccount.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/VRM_deleteRelationshipsFromAccount.trigger-meta.xml
+END
+VRM_deletedRelationships.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/VRM_deletedRelationships.trigger
+END
+BES_LeadConvertToContact.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/BES_LeadConvertToContact.trigger-meta.xml
+END
+VRM_deleteRelationshipsFromContacts.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/VRM_deleteRelationshipsFromContacts.trigger-meta.xml
+END
+VRM_deletedRelationships.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/VRM_deletedRelationships.trigger-meta.xml
+END
+VRM_deleteRelationshipsFromLead.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/VRM_deleteRelationshipsFromLead.trigger
+END
+reciprocalRelationship.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/reciprocalRelationship.trigger
+END
+VRM_deleteRelationshipsFromLead.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/VRM_deleteRelationshipsFromLead.trigger-meta.xml
+END
+reciprocalRelationship.trigger-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/reciprocalRelationship.trigger-meta.xml
+END
+AddFeed.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/AddFeed.trigger
+END
+VRM_deleteRelationshipsFromAccount.trigger
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Visual%20Relationship%20Mapping/triggers/VRM_deleteRelationshipsFromAccount.trigger
+END

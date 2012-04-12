@@ -1,0 +1,71 @@
+<apex:page standardController="Campaign" extensions="extVREmail" id="pge">
+    <script type="text/javascript">
+        window.fCopyToClipboard = function(rSource){ 
+            rSource.select();
+            if(window.clipboardData){  
+                var r=clipboardData.setData('Text',rSource.value); 
+                return 1; 
+            } else {
+                return 0 
+            }
+        } 
+    </script>    
+    <apex:form id="frm">
+        
+        <apex:pageBlock title="Create VR Email Content">
+            <apex:outputPanel id="opTop">
+            <apex:pageBlockSection >
+                <apex:PageBlockSectionItem >
+                    Create Content for Multiple Events
+                    <apex:inputCheckbox value="{!isMultiple}">
+                        <apex:actionSupport event="onclick" action="{!InitList}" reRender="opTop"/>
+                    </apex:inputCheckbox>
+                </apex:PageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!lstEvents}" var="e" rendered="{!isMultiple}">
+                <apex:column >
+                    <apex:inputCheckbox value="{!e.isChecked}"/>   
+                </apex:column>
+                <apex:column headerValue="Event" value="{!e.Event.Name}"/>
+                <apex:column headerValue="Date" value="{!e.Event.Date__c}"/>
+            </apex:pageblockTable>
+            <apex:commandButton value="Generate Content" reRender="frm" action="{!MakeHTML}" rendered="{!isMultiple}"/>
+            </apex:outputPanel>
+            
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    &nbsp;
+                    <apex:outputText >
+                        <b>Click on the text areas below to copy the text to be pasted into Vertical Response.</b>
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    Text
+                    <apex:outputPanel >
+                        <apex:inputTextarea value="{!strText}" style="width:500px;height:120px" 
+                        onfocus="var obj = document.getElementById('bufferHTML_Text');           
+                        if(window.fCopyToClipboard && window.fCopyToClipboard(this)){
+                        obj.innerHTML = 'The Text has been copied to the clipboard. Paste in the sample area below to test.'} else {            
+                        obj.innerHTML = 'The clipboard object isn\'t supported by your browser. Press CTRL-C to copy to the clipboard.'}"/>
+                        <div style="text-align: left; font-weight: bold; color: red;" id="bufferHTML_HTML">&nbsp;</div>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    HTML
+                    <apex:outputPanel >
+                        <apex:inputTextarea id="txtDescrip" value="{!strContent}" onfocus="var obj = document.getElementById('bufferHTML_HTML');           
+                        if(window.fCopyToClipboard && window.fCopyToClipboard(this)){
+                        obj.innerHTML = 'The Text has been copied to the clipboard. Paste in the sample area below to test.'} else {            
+                        obj.innerHTML = 'The clipboard object isn\'t supported by your browser. Press CTRL-C to copy to the clipboard.'}" style="width:500px;height:120px"/>
+                        <div style="text-align: left; font-weight: bold; color: red;" id="bufferHTML_HTML">&nbsp;</div>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    HTML Preview
+                    <apex:outputText escape="false" value="{!strContent}"></apex:outputText>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

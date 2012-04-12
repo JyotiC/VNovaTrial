@@ -1,0 +1,97 @@
+<apex:page standardController="Contact" extensions="BES_VRM.BES_UserRelation"  sidebar="false">
+    <apex:sectionHeader title="Relate to User">
+    </apex:sectionHeader>
+    <apex:form >
+    <apex:outputPanel rendered="{!IsPanelVisible}" layout="block">
+     <apex:pageBlock >
+        <font color='green'><strong><br/>{!Message}</strong></font>
+        <apex:pageBlockButtons >
+        <apex:commandButton value="Visualize" action="{!VisualizeUser}"/>
+        <apex:commandButton value="Cancel" action="{!UnrelateToUser}"/>
+        </apex:pageBlockButtons>
+     </apex:pageBlock>   
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!IsPageBlockVisible}">
+    
+        <apex:pageBlock title="Add Relationship" id="pbAddRelationship"  >
+           <apex:pageBlockButtons >
+            <apex:commandButton value="Save" onclick="javascript:callAddRelationships()" rerender="pbAddRelationship"/>
+            <apex:actionFunction name="insertRelationships" action="{!RelateRecordToUser}" rerender="pbAddRelationship"/>
+            <apex:commandButton value="Save & Visualize" action="{!VisualizeUser}"/>
+            <apex:commandButton value="Cancel" action="{!UnrelateToUser}"/>
+            
+           </apex:pageBlockButtons>
+            <table width="100%" cellpadding="0" cellspacing="0" align="center">
+                 
+                <tr align="left">
+                     
+                     <td width="70%">
+                        <apex:outputLabel value="Choose Relationship and Strength" style="font-weight:bold"/>
+                      </td> 
+                               
+                </tr>
+                 <tr>
+                     <td colspan="4"><hr/> </td>
+                 </tr>
+             </table>
+             <table>
+                <tr>
+                    <td>
+                        <b>Primary Relationship:  </b>
+                    </td>
+                    <td> 
+                        <apex:selectList size="1" id="ddlPrimaryRelationship" value="{!SelRelationship}" >
+                             <apex:selectOptions value="{!PrimaryRelationshipTypes}" />
+                        </apex:selectList>
+                     </td>
+                </tr>
+                <tr>
+                    <td>
+                       <b>Strength: </b>
+                    </td>
+                    <td>
+                       <apex:selectList size="1" id="ddlStrength" value="{!selStrength}" >
+                           <apex:selectOptions value="{!Strength}" />
+                       </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <b>Notes:(200 Characters Max.) </b>
+                    </td>
+                    <td>
+                      <apex:inputTextarea id="txtNotes" value="{!selNotes}" onkeypress="return imposeMaxLength(this, 200);" style="width: 350px"/>  
+                    </td>
+                </tr>
+             </table>    
+        </apex:pageBlock>
+     </apex:outputPanel>
+    <script>
+            function callAddRelationships()
+            {
+                
+                insertRelationships();
+            }
+    
+            /* ************* Allow only numbers ****************** */
+            
+            function onlyNumbers(evt)
+            {
+                var e = evt; 
+                var charCode = e.which || e.keyCode;
+            
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                    return false;
+            
+                return true;
+            
+            }
+            function imposeMaxLength(Object, MaxLen)
+            {
+              return (Object.value.length <= MaxLen);
+            }
+            
+            /* ********************************************* */
+    </script>
+    </apex:form>          
+</apex:page>

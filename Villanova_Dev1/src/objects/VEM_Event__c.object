@@ -1,0 +1,2377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>List of Villanova University planned events</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Display_on_Calendar__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Uncheck for special events that should not be displayed on the calendar</inlineHelpText>
+        <label>Display on Calendar</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EMS_Booking_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>EMS Booking ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>true</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>End Time</label>
+        <picklist>
+            <controllingField>Time_Interval__c</controllingField>
+            <picklistValues>
+                <fullName>12:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Event_Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter up to 255 characters</inlineHelpText>
+        <label>Event Description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Event_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Event Location</label>
+        <referenceTo>VEM_Location__c</referenceTo>
+        <relationshipName>Event_Location</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Event_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter up to 32,768 characters</inlineHelpText>
+        <label>Event Notes</label>
+        <length>32768</length>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Event_Sponsor__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the sponsor/group for this event</inlineHelpText>
+        <label>Event Sponsor</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Event_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Event Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Saved</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Event_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Event Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Athletic Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Athletic Group</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Breakfast</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Breakfast - Buffet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Breakfast - Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campus Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campus Group</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Clinic / Camp</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Concert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dinner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dinner - Buffet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dinner - Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Elections</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exhibit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Film</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forum</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fund Raiser</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Session</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Intramurals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lecture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lunch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Luncheon - Buffet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Luncheon - Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting w/Snacks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outside Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outside Group</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Practice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reception</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recreational Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rehersal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sporting Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Table - Information</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Table - Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Video Program</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Workshop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Volume__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the number of people expected at this event</inlineHelpText>
+        <label>Expected Attendance</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_Approver__c</fullName>
+        <externalId>false</externalId>
+        <label>Location Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Location_Approver</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Override_Blackout_Date__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to schedule an event on a blackout date (requires special approval)</inlineHelpText>
+        <label>Override Blackout Date</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ready_By_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Ready By Time</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Daily_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Daily Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Every X day(s)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Every weekday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Day_Of_Month__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Day of Month</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Days__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurrence_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Friday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Recurrence Friday</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Monday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Recurrence Monday</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Monthly_Day_List1__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Monthly Day List1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>First</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Second</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Third</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fourth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Last</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Monthly_Day_List2__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Monthly Day List2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Day</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sunday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tuesday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wednesday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Thursday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Friday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Saturday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Monthly_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Monthly Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Day X of every Y month(s)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>The X Y of every Z month(s)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Months1__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Months1</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Months2__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Months2</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Parent_Event__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Parent Event</label>
+        <referenceTo>VEM_Event__c</referenceTo>
+        <relationshipLabel>Event Recurrences</relationshipLabel>
+        <relationshipName>Recurrence_Events</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Saturday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Recurrence Saturday</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Sunday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Recurrence Sunday</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Thursday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Recurrence Thursday</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Tuesday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Recurrence Tuesday</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yearly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Wednesday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Recurrence Wednesday</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Weeks__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence_Weeks</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Yearly_Day_List1__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Yearly Day List1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>First</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Second</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Third</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fourth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Last</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Yearly_Day_List2__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Yearly Day List2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Day</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sunday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tuesday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wednesday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Thursday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Friday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Saturday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Yearly_Day__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Yearly Day</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Yearly_Month_List1__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Yearly Month List1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>January</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>February</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>March</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>April</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>May</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>June</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>July</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>August</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>September</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>October</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>November</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>December</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Yearly_Month_List2__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Yearly Month List2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>January</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>February</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>March</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>April</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>May</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>June</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>July</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>August</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>September</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>October</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>November</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>December</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurrence_Yearly_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurrence Yearly Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Every X Y</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>The X Y of Z</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sponsor_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Sponsor Account</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sponsor_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Sponsor Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sponsor_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Sponsor Phone</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>true</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Start_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Time</label>
+        <picklist>
+            <controllingField>Time_Interval__c</controllingField>
+            <picklistValues>
+                <fullName>12:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:15 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:30 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:45 AM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <controllingFieldValues>60 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:15 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:30 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <controllingFieldValues>30 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:45 PM</fullName>
+                <controllingFieldValues>15 Minute</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Time_Interval__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the times to display in the drop-downs below; Select &quot;None&quot; for all-day events</inlineHelpText>
+        <label>Time Interval</label>
+        <picklist>
+            <picklistValues>
+                <fullName>15 Minute</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30 Minute</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>60 Minute</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>VForceReports__c</fullName>
+        <description>Visualforce page Reports</description>
+        <externalId>false</externalId>
+        <label>VForceReports</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Today in the Connelly Center</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Today in Athletics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>This Week in Athletics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <label>Event</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>Event_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Approved</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Event_Status__c</field>
+            <operation>equals</operation>
+            <value>Approved</value>
+        </filters>
+        <label>Approved</label>
+    </listViews>
+    <listViews>
+        <fullName>Athletics_All</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>Event_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Location_Approver__c</field>
+            <operation>equals</operation>
+            <value>Mick Keelan</value>
+        </filters>
+        <label>Athletics - All</label>
+    </listViews>
+    <listViews>
+        <fullName>Athletics_Future</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>Event_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Location_Approver__c</field>
+            <operation>equals</operation>
+            <value>Mick Keelan</value>
+        </filters>
+        <filters>
+            <field>Start_Date__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Athletics - Future</label>
+    </listViews>
+    <listViews>
+        <fullName>Athletics_Recurring</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>Recurrence_Type__c</columns>
+        <columns>Event_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Recurrence_Type__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Location_Approver__c</field>
+            <operation>equals</operation>
+            <value>Mick Keelan</value>
+        </filters>
+        <label>Athletics - Recurring</label>
+    </listViews>
+    <listViews>
+        <fullName>Connelly_All</fullName>
+        <booleanFilter>1</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>Event_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Location_Approver__c</field>
+            <operation>equals</operation>
+            <value>Anthony Alfano</value>
+        </filters>
+        <label>Connelly - All</label>
+    </listViews>
+    <listViews>
+        <fullName>Connelly_Future</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>Event_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Location_Approver__c</field>
+            <operation>equals</operation>
+            <value>Anthony Alfano</value>
+        </filters>
+        <filters>
+            <field>Start_Date__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Connelly - Future</label>
+    </listViews>
+    <listViews>
+        <fullName>Connelly_Recurring</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>Recurrence_Type__c</columns>
+        <columns>Event_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Recurrence_Type__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Location_Approver__c</field>
+            <operation>equals</operation>
+            <value>Anthony Alfano</value>
+        </filters>
+        <label>Connelly - Recurring</label>
+    </listViews>
+    <listViews>
+        <fullName>Future</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>Event_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>End_Date__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Future</label>
+    </listViews>
+    <listViews>
+        <fullName>Pending</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Event_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </filters>
+        <label>Pending</label>
+    </listViews>
+    <listViews>
+        <fullName>Recurring</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>Recurrence_Type__c</columns>
+        <columns>Event_Status__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Recurrence_Type__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Recurring</label>
+    </listViews>
+    <listViews>
+        <fullName>Saved</fullName>
+        <columns>NAME</columns>
+        <columns>Event_Type__c</columns>
+        <columns>Event_Location__c</columns>
+        <columns>Start_Date_Time__c</columns>
+        <columns>End_Date_Time__c</columns>
+        <columns>Event_Sponsor__c</columns>
+        <columns>Expected_Volume__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Event_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Pending,Approved,Rejected</value>
+        </filters>
+        <label>Saved</label>
+    </listViews>
+    <nameField>
+        <label>Event Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Events</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Event_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Event_Location__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Start_Date_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>End_Date_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Event_Sponsor__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Expected_Volume__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Event_Status__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>Expected_Volume_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>Expected_Volume__c &lt;= 0</errorConditionFormula>
+        <errorDisplayField>Expected_Volume__c</errorDisplayField>
+        <errorMessage>Value must be a positive number</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>end_smaller_than_start</fullName>
+        <active>false</active>
+        <errorConditionFormula>End_Date__c &lt;   Start_Date__c</errorConditionFormula>
+        <errorMessage>end date cannot be before the start date</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Connelly_Operation_Projection</fullName>
+        <availability>online</availability>
+        <description>Connelly Operation Projection</description>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>Connelly Operation Projection</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/VEM_Connelly_Operations_Projection</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Connelly_Operations_Report</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>Connelly Operations Report</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/VEM_Connelly_Operations_Report</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Edit_Recurrence</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Edit Recurrence</masterLabel>
+        <openType>sidebar</openType>
+        <page>VEM_Event_Recurrence</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>This_Week_in_Athletics</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>This Week in Athletics</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/VEM_Athletics_Week</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Today_in_Athletics</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>Today in Athletics</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/VEM_Athletics_Today</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Today_in_the_Connelly_Center</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>Today in the Connelly Center</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/VEM_Connelly_Today</url>
+    </webLinks>
+    <webLinks>
+        <fullName>VEM_Reports</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Reports</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/VEMReportEmailer</url>
+    </webLinks>
+</CustomObject>

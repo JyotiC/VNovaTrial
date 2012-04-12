@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes
+END
+QueryBuilder.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/QueryBuilder.cls-meta.xml
+END
+SchemaInfo.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/SchemaInfo.cls-meta.xml
+END
+DynamicSObject.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/DynamicSObject.cls-meta.xml
+END
+MergeRecord.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/MergeRecord.cls-meta.xml
+END
+MergeRecordTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/MergeRecordTest.cls-meta.xml
+END
+SearchMergeTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/SearchMergeTest.cls
+END
+SearchMergeTest.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/SearchMergeTest.cls-meta.xml
+END
+SearchMergeController.cls
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/SearchMergeController.cls
+END
+QueryBuilder.cls
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/QueryBuilder.cls
+END
+SchemaInfo.cls
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/SchemaInfo.cls
+END
+SearchMergeController.cls-meta.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/SearchMergeController.cls-meta.xml
+END
+DynamicSObject.cls
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/DynamicSObject.cls
+END
+MergeRecord.cls
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/MergeRecord.cls
+END
+MergeRecordTest.cls
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Projects/!svn/ver/5094/Villanova/Villanova_Dev1/Referenced%20Packages/Dupe%20Eliminator/classes/MergeRecordTest.cls
+END

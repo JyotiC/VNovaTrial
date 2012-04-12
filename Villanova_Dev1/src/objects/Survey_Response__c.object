@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>A place to store information collected via survey tools.</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Case_Competition_Judge__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Case Competition Judge</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Country_Expert__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Country Expert on Brazil, Russia, India or China for Introductory Leadership Course</description>
+        <externalId>false</externalId>
+        <label>Country Expert</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Guest_Speaker__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Guest Speaker for a Specific Courses</description>
+        <externalId>false</externalId>
+        <label>Guest Speaker</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mentor_Coach__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Mentor/Coach</description>
+        <externalId>false</externalId>
+        <label>Mentor/Coach</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Professional_Development_Events__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Professional Development Events (i.e. career panels, workshops and networking opportunities)</description>
+        <externalId>false</externalId>
+        <label>Professional Development Events</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Resume_Assistance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Resume Review &amp; Assistance</description>
+        <externalId>false</externalId>
+        <label>Resume Assistance</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Subject_Area_Tutor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Subject Area Tutor</description>
+        <externalId>false</externalId>
+        <label>Subject Area Tutor</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Volunteer_Interest__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Is this individual interested in participating in MBA program initiatives?</description>
+        <externalId>false</externalId>
+        <label>Volunteer Interest</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Survey Response</label>
+    <nameField>
+        <label>Survey Responses Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Survey Responses</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

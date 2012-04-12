@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scontrol xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contentSource>HTML</contentSource>
+    <description>Email content that was sent to all recipients on the mailing list.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Campaign Preview Contact</name>
+    <supportsCaching>true</supportsCaching>
+</Scontrol>

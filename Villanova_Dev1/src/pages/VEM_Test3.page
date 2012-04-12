@@ -1,0 +1,41 @@
+<apex:page controller="VEM_TestController1" showHeader="true" sidebar="true">
+
+    <apex:sectionHeader title="Edit" subtitle="Test" />
+
+    <apex:form >
+
+        <apex:pageBlock title="Booking" mode="edit">
+
+            <apex:pageMessages />
+
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save" />
+                <apex:commandButton action="{!cancel}" value="Cancel" />
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection showHeader="true" title="Information" columns="1">
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Report Name" />
+                    <apex:inputText value="{!reportName}" />
+                </apex:pageBlockSectionItem>
+                
+<!--apex:pageBlockSection showHeader="true" columns="1" rendered="false" -->
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Start Date" />
+                    <apex:inputField value="{!proxyObject.Start_Date__c}" />
+                </apex:pageBlockSectionItem>
+
+                <!--apex:pageBlockSectionItem -->
+                    <!--apex:outputLabel value="End Date" /-->
+                    <apex:inputField value="{!proxyObject.End_Date__c}" required="false" />
+                <!--/apex:pageBlockSectionItem-->
+<!--/apex:pageBlockSection-->
+
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+
+    </apex:form>
+
+</apex:page>
